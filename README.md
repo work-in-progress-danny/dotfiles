@@ -1,4 +1,4 @@
-# Chezmoi Dotfiles
+# Dotfiles
 
 Excuse the naming of directories and files, Chezmoi uses them literally `dot_zshrc ~> .zshrc`.
 
@@ -6,7 +6,7 @@ All these settings and preferences are quite specific to me and my Macbooks, use
 
 ## Installation
 
-I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](https://www.chezmoi.io/docs/install/) and run `chemzoi init https://github.com/dannyknows/dotfiles`
+I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](https://www.chezmoi.io/docs/install/) and run `chezmoi init git@github.com:dannyknows/dotfiles.git`
 
 ## Current Tools
 
