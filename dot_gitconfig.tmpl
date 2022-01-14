@@ -1,0 +1,39 @@
+[user]
+	name = {{ .full_name | quote }}
+	email = {{ .email | quote }}
+	signingkey = {{ .signingkey | quote }}
+
+[commit]
+	gpgsign = true
+	template = ~/.config/git/.commitmessage
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+	editor = {{ .chezmoi.homeDir }}/.local/bin/lvim 
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+	cmd = /private/var/folders/84/vlvj_vtj6td0k200qphfysg00000gn/T/AppTranslocation/A1603E91-0F24-4977-A212-2EFD6DC239CE/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[branch]
+	autorebase = true # When pulling changes to your current branch try rebase instead of auto merge
+
+[alias]
+	st = status
+	di = diff
+	co = checkout
+	ci = commit
+	br = branch
+	cm = commit -m
+	cp = cherry-pick
+	uncommit = reset HEAD^
+
