@@ -1,0 +1,16 @@
+# Antigen plugin manager
+source {{ .applications.antigen }}antigen.zsh
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-history-substring-search
+
+antigen apply
+
+# Auto suggest plugin
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
+bindkey '^ ' autosuggest-accept
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
