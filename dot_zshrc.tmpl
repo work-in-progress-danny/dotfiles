@@ -163,7 +163,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
-source /opt/homebrew/share/antigen/antigen.zsh
+source {{ .applications.antigen }}antigen.zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
