@@ -1,0 +1,22 @@
+# build:    Changes that affect how we run our code (bundlers, package managers). Should produce no tangible change to end-users of the application.
+# ci:       Changes to how we use our code in CI systems (Buildkite). Must not present a tangible change to end-users of the application. 
+# chore:    Routine work on a repository (dependency updates, key rotations, user management). Must only affect the runtime application (not developer/compiler/build tools)
+# docs:     Changes to documentation only
+# feat:     A new feature. Must only affect the runtime application (not developer/compiler/build tools)
+# fix:      A bug fix. Must only affect the runtime application (not developer/compiler/build tools)
+# perf:     A code change that addresses application performance issues
+# refactor: A code change that neither fixes a bug nor adds a feature. Must not present a tangible change to end-users of the application.
+# style:    Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc). Must not present a tangible change to end-users of the application.
+# test:     Adding missing tests or correcting existing tests. Must not present a tangible change to end-users of the application.
+# If applied, this commit will: 
+
+# Why is this change being made:
+
+# Links to any relevant tickets, articles and other resources
+# Closes:
+# Fixes:
+# Resolves:
+# Related:
+
+# run > git_authors "name" -> to find the correct details
+# Co-authored-by: name <name@example.com>
