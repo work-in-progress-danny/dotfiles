@@ -31,6 +31,7 @@ I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](htt
 ## Old Tools
 
 - Dotfiles Manager: [Fresh](https://github.com/freshshell/fresh/)
+- Terminals: [iTerm2](https://iterm2.com/), [Kitty](https://github.com/kovidgoyal/kitty)
 - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
 - Shell: [Fish Shell](https://fishshell.com/)
 - Shell Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
