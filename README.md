@@ -6,7 +6,10 @@ All these settings and preferences are quite specific to me and my Macbooks, use
 
 ## Installation
 
-I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](https://www.chezmoi.io/docs/install/) and run `chezmoi init git@github.com:dannyknows/dotfiles.git`
+> WARNING: I wouldn't recommend this as I don't have a comprehensive list of installed software, the dotfiles assume many things are already installed and this could break your dev environment.
+
+I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](https://www.chezmoi.io/docs/install/) and run `chemzoi init git@github.com:dannyknows/dotfiles.git`.
+
 
 ## Current Tools
 
@@ -14,8 +17,8 @@ I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](htt
 
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty#installation)
 - Shell: [Zsh](https://zsh.sourceforge.io/Intro/intro_toc.html)
-  - Shell Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-  - Shell Plugin Manager: [Antigen]()
+  - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+  - Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
 - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
 - Git Interface: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
 - Dotfiles Manager: [Chezmoi](https://www.chezmoi.io/docs/install/)
@@ -30,3 +33,4 @@ I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](htt
 - Dotfiles Manager: [Fresh](https://github.com/freshshell/fresh/)
 - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
 - Shell: [Fish Shell](https://fishshell.com/)
+- Shell Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
