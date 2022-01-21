@@ -3,7 +3,9 @@ if [ "$ZELLIJ" = "" ]; then zellij; fi # Start shell with Zellij
 {{ template "zshrc/alias.tmpl" . }}
 {{ template "zshrc/preferences.tmpl" . }}
 {{ template "zshrc/plugins.tmpl" . }}
-{{ template "zshrc/work.tmpl" . }}
+{{ if (eq .environment "work") }}
+      {{ template "zshrc/work.tmpl" . }}
+{{ end }}
 
 path=(
       /usr/local/{bin,sbin}
