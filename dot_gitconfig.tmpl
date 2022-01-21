@@ -15,7 +15,8 @@
 
 [core]
 	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
-	editor = {{ .chezmoi.homeDir }}/.local/bin/lvim 
+	# editor = {{ .chezmoi.homeDir }}/.local/bin/lvim
+	editor = code --wait
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
