@@ -10,11 +10,11 @@ All these settings and preferences are quite specific to me and my Macbooks, use
 
 I use [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles. [Install it](https://www.chezmoi.io/docs/install/) and run `chemzoi init git@github.com:dannyknows/dotfiles.git`.
 
-
 ## Current Tools
 
 ### Basic
 
+- Editor: [VsCode](https://github.com/microsoft/vscode)
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty#installation)
 - Shell: [Zsh](https://zsh.sourceforge.io/Intro/intro_toc.html)
   - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
