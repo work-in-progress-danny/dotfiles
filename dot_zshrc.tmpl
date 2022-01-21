@@ -1,13 +1,9 @@
 if [ "$ZELLIJ" = "" ]; then zellij; fi # Start shell with Zellij 
 
-{{ template "zshrc/alias" . }}
-{{ template "zshrc/preferences" . }}
-{{ template "zshrc/plugins" . }}
-
-#Shell Config / Random collection of config passed down from smarter people and the internet
-export GPG_TTY=`tty`
-# source /usr/local/opt/chruby/share/chruby/chruby.sh
-# source /usr/local/opt/chruby/share/chruby/auto.sh
+{{ template "zshrc/alias.tmpl" . }}
+{{ template "zshrc/preferences.tmpl" . }}
+{{ template "zshrc/plugins.tmpl" . }}
+{{ template "zshrc/work.tmpl" . }}
 
 path=(
       /usr/local/{bin,sbin}
@@ -21,7 +17,7 @@ path=(
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# eval "$(rbenv init -)"
-# eval "$(pyenv init -)"
-# eval "$(direnv hook zsh)"
+export GPG_TTY=`tty`
+
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"

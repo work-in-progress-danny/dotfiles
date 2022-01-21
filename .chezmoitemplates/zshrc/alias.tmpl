@@ -28,8 +28,8 @@ exa_interactive_tree_script(){
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
-alias v='/Users/danny/.local/bin/lvim'
-alias lvim='/Users/danny/.local/bin/lvim'
+alias v='{{ .chezmoi.homeDir }}/.local/bin/lvim'
+alias lvim='{{ .chezmoi.homeDir }}/.local/bin/lvim'
 alias g='gitui'
 alias ch='chezmoi'
 
@@ -38,8 +38,8 @@ alias school='cd ~/school'
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias desktop="cd ~/Desktop"
 alias fun='cd ~/fun'
-alias menu='cd /Users/danny/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
-alias brain='cd /Users/danny/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
+alias menu='cd {{ .chezmoi.homeDir }}/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
+alias brain='cd {{ .chezmoi.homeDir }}/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 
 # Edit Dotfiles
 alias dotfiles='cd ~/.dotfiles/'
