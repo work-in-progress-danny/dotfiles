@@ -15,16 +15,7 @@ alias cv='cv -i'
 alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias l='exa -hal --group-directories-first --git --time-style=long-iso' # exa ( modern ls replacement https://github.com/ogham/exa )
-alias ltree='exa_interactive_tree_script'
-# scripts
-exa_interactive_tree_script(){
-  if [[ $1 -gt 0 ]]
-  then 
-      exa --tree --level=$1 -hal --git --time-style=long-iso
-  else
-      echo "Please provide a number for depth of tree lists";
-  fi
-}
+alias ltree='{{ .chezmoi.homeDir }}/scripts/exa_list_tree'
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
