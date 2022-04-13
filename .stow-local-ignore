@@ -2,5 +2,6 @@
 .sample_gitconfig
 .stow-local-ignore
 /scripts
-/zshrc
-/archive
+/source
+/_archive
+/.git
