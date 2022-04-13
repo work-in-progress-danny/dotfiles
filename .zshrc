@@ -1,8 +1,8 @@
 if [ "$ZELLIJ" = "" ]; then zellij; fi # Start shell with Zellij 
 
-source ~/.dotfiles/zshrc/alias.sh
-source ~/.dotfiles/zshrc/preferences.sh
-source ~/.dotfiles/zshrc/plugins.sh
+source ~/.dotfiles/source/zshrc/alias.sh
+source ~/.dotfiles/source/zshrc/preferences.sh
+source ~/.dotfiles/source/zshrc/plugins.sh
 # source ~/.dotfiles/zshrc/work.sh
 
 path=(

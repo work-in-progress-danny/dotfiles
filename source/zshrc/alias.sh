@@ -11,9 +11,8 @@ alias ltree='~/.dotfiles/scripts/exa_list_tree'
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
-alias v='~/.local/bin/lvim'
+alias v='~/.nix-profile/bin/nvim'
 alias lvim='~/.local/bin/lvim'
-alias g='gitui'
 
 # Directories
 alias school='cd ~/school'
@@ -21,6 +20,7 @@ alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias desktop="cd ~/Desktop"
 alias fun='cd ~/fun'
 alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
+alias mono='menu && cd menu-mono'
 alias brain='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/cs50'
 
