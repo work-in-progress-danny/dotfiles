@@ -27,14 +27,3 @@
 
 [branch]
 	autorebase = true # When pulling changes to your current branch try rebase instead of auto merge
-
-[alias]
-	st = status
-	di = diff
-	co = checkout
-	ci = commit
-	br = branch
-	cm = commit -m
-	cp = cherry-pick
-	uncommit = reset HEAD^
-
