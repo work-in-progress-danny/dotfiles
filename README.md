@@ -14,15 +14,15 @@ I wouldn't recommend this as I don't have a comprehensive list of installed soft
   - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
 - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
 - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
-- Dotfiles Manager: [GNU stow]()
-- Package Manager: [Nix Home-Manager]()
+- Dotfiles Manager: [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
+- Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - A better cat command: [Bat](https://github.com/sharkdp/bat)
 - A better ls command: [Exa](https://github.com/ogham/exa)
 
 ## Old Tools
 
 - Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/)
-- Package Manager: [Homebrew]()
+- Package Manager: [Homebrew](https://brew.sh/)
 - Terminals: [iTerm2](https://iterm2.com/), [Kitty](https://github.com/kovidgoyal/kitty)
 - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
 - Shell: [Fish Shell](https://fishshell.com/)
