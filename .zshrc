@@ -3,6 +3,7 @@ if [ "$ZELLIJ" = "" ]; then zellij; fi # Start shell with Zellij
 source ~/.dotfiles/source/zshrc/alias.sh
 source ~/.dotfiles/source/zshrc/preferences.sh
 source ~/.dotfiles/source/zshrc/plugins.sh
+source ~/.dotfiles/source/zshrc/environment.sh
 # source ~/.dotfiles/zshrc/work.sh
 
 path=(
@@ -13,9 +14,6 @@ path=(
       $HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin
       $path
      )
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GPG_TTY=`tty`
 
