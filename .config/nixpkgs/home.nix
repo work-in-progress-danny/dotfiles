@@ -25,6 +25,7 @@
       # languages
       cargo
       yarn
+      starship
   ];
 
   # This value determines the Home Manager release that your

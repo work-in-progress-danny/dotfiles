@@ -24,4 +24,4 @@ if [ -e  ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profil
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 
 eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
+eval "$(~/.nix-profile/bin/starship init zsh)"
