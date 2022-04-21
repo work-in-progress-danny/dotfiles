@@ -13,8 +13,6 @@ HISTFILE="$HOME/.zsh_history"
 
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
-export RANGER_LOAD_DEFAULT_RC=false
-
 export EXA_COLORS="da=32" # da: timestamp
 
 export PATH=~/Library/Python/3.8/bin:$PATH

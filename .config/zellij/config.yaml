@@ -253,5 +253,5 @@ keybinds:
 # eg. when terminal window with an active zellij session is closed
 Options:
   - quit
-# - detach (Default)
+
 on_force_close: quit
