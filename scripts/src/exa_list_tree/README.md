@@ -17,7 +17,7 @@ exa_interactive_tree_script(){
 
 1. cd into directory run `$ cargo build release`
 2. copy or symlink `target/release/exa_list_tree` whereever you'd like the executable binary
-3. alias the binary in your `.zshrc/.bashrc`
+3. alias the binary in your `.zshrc/.bashrc` with `alias ltree='~/.dotfiles/scripts/exa_list_tree'`
 
 NOTE: you will have to change the output file's permissions with:
 
@@ -36,7 +36,7 @@ chmod +x ~/scripts/exa_list_tree
 ```zsh
 exa_list_tree <DEPTH> <PATH>
 # DEPTH of directories you want to print
-# PATH to directory you want to print
+# <optional> PATH to directory you want to print, defaults to current working directory
 #
 # e.g exa_list_tree 3 ~
 #
