@@ -23,8 +23,9 @@
       gitui
       gnupg
       # languages
-      cargo
       # yarn yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
+      # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
+      # rustc 
       starship
       fnm
   ];
