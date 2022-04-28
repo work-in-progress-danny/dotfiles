@@ -16,3 +16,5 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export EXA_COLORS="da=32" # da: timestamp
 
 export PATH=~/Library/Python/3.8/bin:$PATH
+
+autoload -U compinit && compinit
