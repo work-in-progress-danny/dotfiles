@@ -28,6 +28,8 @@
       # rustc 
       starship
       fnm
+      neovim
+      stylua
   ];
 
   # This value determines the Home Manager release that your
