@@ -33,12 +33,12 @@ vim.opt.spell = true
 vim.opt.spelllang = "en"
 vim.opt.spellfile = "~/.dotfiles/source/vim/spell/en.utf-8.add"
 -- Tabs/lines
+vim.cmd("set colorcolumn=100")
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
--- vim.opt.nowrap = true
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.showtabline = 2 -- always show tabs
