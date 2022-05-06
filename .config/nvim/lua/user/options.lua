@@ -48,7 +48,7 @@ vim.opt.number = true -- set numbered lines
 vim.opt.cursorline = true -- highlight the current line
 -- other quality of life
 vim.opt.errorbells = false
-vim.opt.timeoutlen = 100 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
 
 -- On the BufWrite event, format the current buffer
 vim.api.nvim_create_autocmd({ "BufWrite" }, {
