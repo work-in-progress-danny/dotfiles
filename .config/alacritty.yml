@@ -6,8 +6,12 @@ save_to_clipboard: true
 font:
   normal: 
     family: Hack Nerd Font
-  size: 14.0
-use_thin_strokes: true
+  size: 13.0
+  use_thin_strokes: true
+  offset:
+    x: 1
+    y: 1
+  
 
 scrolling:
   # Specifying '0' will disable scrolling.
@@ -21,13 +25,29 @@ cursor:
     blinking: Always
     blink_interval: 500
 
-# VSCode's integrated terminal default colors
-# Primary and dimmed colors needed
+key_bindings:
+  # (MacOS) 
+  - { key: Left,        mods: Alt,       chars: "\x1bb"                        } # one word left
+  - { key: Right,       mods: Alt,       chars: "\x1bf"                        } # one word right
+  - { key: Left,        mods: Command,   chars: "\x1bOH",   mode: AppCursor    } # Home
+  - { key: Right,       mods: Command,   chars: "\x1bOF",   mode: AppCursor    } # End
+  - { key: Back,        mods: Super,     chars: "\x15"                         } # delete word/line
+  - { key: LBracket,    mods: Alt,       chars: "\x1b["                        } # Alt + [
+  - { key: RBracket,    mods: Alt,       chars: "\x1b]"                        } # Alt + ]
+  # Zellij keybinds https://github.com/zellij-org/zellij/issues/265#issuecomment-925814212
+  - { key: N,           mods: Alt,       chars: "\x1bn"                        } # Alt + n
+  - { key: H,           mods: Alt,       chars: "\x1bh"                        } # Alt + h
+  - { key: J,           mods: Alt,       chars: "\x1bj"                        } # Alt + j
+  - { key: K,           mods: Alt,       chars: "\x1bk"                        } # Alt + k
+  - { key: L,           mods: Alt,       chars: "\x1bl"                        } # Alt + l
 
 colors:
   cursor:
      background: "#c015ef"
      foreground: "#ffffff"
+
+  # VSCode's integrated terminal default colors
+  # Primary and dimmed colors needed
   #  (VScode Dark+ colours) 
   # # Default colors
   # primary:
@@ -88,20 +108,3 @@ colors:
     magenta: '0xd3869b'
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
-
-key_bindings:
-  # (MacOS) 
-  - { key: Left,        mods: Alt,       chars: "\x1bb"                        } # one word left
-  - { key: Right,       mods: Alt,       chars: "\x1bf"                        } # one word right
-  - { key: Left,        mods: Command,   chars: "\x1bOH",   mode: AppCursor    } # Home
-  - { key: Right,       mods: Command,   chars: "\x1bOF",   mode: AppCursor    } # End
-  - { key: Back,        mods: Super,     chars: "\x15"                         } # delete word/line
-  - { key: LBracket,    mods: Alt,       chars: "\x1b["                        } # Alt + [
-  - { key: RBracket,    mods: Alt,       chars: "\x1b]"                        } # Alt + ]
-  # Zellij keybinds https://github.com/zellij-org/zellij/issues/265#issuecomment-925814212
-  - { key: N,           mods: Alt,       chars: "\x1bn"                        } # Alt + n
-  - { key: H,           mods: Alt,       chars: "\x1bh"                        } # Alt + h
-  - { key: J,           mods: Alt,       chars: "\x1bj"                        } # Alt + j
-  - { key: K,           mods: Alt,       chars: "\x1bk"                        } # Alt + k
-  - { key: L,           mods: Alt,       chars: "\x1bl"                        } # Alt + l
-
