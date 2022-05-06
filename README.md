@@ -32,26 +32,30 @@ Installing this manually as VScode's rust analyser can't find what it needs to r
 [Rust-lang.org/install](https://www.rust-lang.org/tools/install)
 
 1. this should auto-magically install `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+when installing home-manager, don't forget to run `nix-channel --add https://nixos.org/channels/nixpkgs-unstable` so nix knows where to pull changes from
 
 ## Current Tools
 
-- Editor: [VsCode](https://github.com/microsoft/vscode)
+- Editor: [Neovim](https://github.com/neovim/neovim)
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty#installation)
+    - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
 - Shell: [Zsh](https://zsh.sourceforge.io/Intro/intro_toc.html)
   - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-- Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
-- Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
 - Dotfiles Manager: [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
-- A better cat command: [Bat](https://github.com/sharkdp/bat)
-- A better ls command: [Exa](https://github.com/ogham/exa)
+- CLI apps: 
+    - A better cat: [Bat](https://github.com/sharkdp/bat)
+    - A better ls: [Exa](https://github.com/ogham/exa)
+    - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
 
 ## Old Tools
 
+- Editors: [VsCode](https://github.com/microsoft/vscode), [LunarVim ("batteries included" Neovim config)](https://github.com/lunarvim/lunarvim)
+- Terminals: [iTerm2](https://iterm2.com/), [Kitty](https://github.com/kovidgoyal/kitty)
+    - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
+- Shell: [Fish Shell](https://fishshell.com/)
+    - Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+    - Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
 - Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/)
 - Package Manager: [Homebrew](https://brew.sh/)
-- Terminals: [iTerm2](https://iterm2.com/), [Kitty](https://github.com/kovidgoyal/kitty)
-- Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
-- Shell: [Fish Shell](https://fishshell.com/)
-- Shell Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
-- Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
+
