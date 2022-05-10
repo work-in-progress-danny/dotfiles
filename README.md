@@ -1,13 +1,13 @@
 # Dotfiles
 
-All these settings and preferences are quite specific to me, myself and my Macbooks, use them as a reference rather than a "batteries included" setup
+All these settings and preferences are quite specific to me, myself and my MacBooks, use them as a reference rather than a "batteries included" setup.
 
 ## Installation
 
 I wouldn't recommend this as I don't have a comprehensive list of installed software, the dotfiles assume many things are already installed and this could break your dev environment.
 
-1. install nix on the new system [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223)
-2. add `home.nix` to `~/.config/nixpkgs/` with `cp ./config/nixpkgs ~/.config`
+1. Install nix on the new system see [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223).
+2. Add `home.nix` to `~/.config/nixpkgs/` with `cp ./config/nixpkgs ~/.config`
 3. run `home-manager switch` to install all software
 4. (this is a little weird) delete `~/.config/nixpkgs` with `rm ~/.config/nixpkgs` and run `stow .`
    to clear out the untracked (symlinked) `home.nix` file
