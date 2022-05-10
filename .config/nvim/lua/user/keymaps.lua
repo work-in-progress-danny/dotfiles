@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- Normal --
+-- Normal
 keymap("", "q", "<Nop>", opts) -- remap q to nothing because its annoying when trying to :q
 
 -- Comment
@@ -74,7 +74,29 @@ keymap("n", "<leader>T", "<cmd>Telescope <cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 
 -- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Buffers
-keymap("n", "<leader>w", ":Bdelete<cr>", opts) -- close buffer on leader w uses bbye
+keymap("n", "<leader>w", "<cmd>Bdelete<cr>", opts) -- close buffer (uses bbye)
+keymap("n", "<leader>W", "<cmd>Bdelete!<cr>", opts) -- force close buffer (uses bbye)
+keymap("n", "<leader>s", "<cmd>w!", opts) -- force write buffer
+
+-- LSP
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- get variable declaration
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- get variable definition
+keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- get variable implementation
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts) -- get all references in codebase
+
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "<leader>K", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "<leader>k", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
+keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- rename all occurances under cursor
+
+keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts) -- code action under cursor
+
+keymap("n", "[e", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts) -- jump to previous error
+keymap("n", "]e", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts) -- jump to next error
+
+-- No highlight
+keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
