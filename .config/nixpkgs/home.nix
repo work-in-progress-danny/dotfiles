@@ -7,29 +7,36 @@
   home.homeDirectory = "/Users/danny";
 
   home.packages = with pkgs; [
-      # shell
-      zsh
-      bat
-      comma
-      direnv
-      exa
-      zellij
-      zsh-autosuggestions
-      zsh-syntax-highlighting
-      zsh-history-substring-search
-      stow
-      # git 
-      git
-      gitui
-      gnupg
-      # languages
-      # yarn yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
-      # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
-      # rustc 
-      starship
-      fnm
-      neovim
-      stylua
+    # shell
+    zsh
+    bat
+    comma # shopify's comma
+    direnv
+    exa
+    zellij
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+    stow
+    neovim
+    ripgrep
+    fd
+    # git 
+    git
+    gitui
+    gnupg
+    starship
+    # languages
+    # yarn yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
+    # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
+    # rustc 
+    stylua
+    fnm
+    # work
+    docker
+    postgresql
+    jdk11
+    deno
   ];
 
   # This value determines the Home Manager release that your

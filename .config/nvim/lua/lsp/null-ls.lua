@@ -8,12 +8,11 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
-
 null_ls.setup({
 	debug = false,
 	sources = {
 		-- Javascript
-		formatting.prettier,
+		formatting.deno_fmt, -- deno must be installed in the PATH, nix installs it
 		diagnostics.eslint,
 
 		-- Lua
