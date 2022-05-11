@@ -12,6 +12,6 @@ source ~/.dotfiles/source/zshrc/alias.sh
 source ~/.dotfiles/source/zshrc/preferences.sh
 source ~/.dotfiles/source/zshrc/plugins.sh
 source ~/.dotfiles/source/zshrc/environment.sh
-source ~/.dotfiles/source/zshrc/work.sh
+# source ~/.dotfiles/source/zshrc/work.sh
 
 eval "$(~/.nix-profile/bin/starship init zsh)"
