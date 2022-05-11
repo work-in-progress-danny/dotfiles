@@ -9,10 +9,8 @@ vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymor
 vim.opt.smartcase = true -- smart case
 vim.opt.swapfile = false -- creates a swapfile
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
-vim.opt.undofile = true -- enable persistent undo
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = false -- display lines as one long line
@@ -25,8 +23,8 @@ vim.opt.pumheight = 100 -- pop up menu height
 -- Window
 vim.opt.splitbelow = true -- force all horizontal splits to go below current window
 vim.opt.splitright = true -- force all vertical splits to go to the right of current window
--- undo
-vim.opt.undofile = true -- creates a undo file
+-- Undo
+vim.opt.undofile = true -- enable persistent undo
 -- vim.opt.undodir = "~/.vim/undo"
 -- Spelling
 vim.opt.spell = true
@@ -35,7 +33,7 @@ vim.opt.spelllang = "en_au"
 vim.cmd("set colorcolumn=100")
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.scrolloff = 8 -- is one of my fav
