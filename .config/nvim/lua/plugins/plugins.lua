@@ -56,7 +56,8 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use("kyazdani42/nvim-web-devicons") -- a nice plugin
+	use("kyazdani42/nvim-web-devicons") -- a nice icons plugin
+	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
@@ -73,7 +74,9 @@ return packer.startup(function(use)
 
 	-- Colour Scheme
 	use("morhetz/gruvbox") -- My favourite colour scheme
+	use("lifepillar/vim-gruvbox8")
 	use({ "p00f/nvim-ts-rainbow", requires = "vim-treesitter/nvim-treesitter" }) -- colours matching parenthesis
+	use("lilydjwg/colorizer")
 
 	-- CMP Plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -83,6 +86,7 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip", requires = "hrsh7th/nvim-cmp" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", requires = "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lua", requires = "hrsh7th/nvim-cmp" })
+	use("f3fora/cmp-spell")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -96,7 +100,7 @@ return packer.startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "nvim-telescope/telescope-media-files.nvim", requires = { "nvim-telescope/telescope.nvim" } })
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", requires = { "nvim-telescope/telescope.nvim" } })
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
@@ -106,6 +110,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("nvim-treesitter/playground")
 
 	-- Whichkey
 	use("folke/which-key.nvim")
