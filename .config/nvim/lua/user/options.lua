@@ -30,8 +30,7 @@ vim.opt.undofile = true -- creates a undo file
 -- vim.opt.undodir = "~/.vim/undo"
 -- Spelling
 vim.opt.spell = true
-vim.opt.spelllang = "en-au"
-vim.opt.spellfile = "~/.dotfiles/source/vim/spell/en.utf-8.add"
+vim.opt.spelllang = "en_au"
 -- Tabs/lines
 vim.cmd("set colorcolumn=100")
 vim.opt.tabstop = 2
