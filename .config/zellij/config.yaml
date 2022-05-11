@@ -172,8 +172,7 @@ keybinds:
           key: [ Char: "\t" ]
     scroll:
         - action: [SwitchToMode: Normal,]
-          key: [Ctrl: 'r', Ctrl: 's', Char: ' ',
-          Char: "\n",]
+          key: [Ctrl: 'r', Ctrl: 's', Char: ' ', Char: "\n" ]
         - action: [SwitchToMode: Tab,]
           key: [Ctrl: 't',]
         - action: [SwitchToMode: Locked,]
@@ -251,7 +250,7 @@ keybinds:
 
 # Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 # eg. when terminal window with an active zellij session is closed
-Options:
-  - quit
+# Options:
+#   - quit
 
-on_force_close: quit
+# on_force_close: quit
