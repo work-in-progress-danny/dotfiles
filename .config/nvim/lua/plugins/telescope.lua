@@ -14,7 +14,7 @@ telescope.setup({
 
 		prompt_prefix = " ",
 		selection_caret = " ",
-		path_display = { "truncate = 5" }, -- truncate the path of the file to a max of 5 levels up
+		path_display = { "smart" }, -- truncate the path of the file to a max of 5 levels up
 		file_ignore_patterns = {
 			"node_modules",
 			".git",
