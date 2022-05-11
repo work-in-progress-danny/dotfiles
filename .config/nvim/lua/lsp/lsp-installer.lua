@@ -1,30 +1,45 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
+local _, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not _ then
+	return
+end
+
+local _, lspconfig = pcall(require, "lspconfig")
+if not _ then
 	return
 end
 
 lsp_installer.setup()
 
-local lspconfig = require("lspconfig")
+local on_attach = require("lsp.handlers").on_attach
+local capabilities = require("lsp.handlers").capabilities
 
 lspconfig.sumneko_lua.setup({
-	init_options = { require("lsp.settings.sumneki_lua") },
+	settings = require("lsp.settings.sumneko_lua").settings,
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 lspconfig.jsonls.setup({
-	init_options = { require("lsp.settings.jsonls") },
+	settings = require("lsp.settings.jsonls").settings,
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 lspconfig.pyright.setup({
-	init_options = { require("lsp.settings.pyright") },
+	settings = require("lsp.settings.pyright").settings,
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.rust_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 -- lsp_installer.on_server_ready(function(server)
 -- 	local opts = {
--- 		on_attach = require("lsp.handlers").on_attach,
--- 		capabilities = require("lsp.handlers").capabilities,
 -- 	}
 -- 	if server.name == "jsonls" then
 -- 		local jsonls_opts = require("lsp.settings.jsonls")

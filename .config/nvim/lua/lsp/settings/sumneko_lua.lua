@@ -10,6 +10,10 @@ return {
 					[vim.fn.stdpath("config") .. "/lua"] = true,
 				},
 			},
+			-- Do not send telemetry data containing a randomized but unique identifier
+			telemetry = {
+				enable = false,
+			},
 		},
 	},
 }
