@@ -21,6 +21,13 @@ vim.g.maplocalleader = " "
 -- Normal
 keymap("", "q", "<Nop>", opts) -- remap q to nothing because its annoying when trying to :q
 
+-- Better Movement
+keymap("n", "<S-b>", "^", opts) -- shift b moves the Cursor to the start of the line
+keymap("n", "<S-e>", "$", opts) -- shift e moves the Cursor to the end of the line
+
+-- No highlight
+keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
+
 -- Comment
 -- [reference](https://github.com/numToStr/Comment.nvim/blob/master/doc/API.md#%EF%B8%8F-usage)
 keymap("n", "<leader>/", ":lua require('Comment.api').toggle_current_linewise()<cr>", opts) -- leader / comment out the current line when in normal mode
@@ -97,6 +104,3 @@ keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts) -- code
 
 keymap("n", "[e", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts) -- jump to previous error
 keymap("n", "]e", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts) -- jump to next error
-
--- No highlight
-keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
