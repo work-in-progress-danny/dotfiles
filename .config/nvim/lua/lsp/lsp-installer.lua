@@ -36,6 +36,11 @@ lspconfig.rust_analyzer.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.tsserver.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 -- lsp_installer.on_server_ready(function(server)
