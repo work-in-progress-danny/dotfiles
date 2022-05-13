@@ -17,3 +17,4 @@ require("plugins.bufferline")
 require("plugins.lualine")
 -- require("plugins.whichkey") until I have configured it fully it's disabled
 require("plugins.git-conflict")
+require("plugins.toggle-term")
