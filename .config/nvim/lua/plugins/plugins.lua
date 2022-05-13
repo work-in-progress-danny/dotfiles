@@ -120,6 +120,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
+	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and visa versa
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
