@@ -13,5 +13,6 @@ source ~/.dotfiles/source/zshrc/preferences.sh
 source ~/.dotfiles/source/zshrc/plugins.sh
 source ~/.dotfiles/source/zshrc/environment.sh
 # source ~/.dotfiles/source/zshrc/work.sh
+# I would use source ~/.dotfiles/source/zshrc/* but randomly the zsh plugins stop working
 
 eval "$(~/.nix-profile/bin/starship init zsh)"
