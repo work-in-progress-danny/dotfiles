@@ -32,7 +32,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost _plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -68,6 +68,9 @@ return packer.startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+
+	-- Toggle Term
+	use("akinsho/toggleterm.nvim")
 
 	-- Nvim Tree
 	use("kyazdani42/nvim-tree.lua")

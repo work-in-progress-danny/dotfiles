@@ -5,7 +5,7 @@ require("user.colourscheme")
 require("lsp.lsp")
 require("lsp.null-ls")
 
-require("plugins.plugins")
+require("plugins._plugins")
 require("plugins.cmp")
 require("plugins.telescope")
 require("plugins.treesitter")
