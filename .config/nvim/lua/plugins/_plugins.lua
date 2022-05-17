@@ -63,6 +63,9 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
+	-- Alpha (startup screen)
+	use("goolord/alpha-nvim")
+
 	-- Lualine
 	use({
 		"nvim-lualine/lualine.nvim",
