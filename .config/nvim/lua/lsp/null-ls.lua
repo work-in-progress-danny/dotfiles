@@ -14,7 +14,8 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		-- Javascript
-		formatting.deno_fmt, -- deno must be installed in the PATH, nix installs it
+		-- formatting.deno_fmt, -- deno must be installed in the PATH, nix installs it
+		formatting.prettier,
 		diagnostics.eslint,
 
 		-- Lua
