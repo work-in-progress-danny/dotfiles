@@ -79,7 +79,6 @@ return packer.startup(function(use)
 	use("morhetz/gruvbox") -- My favourite colour scheme
 	use("lifepillar/vim-gruvbox8")
 	use({ "p00f/nvim-ts-rainbow", requires = "vim-treesitter/nvim-treesitter" }) -- colours matching parenthesis
-	use("lilydjwg/colorizer")
 
 	-- CMP Plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -125,6 +124,9 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
 	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and visa versa
+
+	-- Utilities
+	use("lilydjwg/colorizer") -- highlight colour codes e.g #282 #718
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
