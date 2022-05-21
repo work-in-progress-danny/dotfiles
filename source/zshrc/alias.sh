@@ -32,8 +32,8 @@ alias mlab='cd ~/work/manager-lab'
 alias dmod='cd ~/work/develop-module/frontend'
 
 # Edit Dotfiles
-alias dotfiles='cd ~/.dotfiles/'
-alias odotfiles='code ~/.dotfiles/'
+alias d='cd ~/.dotfiles/'
+alias od='v ~/.dotfiles/'
 
 # Git
 alias g='gitui'
