@@ -63,7 +63,6 @@ end
 M.on_attach = function(client)
 	if
 		client.name == "tsserver"
-		or client.name == "tsserver"
 		or client.name == "jsonls"
 		or client.name == "rustfmt"
 		or client.name == "rust_analyzer"

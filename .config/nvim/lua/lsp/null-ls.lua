@@ -22,7 +22,26 @@ null_ls.setup({
 		formatting.stylua,
 
 		-- Rust
-		formatting.rustfmt,
+		-- rustfmt defaults to rust 2015, this script attempts to read from cargo.toml or defaults to 2021
+		-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Source-specific-Configuration#rustfmt
+		-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#rustfmt
+		formatting.rustfmt.with({
+			extra_args = function(params)
+				local Path = require("plenary.path")
+				local cargo_toml = Path:new(params.root .. "/" .. "Cargo.toml")
+
+				if cargo_toml:exists() and cargo_toml:is_file() then
+					for _, line in ipairs(cargo_toml:readlines()) do
+						local edition = line:match([[^edition%s*=%s*%"(%d+)%"]])
+						if edition then
+							return { "--edition=" .. edition }
+						end
+					end
+				end
+				-- default edition when we don't find `Cargo.toml` or the `edition` in it.
+				return { "--edition=2021" }
+			end,
+		}),
 
 		-- Python
 		-- formatting.black.with { extra_args = { "--fast" } },

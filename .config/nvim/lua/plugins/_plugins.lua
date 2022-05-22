@@ -1,15 +1,11 @@
---   use('editorconfig/editorconfig-vim')
 --   use('lukas-reineke/indent-blankline.nvim')
---   use('tpope/vim-fugitive') -- Git
 --   use({ 'SmiteshP/nvim-gps' })
---   use({ 'windwp/nvim-spectre', requires = { 'nvim-lua/plenary.nvim' } }) -- Search UI
 
 --   -- Text operations
 --   use('AndrewRadev/splitjoin.vim')
 --   use('christoomey/vim-sort-motion')
 --   use('ntpeters/vim-better-whitespace')
 --   use('rstacruz/vim-closer')
---   use('tpope/vim-commentary')
 
 local fn = vim.fn
 -- Automatically install packer
@@ -77,6 +73,9 @@ return packer.startup(function(use)
 
 	-- Nvim Tree
 	use("kyazdani42/nvim-tree.lua")
+
+	-- Languages
+	use("simrat39/rust-tools.nvim")
 
 	-- Colour Scheme
 	use("morhetz/gruvbox") -- My favourite colour scheme
