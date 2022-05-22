@@ -1,3 +1,5 @@
+-- https://github.com/folke/which-key.nvim
+
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
@@ -50,7 +52,7 @@ local normal_mode_mappings = {
 	w = { "<cmd>Bdelete<cr>", "Close buffer" }, -- (uses bbye)
 	W = { "<cmd>Bdelete!<cr>", "Force close buffer" }, -- (uses bbye)
 	s = { "<cmd>w!<cr>", "Force write buffer" },
-	h = { "<cmd>noh<cr>", "Remove Highlights" },
+	h = { "<cmd>noh<cr>", "Remove highlights" },
 	r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename all instances" },
 	a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Display code action" },
 
@@ -80,7 +82,6 @@ local visual_mode_opts = {
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
 	nowait = true, -- use `nowait` when creating keymaps
-	-- default_mode = "x",
 }
 
 local visual_mode_mappings = {
