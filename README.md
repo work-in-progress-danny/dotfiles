@@ -15,7 +15,7 @@ I wouldn't recommend this as I don't have a comprehensive list of installed soft
 
 ### Manual installation of packages
 
-this is only temporary. Until Yarn and Cargo are usable on nix for my setup
+this is only temporary. Until Yarn are usable on nix for my setup
 
 #### Yarn
 
@@ -25,15 +25,6 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 
 1. this should auto-magically install `curl -o- -L https://yarnpkg.com/install.sh | bash`
 
-#### Cargo
-
-Installing this manually as VScode's rust analyser can't find what it needs to run [see](https://github.com/rust-lang/rust-analyzer/issues/9506)
-
-[Rust-lang.org/install](https://www.rust-lang.org/tools/install)
-
-1. this should auto-magically install `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-when installing home-manager, don't forget to run `nix-channel --add https://nixos.org/channels/nixpkgs-unstable` so nix knows where to pull changes from
-
 ## Current Tools
 
 - Editor: [Neovim](https://github.com/neovim/neovim)
@@ -41,6 +32,11 @@ when installing home-manager, don't forget to run `nix-channel --add https://nix
     - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
 - Shell: [Zsh](https://zsh.sourceforge.io/Intro/intro_toc.html)
   - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+  - Zsh Plugin Manger: [Nix Home-Manager](https://github.com/nix-community/home-manager)
+  - Zsh Plugins:
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - Dotfiles Manager: [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - CLI apps: 
