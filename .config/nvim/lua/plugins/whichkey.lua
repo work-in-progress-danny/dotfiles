@@ -71,7 +71,7 @@ local normal_mode_mappings = {
 		name = "Terminal",
 		t = { "<cmd>ToggleTerm<cr>", "Open Terminal" },
 		-- GitUI
-		G = { Gitui_toggle, "Open GitUI" }, -- global is defined in toggle-term
+		g = { Gitui_toggle, "Open GitUI" }, -- global is defined in toggle-term
 	},
 }
 
