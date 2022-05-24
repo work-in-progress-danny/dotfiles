@@ -8,6 +8,11 @@ if not _ then
 	return
 end
 
+local _, rust_tools = pcall(require, "rust-tools")
+if not _ then
+	return
+end
+
 lsp_installer.setup()
 
 local on_attach = require("lsp.handlers").on_attach
@@ -51,7 +56,7 @@ lspconfig.rust_analyzer.setup({
 	capabilities = capabilities,
 })
 
-require("rust-tools").setup({
+rust_tools.setup({
 	tools = { -- rust-tools options
 		autoSetHints = true,
 		hover_with_actions = true,
