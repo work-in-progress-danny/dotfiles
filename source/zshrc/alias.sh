@@ -17,21 +17,21 @@ alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashin
 alias v='~/.nix-profile/bin/nvim'
 
 # Directories
-alias school='cd ~/school'
-alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias desktop="cd ~/Desktop"
-alias fun='cd ~/fun'
-alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
-alias mono='menu && cd menu-monorepo'
+alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
+alias projects='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
 alias brain='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
-alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/cs50'
+
+## Projects
+alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
+alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
 
 # Work
 alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
 alias dmod='cd ~/work/develop-module/frontend'
 
-# Edit Dotfiles
+# Dotfiles
 alias d='cd ~/.dotfiles/'
 alias od='v ~/.dotfiles/'
 
