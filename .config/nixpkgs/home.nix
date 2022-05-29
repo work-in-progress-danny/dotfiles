@@ -38,7 +38,6 @@
     docker
     postgresql
     jdk11
-    deno
   ];
 
   # This value determines the Home Manager release that your
