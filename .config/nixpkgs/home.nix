@@ -33,6 +33,7 @@
     # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
     # rustc 
     stylua
+    rnix-lsp
     fnm
     # work
     docker

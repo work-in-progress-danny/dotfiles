@@ -13,7 +13,18 @@ if not _ then
 	return
 end
 
-lsp_installer.setup()
+lsp_installer.setup({
+	ensure_installed = {
+		"sumneko_lua",
+		"pyright",
+		"jsonls",
+		"tsserver",
+		"tailwindcss",
+		"cssls",
+		"rust_analyzer",
+		"rnix",
+	},
+})
 
 local on_attach = require("lsp.handlers").on_attach
 local capabilities = require("lsp.handlers").capabilities
@@ -52,6 +63,11 @@ lspconfig.cssls.setup({
 })
 
 lspconfig.rust_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.rnix.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
