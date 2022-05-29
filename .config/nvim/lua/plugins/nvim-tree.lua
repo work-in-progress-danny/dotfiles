@@ -5,27 +5,6 @@ if not status_ok then
 	return
 end
 
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		ignored = "◌",
-		untracked = "?",
-		-- staged = "S",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
-
 local mappings = {
 	{ key = { "l", "o", "<2-LeftMouse>" }, action = "edit" },
 	{ key = "v", action = "vsplit" },
@@ -69,6 +48,30 @@ local mappings = {
 }
 
 nvim_tree.setup({
+	renderer = {
+		icons = {
+			glyphs = {
+				default = "",
+				symlink = "",
+				git = {
+					unstaged = "",
+					unmerged = "",
+					renamed = "➜",
+					deleted = "",
+					ignored = "◌",
+					untracked = "?",
+					-- staged = "S",
+				},
+				folder = {
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+				},
+			},
+		},
+	},
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = false,
