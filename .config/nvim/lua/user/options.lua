@@ -21,6 +21,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.fillchars = "fold: "
 vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
+vim.opt.foldlevel = 2
 vim.cmd([[
 :highlight Folded guibg=#33836	 guifg=#a89984
 :highlight FoldColumn guibg=darkgrey guifg=white
