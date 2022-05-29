@@ -15,6 +15,25 @@ vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+-- Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.fillchars = "fold: "
+vim.opt.foldnestmax = 3
+vim.opt.foldminlines = 1
+vim.cmd([[
+:highlight Folded guibg=#33836	 guifg=#a89984
+:highlight FoldColumn guibg=darkgrey guifg=white
+set foldtext=CustomFoldText()
+
+: function! CustomFoldText()
+:   let foldSize = 1 + v:foldend - v:foldstart
+:   let foldSizeStr = "+-- "  . foldSize . " lines "
+:   let foldStartStr = substitute(trim(getline(v:foldstart)), '\\t', repeat(' ', &tabstop),'g')
+:   let foldEndStr = trim(getline(v:foldend))
+:   return foldSizeStr . foldStartStr . "..." . foldEndStr
+: endfunction
+]])
 -- Search
 vim.opt.incsearch = true
 -- UI
