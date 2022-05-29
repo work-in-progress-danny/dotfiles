@@ -15,7 +15,7 @@ I wouldn't recommend this as I don't have a comprehensive list of installed soft
 
 ### Manual installation of packages
 
-this is only temporary. Until Yarn are usable on nix for my setup
+This is only temporary. Until Yarn is usable on nix for my setup
 
 #### Yarn
 

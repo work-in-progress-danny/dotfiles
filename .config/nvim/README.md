@@ -1,14 +1,15 @@
 # My Neovim Config
 
+This is a pretty custom none-isolated installation, many of the dependencies are installed via Nix,
+If you're using it go wild. Maybe one day I'll move to a nix based setup/config until then Lua it is
+
 ## TODO
 
 ### Features
 
-- create a keymap for `:noh` maybe `<leader>h`
-
 - figure out folding
 
-- Figure out spelling
+- Figure out spelling. Kind of done, z = opens all the spelling suggestions. I would want a better interface for it though
 
 add all `lua vim.lsp.buf.` functions to keymaps, things like;
 - highlight all matching
@@ -26,8 +27,8 @@ why are functions the same color as text but props are all colour coded?
 
 ### Performance
 
-- eslint is slow.. I wonder if deno is better, like a rust process running in the 
-backround the adhears to eslintrc rules. I think why it's slow is because it runs node eslint every time
+- ~eslint~ prettier is slow.. I wonder if deno is better, like a rust process running in the 
+backround the adhears to ~eslintrc~ prettierrc rules. I think why it's slow is because it runs node ~eslint~ prettier every time
 
 ## Design notes
 
@@ -54,6 +55,8 @@ Solidify my understanding of this setup;
 - `*` highlights all occurences under cursor
 
 - `:windo close` closes the current window but leaves the buffer open (it will pop up in your remaining window)
+
+- gJ split joins up, gS split joins down
 
 ## Radar
 
