@@ -5,8 +5,6 @@ if not status_ok then
 	return
 end
 
--- telescope.load_extension('media_files')
-
 local actions = require("telescope.actions")
 
 telescope.setup({
@@ -14,7 +12,7 @@ telescope.setup({
 
 		prompt_prefix = " ",
 		selection_caret = " ",
-		path_display = { "smart" }, -- truncate the path of the file to a max of 5 levels up
+		path_display = { "smart" },
 		file_ignore_patterns = {
 			"node_modules",
 			".git",
@@ -116,4 +114,5 @@ telescope.setup({
 	},
 })
 
-require("telescope").load_extension("fzf")
+telescope.load_extension("fzf")
+-- telescope.load_extension('media_files')

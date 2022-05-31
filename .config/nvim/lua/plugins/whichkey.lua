@@ -7,6 +7,10 @@ end
 
 require("plugins.toggle-term") -- needed for Gitui_toggle
 
+function Cmd(command_body)
+	return "<cmd>" .. command_body .. "<cr>"
+end
+
 local setup_preferences = {
 	ignore_missing = true,
 	window = {
@@ -36,41 +40,44 @@ local normal_mode_opts = {
 local normal_mode_mappings = {
 	k = {
 		name = "signature help",
-		h = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
-		k = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Show diagnostics" },
-		K = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show hover" },
+		h = { Cmd("lua vim.lsp.buf.signature_help()"), "Signature help" },
+		k = { Cmd("lua vim.diagnostic.open_float()"), "Show diagnostics" },
+		K = { Cmd("lua vim.lsp.buf.hover()"), "Show hover" },
 	},
 	-- Telescope
-	f = { ":Telescope find_files hidden=true<cr>", "Find files" },
-	G = { ":Telescope live_grep hidden=true<cr>", "Grep text" },
-	T = { "<cmd>Telescope <cr>", "Toggle Telescope" },
+	f = { Cmd("Telescope find_files hidden=true"), "Find files" },
+	G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
+	T = {
+		name = "Telescope",
+		t = { Cmd("Telescope"), "Toggle Telescope" },
+		c = { Cmd("Telescope command_history"), "Command History" },
+		b = { Cmd("Telescope buffers"), "Buffers" },
+	},
 
 	-- NvimTree
-	e = { "<cmd>NvimTreeToggle<cr>", "Toggle nvim-tree" },
+	e = { Cmd("NvimTreeToggle"), "Toggle nvim-tree" },
 
-	-- Buffer
-	w = { "<cmd>Bdelete<cr>", "Close buffer" }, -- (uses bbye)
-	W = { "<cmd>Bdelete!<cr>", "Force close buffer" }, -- (uses bbye)
-	s = { "<cmd>w!<cr>", "Force write buffer" },
-	h = { "<cmd>noh<cr>", "Remove highlights" },
-	r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename all instances" },
-	a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Display code action" },
+	-- Buffer Management
+	w = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
+	W = { Cmd("Bdelete!"), "Force close buffer" }, -- (uses bbye)
+	s = { Cmd("w!"), "Force write buffer" },
+	h = { Cmd("noh"), "Remove highlights" },
+	r = { Cmd("lua vim.lsp.buf.rename()"), "Rename all instances" },
+	a = { Cmd("lua vim.lsp.buf.code_action()"), "Display code action" },
 
 	-- Get *
 	g = {
 		name = "Get something",
-
-		D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
-		d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
-		i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
-		r = { " <cmd>lua vim.lsp.buf.references()<CR>", "All references in code base" },
+		D = { Cmd("lua vim.lsp.buf.declaration()"), "Declaration" },
+		d = { Cmd("lua vim.lsp.buf.definition()"), "Definition" },
+		i = { Cmd("lua vim.lsp.buf.implementation()"), "Implementation" },
+		r = { Cmd("lua vim.lsp.buf.references()"), "All references in code base" },
 	},
 
 	-- Terminal
 	t = {
 		name = "Terminal",
-		t = { "<cmd>ToggleTerm<cr>", "Open Terminal" },
-		-- GitUI
+		t = { Cmd("ToggleTerm"), "Open Terminal" },
 		g = { Gitui_toggle, "Open GitUI" }, -- global is defined in toggle-term
 	},
 }

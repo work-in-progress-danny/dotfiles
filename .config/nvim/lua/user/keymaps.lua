@@ -1,4 +1,7 @@
 local opts = { noremap = true, silent = true }
+-- require("plugins.whichkey")
+
+require("plugins.whichkey")
 
 local term_opts = { silent = true }
 
@@ -11,6 +14,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
+--   all modes = "",
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
@@ -27,6 +31,9 @@ keymap("n", "<S-e>", "$", opts) -- shift e moves the Cursor to the end of the li
 
 -- No highlight
 keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
+
+-- Use Telescope current_buffer_fuzzy_find over vim's /
+keymap("", "/", Cmd("Telescope current_buffer_fuzzy_find"), opts)
 
 -- Comment
 -- [reference](https://github.com/numToStr/Comment.nvim/blob/master/doc/API.md#%EF%B8%8F-usage)
@@ -73,8 +80,7 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Plugins --
+-- Plugins
 -- LSP
-
 keymap("n", "[e", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts) -- jump to previous error
 keymap("n", "]e", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts) -- jump to next error
