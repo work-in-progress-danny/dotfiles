@@ -79,7 +79,7 @@ return packer.startup(function(use)
 
 	-- Colour Scheme
 	use("morhetz/gruvbox") -- My favourite colour scheme
-	use("lifepillar/vim-gruvbox8")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "p00f/nvim-ts-rainbow", requires = "vim-treesitter/nvim-treesitter" }) -- colours matching parenthesis
 
 	-- CMP Plugins
