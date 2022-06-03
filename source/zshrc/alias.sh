@@ -37,6 +37,8 @@ alias od='v ~/.dotfiles/'
 
 # Git
 alias g='gitui'
+# fetcher
+alias gfom="git fetch origin master"
 # commit
 alias gc='git commit'
 alias gcm='git commit -m'
