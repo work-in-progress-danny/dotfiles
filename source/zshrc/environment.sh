@@ -1,5 +1,7 @@
 eval "$(fnm env --use-on-cd)"
 
+if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
+
 source $HOME/.cargo/env
 
 export GPG_TTY=`tty`

@@ -29,7 +29,7 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 
 - Editor: [Neovim](https://github.com/neovim/neovim)
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty#installation)
-    - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
+  - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
 - Shell: [Zsh](https://zsh.sourceforge.io/Intro/intro_toc.html)
   - Prompt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
   - Zsh Plugin Manger: [Nix Home-Manager](https://github.com/nix-community/home-manager)
@@ -39,19 +39,18 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - Dotfiles Manager: [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
-- CLI apps: 
-    - A better cat: [Bat](https://github.com/sharkdp/bat)
-    - A better ls: [Exa](https://github.com/ogham/exa)
-    - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
+- CLI apps:
+  - A better cat: [Bat](https://github.com/sharkdp/bat)
+  - A better ls: [Exa](https://github.com/ogham/exa)
+  - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
 
 ## Old Tools
 
 - Editors: [VsCode](https://github.com/microsoft/vscode), [LunarVim ("batteries included" Neovim config)](https://github.com/lunarvim/lunarvim)
 - Terminals: [iTerm2](https://iterm2.com/), [Kitty](https://github.com/kovidgoyal/kitty)
-    - Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux)
+  - Terminal Multiplexer: [Zellij](https://github.com/zellij-org/zellij#how-do-i-install-it)
 - Shell: [Fish Shell](https://fishshell.com/)
-    - Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
-    - Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
+  - Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+  - Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
 - Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/)
 - Package Manager: [Homebrew](https://brew.sh/)
-

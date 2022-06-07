@@ -13,7 +13,6 @@
     comma # shopify's comma
     direnv
     exa
-    zellij
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-history-substring-search
@@ -21,6 +20,7 @@
     neovim
     ripgrep
     fd
+    tmux
     # git 
     git
     gitui
