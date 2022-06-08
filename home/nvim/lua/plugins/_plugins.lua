@@ -103,8 +103,8 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-
-	use("j-hui/fidget.nvim")
+	use("j-hui/fidget.nvim") -- nice little notifier in the corner communicating the internals of lsp
+	use("github/copilot.vim")
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
