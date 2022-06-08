@@ -1,5 +1,5 @@
 # Command Relearning
-alias find='echo "use fd, https://github.com/sharkdp/fd. Remove when it makes sense, 14 Jan"'
+alias find='echo "use fd, https://github.com/sharkdp/fd. Remove when it makes sense, 14 Jan" find'
 
 # Shell 
 alias rm='rm -i'
