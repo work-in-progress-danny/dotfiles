@@ -5,21 +5,32 @@ if not null_ls_status_ok then
 	return
 end
 
+local _, fidget = pcall(require, "fidget")
+if not _ then
+	return
+end
+
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
 	sources = {
 		-- Javascript
 		-- formatting.deno_fmt, -- deno must be installed in the PATH, nix installs it
-		formatting.prettier,
-		diagnostics.eslint,
+		formatting.prettierd,
+		diagnostics.eslint_d,
 
 		-- Lua
 		formatting.stylua,
+
+		-- Nix
+		diagnostics.statix,
+		code_actions.statix,
 
 		-- Rust
 		-- rustfmt defaults to rust 2015, this script attempts to read from cargo.toml or defaults to 2021
@@ -49,3 +60,5 @@ null_ls.setup({
 		-- diagnostics.flake8,
 	},
 })
+
+fidget.setup() -- provide a UI for nvim-lsp's progress handler

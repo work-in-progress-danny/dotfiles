@@ -19,7 +19,7 @@ vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applicati
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.fillchars = "fold: "
-vim.opt.foldnestmax = 3
+vim.opt.foldnestmax = 5
 vim.opt.foldminlines = 1
 vim.opt.foldlevel = 2
 vim.cmd([[

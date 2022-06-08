@@ -52,6 +52,7 @@ local normal_mode_mappings = {
 		t = { Cmd("Telescope"), "Toggle Telescope" },
 		c = { Cmd("Telescope command_history"), "Command History" },
 		b = { Cmd("Telescope buffers"), "Buffers" },
+    r = { Cmd("Telescope resume"), "Resume last Telescope instance"}
 	},
 
 	-- NvimTree

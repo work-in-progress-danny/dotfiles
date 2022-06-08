@@ -1,7 +1,7 @@
 [user]
-   	name = ""
+  name = ""
 	email = ""
-   	signingkey = ""
+  signingkey = ""
 
 [commit]
 	gpgsign = true

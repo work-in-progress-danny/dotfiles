@@ -4,14 +4,11 @@ All these settings and preferences are quite specific to me, myself and my MacBo
 
 ## Installation
 
-I wouldn't recommend this as I don't have a comprehensive list of installed software, the dotfiles assume many things are already installed and this could break your dev environment.
+I wouldn't recommend this as I don't have a comprehensive list of installed software, the configuration assumes many things are already installed and this could break your dev environment.
 
 1. Install nix on the new system see [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223).
-2. Add `home.nix` to `~/.config/nixpkgs/` with `cp ./config/nixpkgs ~/.config`
+2. run `chmod +x ./install.sh && ./install.sh`
 3. run `home-manager switch` to install all software
-4. (this is a little weird) delete `~/.config/nixpkgs` with `rm ~/.config/nixpkgs` and run `stow .`
-   to clear out the untracked (symlinked) `home.nix` file
-5. restart shell with `zsh`
 
 ### Manual installation of packages
 
@@ -37,7 +34,7 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- Dotfiles Manager: [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
+- Dotfiles Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - CLI apps:
   - A better cat: [Bat](https://github.com/sharkdp/bat)
@@ -52,5 +49,5 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 - Shell: [Fish Shell](https://fishshell.com/)
   - Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
   - Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
-- Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/)
+- Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/), [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
 - Package Manager: [Homebrew](https://brew.sh/)
