@@ -31,6 +31,8 @@ null_ls.setup({
 		-- Nix
 		diagnostics.statix,
 		code_actions.statix,
+		-- Bash
+		diagnostics.shellcheck,
 
 		-- Rust
 		-- rustfmt defaults to rust 2015, this script attempts to read from cargo.toml or defaults to 2021

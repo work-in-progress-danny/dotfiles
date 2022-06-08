@@ -1,7 +1,8 @@
 local opts = { noremap = true, silent = true }
--- require("plugins.whichkey")
 
-require("plugins.whichkey")
+function Cmd(command_body)
+	return "<cmd>" .. command_body .. "<cr>"
+end
 
 local term_opts = { silent = true }
 

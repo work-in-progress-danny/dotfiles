@@ -34,6 +34,7 @@
         fd
         wget
         tmux
+        shellcheck
         # git 
         git
         gitui
@@ -57,6 +58,7 @@
       file = {
         # .config files
         ".config/nvim".source = ./home/nvim;
+        ".config/nvim".recursive = true; # https://github.com/nix-community/home-manager/issues/2282
         ".config/git".source = ./home/git;
         ".config/gitui".source = ./home/gitui;
         ".config/alacritty.yml".source = ./home/alacritty.yml;

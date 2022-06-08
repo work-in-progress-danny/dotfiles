@@ -23,6 +23,7 @@ lsp_installer.setup({
 		"cssls",
 		"rust_analyzer",
 		"rnix",
+		"bashls",
 	},
 })
 
