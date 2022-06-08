@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Sensible Zsh config
 # https://www.viget.com/articles/zsh-config-productivity-plugins-for-mac-oss-default-shell/
 setopt auto_cd # auto change directories

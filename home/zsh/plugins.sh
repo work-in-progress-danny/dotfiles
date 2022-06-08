@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.nix-profile/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Command Relearning
 alias find='echo "use fd, https://github.com/sharkdp/fd. Remove when it makes sense, 14 Jan" find'
 
@@ -16,7 +18,7 @@ alias v='~/.nix-profile/bin/nvim'
 # Directories
 alias desktop="cd ~/Desktop"
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
-alias projects='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
+alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
 alias brain='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 
 ## Projects
@@ -72,9 +74,9 @@ alias gl='git log'
 alias glp='git log -p'
 # scripts
 git_rebase_interactive_head_script(){
-  if [ $1 -gt 0 ]
+  if [ "$1" -gt 0 ]
   then
-      git rebase -i HEAD~$1
+      git rebase -i HEAD~"$1"
   else
       echo "Please provide a number to rebase by";
   fi
