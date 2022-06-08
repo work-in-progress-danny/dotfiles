@@ -63,8 +63,8 @@
         ".config/starship.toml".source = ./home/starship.toml;
 
         # ~/ files
-        ".zshrc".source = ./home/zshrc/.zshrc;
-        ".zprofile".source = ./home/.zprofile;
+        ".zshrc".source = ./home/zsh/.zshrc;
+        ".zprofile".source = ./home/zsh/.zprofile;
         ".tmux.conf".source = ./home/.tmux.conf;
         ".gitignore_global".source = ./home/.gitignore_global;
       };

@@ -9,9 +9,6 @@ alias mkdir='mkdir -p'
 alias l='exa -hal --group-directories-first --git --time-style=long-iso' # exa ( modern ls replacement https://github.com/ogham/exa )
 alias ltree='~/.dotfiles/scripts/exa_list_tree'
 
-# Terminal Multiplexer
-alias z='zellij -s home'
-
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
 alias v='~/.nix-profile/bin/nvim'
@@ -34,6 +31,10 @@ alias dmod='cd ~/work/develop-module/frontend'
 # Dotfiles
 alias d='cd ~/.dotfiles/'
 alias od='v ~/.dotfiles/'
+
+# Nix Home-Manager
+alias hms="home-manager switch"
+alias ncg="nix-collect-garbage"
 
 # Git
 alias g='gitui'
