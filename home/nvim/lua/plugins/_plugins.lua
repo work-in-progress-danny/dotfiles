@@ -90,7 +90,8 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip", requires = "hrsh7th/nvim-cmp" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", requires = "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lua", requires = "hrsh7th/nvim-cmp" })
-	use("f3fora/cmp-spell")
+	use({ "f3fora/cmp-spell", requires = { "hrsh7th/nvim-cmp" } })
+	use({ "hrsh7th/cmp-copilot", requires = { "github/copilot.vim", "hrsh7th/nvim-cmp" } })
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -104,6 +105,8 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("j-hui/fidget.nvim") -- nice little notifier in the corner communicating the internals of lsp
+
+	-- Github Copilot
 	use("github/copilot.vim")
 
 	-- Telescope

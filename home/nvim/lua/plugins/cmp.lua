@@ -17,6 +17,7 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
+	copilot = "",
 	Text = "",
 	Method = "m",
 	Function = "",
@@ -102,6 +103,7 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
+				copilot = "[Copilot]",
 				spell = "[Spell]",
 				nvim_lsp = "[LSP]",
 				luasnip = "[Snippet]",
@@ -112,6 +114,7 @@ cmp.setup({
 		end,
 	},
 	sources = {
+		{ name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "spell" },
 		{ name = "luasnip" },
