@@ -34,7 +34,7 @@ keymap("n", "<S-e>", "$", opts) -- shift e moves the Cursor to the end of the li
 keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
 
 -- Use Telescope current_buffer_fuzzy_find over vim's /
-keymap("", "/", Cmd("Telescope current_buffer_fuzzy_find"), opts)
+-- keymap("", "/", Cmd("Telescope current_buffer_fuzzy_find"), opts)
 
 -- Comment
 -- [reference](https://github.com/numToStr/Comment.nvim/blob/master/doc/API.md#%EF%B8%8F-usage)
