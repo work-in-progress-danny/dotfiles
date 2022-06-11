@@ -124,10 +124,12 @@ return packer.startup(function(use)
 
 	-- Text Manipulation
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
 	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and visa versa
 	use("tpope/vim-surround") -- Provides an interface to wrap a given block with a symbol
+	use("godlygeek/tabular") -- Takes a regular expression and aligns a block of text depending on that
 
 	-- Utilities
 	use("lilydjwg/colorizer") -- highlight colour codes e.g #282 #718
