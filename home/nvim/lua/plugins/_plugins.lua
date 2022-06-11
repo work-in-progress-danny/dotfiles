@@ -1,11 +1,6 @@
---   use('lukas-reineke/indent-blankline.nvim')
---   use({ 'SmiteshP/nvim-gps' })
-
---   -- Text operations
---   use('AndrewRadev/splitjoin.vim')
+-- Text operations
 --   use('christoomey/vim-sort-motion')
 --   use('ntpeters/vim-better-whitespace')
---   use('rstacruz/vim-closer')
 
 local fn = vim.fn
 -- Automatically install packer
@@ -52,12 +47,11 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use("kyazdani42/nvim-web-devicons") -- a nice icons plugin
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
 
 	-- Bufferline
-	use("akinsho/bufferline.nvim")
-	use("moll/vim-bbye")
+	use("akinsho/bufferline.nvim") -- a tab-like line displaying all open buffers
+	use("moll/vim-bbye") -- Easily dismiss buffers
 
 	-- Alpha (startup screen)
 	use("goolord/alpha-nvim")
@@ -94,7 +88,7 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-copilot", requires = { "github/copilot.vim", "hrsh7th/nvim-cmp" } })
 
 	-- Snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
+	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- Indentation
@@ -129,14 +123,15 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 
 	-- Text Manipulation
-	use("tpope/vim-surround") -- A nice text wrapping helper
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
 	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and visa versa
+	use("tpope/vim-surround") -- Provides an interface to wrap a given block with a symbol
 
 	-- Utilities
 	use("lilydjwg/colorizer") -- highlight colour codes e.g #282 #718
+	use("kyazdani42/nvim-web-devicons") -- a nice icons plugin
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
