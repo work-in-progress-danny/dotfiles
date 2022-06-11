@@ -29,7 +29,14 @@ configs.setup({
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = nil, -- Do not enable for files with more than n lines, int
 		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-		colors = { "#ffbb00", "#00e1ff", "#ff00e8" }, -- table of hex strings
+		colors = {
+			"#E06C75",
+			"#E5C07B",
+			"#98C379",
+			"#56B6C2",
+			"#61AFEF",
+			"#C678DD",
+		}, -- table of hex strings, this matches the colours set in indent-blankline.lua
 		-- termcolors = {} -- table of colour name strings
 	},
 	context_commentstring = {
