@@ -1,9 +1,8 @@
 #!/bin/bash
 
-source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.nix-profile/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.nix-profile/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+source "$HOME/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # Auto suggest plugin settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
 bindkey '^ ' autosuggest-accept
