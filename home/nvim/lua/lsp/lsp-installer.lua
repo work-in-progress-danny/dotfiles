@@ -24,6 +24,7 @@ lsp_installer.setup({
 		"rust_analyzer",
 		"rnix",
 		"bashls",
+		"clangd",
 	},
 })
 
@@ -69,6 +70,11 @@ lspconfig.rust_analyzer.setup({
 })
 
 lspconfig.rnix.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.clangd.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

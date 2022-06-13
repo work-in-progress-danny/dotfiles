@@ -50,6 +50,7 @@
         fnm
 
         # Neovim deps
+        cppcheck
         stylua
         rnix-lsp
         statix
