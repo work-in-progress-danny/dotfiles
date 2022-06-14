@@ -19,7 +19,14 @@ alias v='~/.nix-profile/bin/nvim'
 alias desktop="cd ~/Desktop"
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
-alias brain='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
+
+# Dotfiles
+alias d='cd ~/.dotfiles/'
+alias od='v ~/.dotfiles/'
+
+# Brain 
+alias b='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
+alias ob='v ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 
 ## Projects
 alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
@@ -30,9 +37,6 @@ alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
 alias dmod='cd ~/work/develop-module/frontend'
 
-# Dotfiles
-alias d='cd ~/.dotfiles/'
-alias od='v ~/.dotfiles/'
 
 # Nix Home-Manager
 alias hms="home-manager switch"
