@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Welcome to the Danny's Dotfiles Experience"
 
 echo "Creating the nix home directory at ~/.config/nixpkgs"
