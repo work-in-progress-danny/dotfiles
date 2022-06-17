@@ -20,7 +20,8 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 
 [Yarnpkg.com/install](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
 
-1. this should auto-magically install `curl -o- -L https://yarnpkg.com/install.sh | bash`
+1. This should auto-magically install `curl -o- -L https://yarnpkg.com/install.sh | bash`
+2. Install nvim dependancies `npm install -g eslint_d @fsouza/prettierd`
 
 ## Current Tools
 
