@@ -79,6 +79,11 @@ lspconfig.clangd.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.bashls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 rust_tools.setup({
 	tools = { -- rust-tools options
 		autoSetHints = true,
