@@ -72,8 +72,9 @@ return packer.startup(function(use)
 	use("simrat39/rust-tools.nvim")
 
 	-- Colour Scheme
-	use("morhetz/gruvbox") -- My favourite colour scheme
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	-- use("morhetz/gruvbox") -- My favourite colour scheme
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
+	use("sainnhe/gruvbox-material")
 	use({ "p00f/nvim-ts-rainbow", requires = "vim-treesitter/nvim-treesitter" }) -- colours matching parenthesis
 
 	-- CMP Plugins
