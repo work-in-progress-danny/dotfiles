@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
+	-- use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
 
 	-- Scrollbar
 	use("petertriho/nvim-scrollbar")
@@ -57,7 +57,7 @@ return packer.startup(function(use)
 	use("moll/vim-bbye") -- Easily dismiss buffers
 
 	-- Alpha (startup screen)
-	use("goolord/alpha-nvim")
+	-- use("goolord/alpha-nvim")
 
 	-- Lualine
 	use({
@@ -75,7 +75,7 @@ return packer.startup(function(use)
 	use("simrat39/rust-tools.nvim")
 
 	-- Colour Scheme
-	-- use("morhetz/gruvbox") -- My favourite colour scheme
+	use("morhetz/gruvbox") -- My favourite colour scheme
 	-- use({ "catppuccin/nvim", as = "catppuccin" })
 	use("sainnhe/gruvbox-material")
 	use({ "p00f/nvim-ts-rainbow", requires = "vim-treesitter/nvim-treesitter" }) -- colours matching parenthesis
@@ -102,7 +102,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use("j-hui/fidget.nvim") -- nice little notifier in the corner communicating the internals of lsp
+	use({ "j-hui/fidget.nvim", requires = { "jose-elias-alvarez/null-ls.nvim" } }) -- nice little notifier in the corner communicating the internals of lsp
 
 	-- Github Copilot
 	use("github/copilot.vim")
@@ -110,7 +110,7 @@ return packer.startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "nvim-telescope/telescope-media-files.nvim", requires = { "nvim-telescope/telescope.nvim" } })
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "nvim-telescope/telescope-fzf-native.nvim", requires = { "nvim-telescope/telescope.nvim" }, run = "make" })
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
@@ -121,8 +121,8 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	use("nvim-treesitter/playground")
 	use({ "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" })
+	-- use("nvim-treesitter/playground") -- comment this out until you want to use treesitter playground
 
 	-- Whichkey
 	use("folke/which-key.nvim")
