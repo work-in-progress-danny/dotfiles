@@ -23,6 +23,8 @@
         zsh-autosuggestions
         zsh-syntax-highlighting
         zsh-history-substring-search
+
+        # Tools
         starship
         bat
         comma # shopify's comma
