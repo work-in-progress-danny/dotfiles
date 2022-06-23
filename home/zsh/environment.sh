@@ -4,10 +4,13 @@ if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
 
 GPG_TTY="$(tty)"
 
-PATH="
-       $HOME/bin
-       $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
-     "
+# PATH="
+#        $HOME/bin
+#        $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
+#      "
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+     
 
 eval "$(fnm env --use-on-cd)"
 eval "$(direnv hook zsh)"
