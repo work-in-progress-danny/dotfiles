@@ -49,9 +49,6 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	-- use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
 
-	-- Scrollbar
-	use("petertriho/nvim-scrollbar")
-
 	-- Bufferline
 	use("akinsho/bufferline.nvim") -- a tab-like line displaying all open buffers
 	use("moll/vim-bbye") -- Easily dismiss buffers
