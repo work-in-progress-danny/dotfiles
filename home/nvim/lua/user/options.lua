@@ -38,7 +38,7 @@ vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applicati
 -- Search
 vim.opt.incsearch = true
 -- UI
-vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.pumheight = 100 -- pop up menu height
 -- Window
 vim.opt.splitbelow = true -- force all horizontal splits to go below current window
