@@ -52,7 +52,7 @@ local normal_mode_mappings = {
 		t = { Cmd("Telescope"), "Toggle Telescope" },
 		c = { Cmd("Telescope command_history"), "Command History" },
 		b = { Cmd("Telescope buffers"), "Buffers" },
-    r = { Cmd("Telescope resume"), "Resume last Telescope instance"}
+		r = { Cmd("Telescope resume"), "Resume last Telescope instance" },
 	},
 
 	-- NvimTree
@@ -72,7 +72,7 @@ local normal_mode_mappings = {
 		D = { Cmd("lua vim.lsp.buf.declaration()"), "Declaration" },
 		d = { Cmd("lua vim.lsp.buf.definition()"), "Definition" },
 		i = { Cmd("lua vim.lsp.buf.implementation()"), "Implementation" },
-		r = { Cmd("lua vim.lsp.buf.references()"), "All references in code base" },
+		r = { Cmd("Telescope lsp_references"), "All references in code base" },
 	},
 
 	-- Terminal
