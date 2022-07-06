@@ -30,7 +30,6 @@
         comma # shopify's comma
         direnv
         exa
-        stow
         neovim
         ripgrep # required by neovim's Telescope
         fd
