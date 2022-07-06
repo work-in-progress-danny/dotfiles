@@ -64,25 +64,25 @@
       ];
 
       file = {
-        # .config files
-        ".config/nvim".source = ./home/nvim;
-        ".config/nvim".recursive = true; # https://github.com/nix-community/home-manager/issues/2282
-        ".config/git".source = ./home/git;
-        ".config/gitui".source = ./home/gitui;
-        ".config/alacritty.yml".source = ./home/alacritty.yml;
-        ".config/starship.toml".source = ./home/starship.toml;
+        # ~
+        ".zshrc".source = ~/.dotfiles/home/zsh/.zshrc;
+        ".zprofile".source = ~/.dotfiles/home/zsh/.zprofile;
+        ".tmux.conf".source = ~/.dotfiles/home/.tmux.conf;
+        ".gitignore_global".source = ~/.dotfiles/home/.gitignore_global;
 
-        # ~/ files
-        ".zshrc".source = ./home/zsh/.zshrc;
-        ".zprofile".source = ./home/zsh/.zprofile;
-        ".tmux.conf".source = ./home/.tmux.conf;
-        ".gitignore_global".source = ./home/.gitignore_global;
+        # ~/.config/ 
+        ".config/nvim".source = ~/.dotfiles/home/nvim;
+        ".config/nvim".recursive = true; # https://github.com/nix-community/home-manager/issues/2282
+        ".config/git".source = ~/.dotfiles/home/git;
+        ".config/gitui".source = ~/.dotfiles/home/gitui;
+        ".config/alacritty.yml".source = ~/.dotfiles/home/alacritty.yml;
+        ".config/starship.toml".source = ~/.dotfiles/home/starship.toml;
       };
     };
 
   # programs are defined [here](https://github.com/nix-community/home-manager/tree/master/modules/programs)
   programs = {
-    home-manager.enable = true; # Let Home Manager install and manage itself.
+    home-manager.enable = true; # have home-manager install and manage itself.
   };
 
 }

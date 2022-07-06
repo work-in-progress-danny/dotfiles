@@ -10,3 +10,9 @@ echo "symlinking dotfiles contents into the new directory"
 
 ln ~/.dotfiles/home.nix ~/.config/nixpkgs 
 ln -s ~/.dotfiles/home/ ~/.config/nixpkgs/ 
+
+echo "Running first home-manager install"
+
+home-manager switch
+
+echo "Now your shell should have all the tools and configurations I like to use. Enjoy!"
