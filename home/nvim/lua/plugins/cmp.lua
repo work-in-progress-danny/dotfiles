@@ -120,7 +120,7 @@ cmp.setup({
 	sources = {
 		{ name = "copilot" },
 		{ name = "nvim_lsp" },
-		{ name = "spell" },
+		{ name = "spell", keyword_length = 4 },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
