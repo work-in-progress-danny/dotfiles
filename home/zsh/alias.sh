@@ -44,6 +44,7 @@ alias ncg="nix-collect-garbage"
 
 # Git
 alias g='gitui'
+alias git_authors='git log | sed -n 's/Author://p'  | sort --unique --ignore-case| column -t -s "<\*>"'
 # fetcher
 alias gfom="git fetch origin master"
 # commit
