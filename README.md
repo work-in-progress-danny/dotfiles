@@ -23,6 +23,10 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 1. This should auto-magically install `curl -o- -L https://yarnpkg.com/install.sh | bash`
 2. Install nvim dependancies `npm install -g eslint_d @fsouza/prettierd`
 
+## Usage
+
+- Configure node versions with fnm (fast node manager) `fnm default <version>`. Copilot needs at least node version 16.
+
 ## Current Tools
 
 - Editor: [Neovim](https://github.com/neovim/neovim)
