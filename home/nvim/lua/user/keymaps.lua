@@ -31,7 +31,7 @@ keymap("n", "<S-b>", "^", opts) -- shift b moves the Cursor to the start of the 
 keymap("n", "<S-e>", "$", opts) -- shift e moves the Cursor to the end of the line
 
 -- No highlight
-keymap("n", "<leader>h", "<cmd>noh<CR>", opts) -- turn off highlighted search results
+keymap("n", "<leader>h", Cmd("noh"), opts) -- turn off highlighted search results
 
 -- Use Telescope current_buffer_fuzzy_find over vim's /
 -- keymap("", "/", Cmd("Telescope current_buffer_fuzzy_find"), opts)
@@ -42,16 +42,17 @@ keymap("n", "<leader>/", ":lua require('Comment.api').toggle_current_linewise()<
 keymap("v", "<leader>/", ":lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<cr>", opts) -- leader / comments out all highlighted lines when in visual mode
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts) -- move cursor window to the left
+keymap("n", "<C-j>", "<C-w>j", opts) -- move cursor window down
+keymap("n", "<C-k>", "<C-w>k", opts) -- move cursor window up
+keymap("n", "<C-l>", "<C-w>l", opts) -- move cursor window to the right
+keymap("n", "<C-e>", Cmd("NvimTreeFocus"), opts) -- jump to nvim tree window
 
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- Resize with arrows. These can't work on Mac, they are already mapped to window management commands
+-- keymap("n", "<C-Up>", Cmd("resize +2"), opts)
+-- keymap("n", "<C-Down>", Cmd("resize -2"), opts)
+-- keymap("n", "<C-Left>", Cmd("vertical resize -2"), opts)
+-- keymap("n", "<C-Right>", Cmd("vertical resize +2"), opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
