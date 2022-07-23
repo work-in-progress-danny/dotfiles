@@ -35,25 +35,33 @@ alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/pro
 # Work
 alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
-alias dmod='cd ~/work/develop-module/frontend'
-
+alias dmod='cd ~/work/develop-module/working'
 
 # Nix Home-Manager
 alias hms="home-manager switch"
 alias ncg="nix-collect-garbage"
 
 # Git
+# it would be nice to have a script that captures the output of a failed git push and runs the given command anyway. Essentially never failing to push
+# this ^ now happens in the latest version of git, the Nix flake isn't up to date yet
 alias g='gitui'
+alias gwtc='~/.dotfiles/scripts/src/git_worktree_creator/target/release/git_worktree_creator'
 alias git_authors='git log | sed -n 's/Author://p'  | sort --unique --ignore-case| column -t -s "<\*>"'
-# fetcher
-alias gfom="git fetch origin master"
+# reset
+alias grh="git reset head~"
+# fetch
+alias gfo="git fetch origin" # don't know what this does specifically 
+# merge
+alias gm='git merge'
+alias gma='git merge --abort'
 # commit
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias gcane='git commit --amend --no-edit'
 # branch/remote
-alias gpsh=' git push'
+alias gb='git branch'
+alias gpsh='git push'
 alias gpshfwl='git push --force-with-lease'
 alias gpll='git pull -r'
 alias dmb='git switch main && git branch --merged | grep -v \* | xargs git branch -d' # delete merged branches
@@ -86,6 +94,11 @@ git_rebase_interactive_head_script(){
       echo "Please provide a number to rebase by";
   fi
 }
+
+# git_reset_head_script(){
+#   git reset head~"$1"
+# }
+
 
 # C++
 alias gpp='g++ -Wall -std=c++1z'
