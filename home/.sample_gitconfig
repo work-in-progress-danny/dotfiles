@@ -1,29 +1,29 @@
 [user]
   name = ""
-	email = ""
+  email = ""
   signingkey = ""
 
 [commit]
-	gpgsign = true
-	template = ~/.config/git/.commitmessage
+  gpgsign = true
+  verbose = true
+  template = ~/.config/git/.commitmessage
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [core]
-	excludesfile = ~/.gitignore_global
-	# editor = ~/.local/bin/lvim
-	editor = code --wait
+  excludesfile = ~/.gitignore_global
+  editor = ~/.nix-profile/bin/nvim 
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 
 [mergetool "sourcetree"]
-	cmd = /private/var/folders/84/vlvj_vtj6td0k200qphfysg00000gn/T/AppTranslocation/A1603E91-0F24-4977-A212-2EFD6DC239CE/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /private/var/folders/84/vlvj_vtj6td0k200qphfysg00000gn/T/AppTranslocation/A1603E91-0F24-4977-A212-2EFD6DC239CE/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 
 [branch]
-	autorebase = true # When pulling changes to your current branch try rebase instead of auto merge
+  autorebase = true # When pulling changes to your current branch try rebase instead of auto merge
