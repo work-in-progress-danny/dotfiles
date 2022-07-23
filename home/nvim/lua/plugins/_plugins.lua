@@ -1,7 +1,3 @@
--- Text operations
---   use('christoomey/vim-sort-motion')
---   use('ntpeters/vim-better-whitespace')
-
 local fn = vim.fn
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -15,11 +11,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
 	})
-	print("Installing packer close and reopen Neovim...")
+	print("Installing Packer. Close and reopen Neovim...")
 	vim.cmd([[packadd packer.nvim]])
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- An autocommand that reloads Neovim whenever you save this file (_plugins.lua)
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -42,33 +38,31 @@ packer.init({
 	},
 })
 
--- Install your plugins here
 return packer.startup(function(use)
+	-- Utilities
+	use("lilydjwg/colorizer") -- highlight colour codes with their colour e.g #282 #718
+	use("kyazdani42/nvim-web-devicons") -- a nice icons plugin, that many plugins use. Bufferline, Lualine and Telescope for example
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	-- use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight see: https://github.com/neovim/neovim/issues/12587
 
-	-- Bufferline
+	-- Bufferline ( Tab-like line at the top of the buffer showing all open buffers like tabs )
 	use("akinsho/bufferline.nvim") -- a tab-like line displaying all open buffers
 	use("moll/vim-bbye") -- Easily dismiss buffers
 
-	-- Alpha (startup screen)
-	-- use("goolord/alpha-nvim")
-
-	-- Lualine
+	-- Lualine ( Info line at the bottom of the buffer showing git diff and location )
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-	-- Toggle Term
+	-- Toggle Term ( Floating Neovim terminal )
 	use("akinsho/toggleterm.nvim")
 
-	-- Nvim Tree
+	-- Nvim Tree ( File Explorer )
 	use("kyazdani42/nvim-tree.lua")
 
-	-- Languages
+	-- Language support. Null-ls and Neovim's LSP handles almost everything
 	use("simrat39/rust-tools.nvim")
 
 	-- Colour Scheme
@@ -93,16 +87,13 @@ return packer.startup(function(use)
 	-- Indentation
 	use("lukas-reineke/indent-blankline.nvim")
 
-	-- LSP
+	-- LSP ( Language Server Protocol support )
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use({ "j-hui/fidget.nvim", requires = { "jose-elias-alvarez/null-ls.nvim" } }) -- nice little notifier in the corner communicating the internals of lsp
+	use({ "j-hui/fidget.nvim", requires = { "jose-elias-alvarez/null-ls.nvim" } }) -- nice little notifier in the corner communicating the current state of Null-ls
 
-	-- Github Copilot
-	use("github/copilot.vim")
-
-	-- Telescope
+	-- Telescope ( Search Client and UI )
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "nvim-telescope/telescope-media-files.nvim", requires = { "nvim-telescope/telescope.nvim" } })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", requires = { "nvim-telescope/telescope.nvim" }, run = "make" })
@@ -110,7 +101,7 @@ return packer.startup(function(use)
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
-	-- Treesitter
+	-- Treesitter ( Syntax Highlighting )
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -118,21 +109,16 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" })
 	-- use("nvim-treesitter/playground") -- comment this out until you want to use treesitter playground
 
-	-- Whichkey
+	-- Whichkey ( Keybinding Prompt on leader-key down )
 	use("folke/which-key.nvim")
 
 	-- Text Manipulation
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", requires = "nvim-treesitter/nvim-treesitter" })
-	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and visa versa
+	use("AndrewRadev/splitjoin.vim") -- split a single line of code into multiple and multiple into single
 	use("tpope/vim-surround") -- Provides an interface to wrap a given block with a symbol
 	use("godlygeek/tabular") -- Takes a regular expression and aligns a block of text depending on that
-
-	-- Utilities
-	use("lilydjwg/colorizer") -- highlight colour codes e.g #282 #718
-	use("kyazdani42/nvim-web-devicons") -- a nice icons plugin
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -140,3 +126,6 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+
+-- Noteworthy plugins:
+-- Alpha, Neovim boot screen "goolord/alpha-nvim"
