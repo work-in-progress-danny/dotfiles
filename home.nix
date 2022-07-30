@@ -16,6 +16,10 @@
       stateVersion = "22.05";
       username = "danny.lowwater";
       homeDirectory = "/Users/danny.lowater";
+  imports = [
+    home/git
+    home/local.nix
+  ];
 
       packages = with pkgs; [
         # Shell
@@ -23,6 +27,7 @@
         zsh-autosuggestions
         zsh-syntax-highlighting
         zsh-history-substring-search
+  home = {
 
         # Tools
         starship
@@ -73,16 +78,15 @@
         # ~/.config/ 
         ".config/nvim".source = ~/.dotfiles/home/nvim;
         ".config/nvim".recursive = true; # https://github.com/nix-community/home-manager/issues/2282
-        ".config/git".source = ~/.dotfiles/home/git;
         ".config/gitui".source = ~/.dotfiles/home/gitui;
         ".config/alacritty.yml".source = ~/.dotfiles/home/alacritty.yml;
         ".config/starship.toml".source = ~/.dotfiles/home/starship.toml;
       };
     };
+  };
 
   # programs are defined [here](https://github.com/nix-community/home-manager/tree/master/modules/programs)
   programs = {
     home-manager.enable = true; # have home-manager install and manage itself.
   };
-
-}
+} 
