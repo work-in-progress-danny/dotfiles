@@ -7,8 +7,12 @@ All these settings and preferences are quite specific to me, myself and my MacBo
 I wouldn't recommend this as I don't have a comprehensive list of installed software, the configuration assumes many things are already installed and this could break your dev environment.
 
 1. Install nix on the new system see [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223).
-2. run `chmod +x ./install.sh && ./install.sh`
-3. run `home-manager switch` to install all software
+2. Run `chmod +x ./install.sh && ./install.sh`
+3. Create a local.nix file with `cp ~/.dotfiles/home/sample_local.nix ~/.dotfiles/home/local.nix`, in there fill out your install specific details
+4. Run `home-manager switch` to install all software
+5. I use [ 1password ](https://1password.com/) as an ssh agent, you'll need to install it [ here (mac)](https://1password.com/downloads/mac/).
+   1. run `mkdir -p ~/.1password && ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock` to use the 1password agent. [ docs ](https://developer.1password.com/docs/ssh/get-started#step-4-configure-your-ssh-or-git-client)
+6. Everything should be installed now and ready to use, if there are any problems open up an issue on github!
 
 ### Manual installation of packages
 
