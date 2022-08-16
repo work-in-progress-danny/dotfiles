@@ -36,6 +36,7 @@ alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/pro
 alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
 alias dmod='cd ~/work/develop-module/working'
+alias cpth='cd ~/work/career-pathways/'
 
 # Nix Home-Manager
 alias hms="home-manager switch"
