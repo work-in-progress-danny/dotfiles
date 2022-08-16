@@ -1,5 +1,5 @@
 -- https://github.com/folke/which-key.nvim
-
+-- see telescope bug https://github.com/folke/which-key.nvim/issues/273
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
@@ -40,6 +40,7 @@ local normal_mode_opts = {
 local normal_mode_mappings = {
 	k = {
 		name = "signature help",
+		-- TODO add a script check whether there is diagnostics to show if not display variable signature
 		h = { Cmd("lua vim.lsp.buf.signature_help()"), "Signature help" },
 		k = { Cmd("lua vim.diagnostic.open_float()"), "Show diagnostics" },
 		K = { Cmd("lua vim.lsp.buf.hover()"), "Show hover" },
@@ -81,7 +82,11 @@ local normal_mode_mappings = {
 		t = { Cmd("ToggleTerm"), "Open Terminal" },
 		g = { GITUI_TOGGLE, "Open GitUI" }, -- GITUI_TOGGLE global is defined in toggle-term
 		h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
+		n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term
 	},
+	--[[ ["/"] = { ]]
+	--[[ 	Cmd("require('Comment.api').toggle.current.linewise()", "Comment out the current line"), ]]
+	--[[ }, ]]
 }
 
 local visual_mode_opts = {

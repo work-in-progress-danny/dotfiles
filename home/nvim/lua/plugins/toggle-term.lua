@@ -37,8 +37,21 @@ end
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 local Terminal = require("toggleterm.terminal").Terminal
-local gitui = Terminal:new({ cmd = "gitui", hidden = true, close_on_exit = true })
-local htop = Terminal:new({ cmd = "htop", hidden = true, close_on_exit = true })
+
+local terminal_opts = {
+	hidden = true,
+	close_on_exit = true,
+	start_in_insert = true,
+	persist_mode = false,
+}
+
+local function new_terminal(cmd)
+	return Terminal:new({ cmd, terminal_opts })
+end
+
+local gitui = new_terminal("gitui")
+local htop = new_terminal("htop")
+local node = new_terminal("node")
 
 function GITUI_TOGGLE()
 	gitui:toggle()
@@ -46,6 +59,10 @@ end
 
 function HTOP_TOGGLE()
 	htop:toggle()
+end
+
+function NODE_TOGGLE()
+	node:toggle()
 end
 
 -- local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
