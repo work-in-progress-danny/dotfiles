@@ -87,7 +87,7 @@ lspconfig.bashls.setup({
 rust_tools.setup({
 	tools = { -- rust-tools options
 		autoSetHints = true,
-		hover_with_actions = true,
+		-- hover_with_actions = true, deprecated unknown reason 16/8/22
 		inlay_hints = {
 			show_parameter_hints = false,
 			parameter_hints_prefix = "",
