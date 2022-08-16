@@ -25,6 +25,7 @@ lsp_installer.setup({
 		"rnix",
 		"bashls",
 		"clangd",
+		"kotlin_language_server",
 	},
 })
 
@@ -80,6 +81,11 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.bashls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.kotlin_language_server.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

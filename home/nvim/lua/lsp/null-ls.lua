@@ -38,6 +38,10 @@ null_ls.setup({
 		diagnostics.cppcheck,
 		-- formatting is done by clangd (lsp-config)
 
+		-- Kotlin
+		diagnostics.ktlint,
+		formatting.ktlint,
+
 		-- Rust
 		-- rustfmt defaults to rust 2015, this script attempts to read from cargo.toml or defaults to 2021
 		-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Source-specific-Configuration#rustfmt
