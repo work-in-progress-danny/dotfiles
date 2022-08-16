@@ -42,7 +42,6 @@
       # Git 
       git
       gitui
-      gnupg
 
       # Languages
       # yarn # yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
