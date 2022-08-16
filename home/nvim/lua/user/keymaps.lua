@@ -38,8 +38,8 @@ keymap("n", "<leader>h", Cmd("noh"), opts) -- turn off highlighted search result
 
 -- Comment
 -- [reference](https://github.com/numToStr/Comment.nvim/blob/master/doc/API.md#%EF%B8%8F-usage)
-keymap("n", "<leader>/", ":lua require('Comment.api').toggle_current_linewise()<cr>", opts) -- leader / comment out the current line when in normal mode
-keymap("v", "<leader>/", ":lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<cr>", opts) -- leader / comments out all highlighted lines when in visual mode
+keymap("n", "<leader>/", ":lua require('Comment.api').toggle.linewise.current()<cr>", opts) -- leader / comment out the current line when in normal mode
+keymap("v", "<leader>/", ":lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts) -- leader / comments out all highlighted lines when in visual mode
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts) -- move cursor window to the left
