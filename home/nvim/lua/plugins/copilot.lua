@@ -1,11 +1,18 @@
-local status_ok, _ = pcall(require, "github/copilot.vim")
-if not status_ok then
+local status_lua_copilot_ok, copilot = pcall(require, "zbirenbaum/copilot.lua")
+
+if not status_lua_copilot_ok then
 	return
 end
 
--- [reddit post with fix for copilot making suggestions in TelescopePrompt](https://www.reddit.com/r/neovim/comments/qs8siw/copilot_and_telescope/)
--- check more info with :h copilot
-vim.cmd([[
-  let g:copilot_filetypes = { 'TelescopePrompt': v:false }
-  highlight CopilotSuggestion guifg=#555555 ctermfg=8 " change this later maybe 
-]])
+print("status_lua_copilot_ok", status_lua_copilot_ok)
+
+-- This is a copilot wrapper that is written in Lua because the native vim one is not nice.
+-- The lua version isn't officially supported.
+
+copilot.setup({
+	ft_disable = { "markdown", "TelescopePrompt", ".git/COMMIT_EDITMSG" },
+	cmp = {
+		enabled = true,
+		method = "getCompletionsCycling",
+	},
+})

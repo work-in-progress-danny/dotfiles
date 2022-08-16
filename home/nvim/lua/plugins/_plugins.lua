@@ -78,11 +78,33 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lsp", requires = "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-nvim-lua", requires = "hrsh7th/nvim-cmp" })
 	use({ "f3fora/cmp-spell", requires = { "hrsh7th/nvim-cmp" } })
-	use({ "hrsh7th/cmp-copilot", requires = { "github/copilot.vim", "hrsh7th/nvim-cmp" } })
 
+	-- Github Copilot
+	-- use("github/copilot.vim") -- this is weird, see comment in plugins/copilot
+	use({
+		"zbirenbaum/copilot.lua",
+		event = "InsertEnter",
+		config = function()
+			vim.schedule(function()
+				require("copilot").setup({
+					ft_disable = { "markdown", "TelescopePrompt", ".git/COMMIT_EDITMSG" },
+					cmp = {
+						enabled = true,
+						method = "getCompletionsCycling",
+					},
+				})
+			end)
+		end,
+	})
+
+	use({
+		"zbirenbaum/copilot-cmp",
+		module = "copilot_cmp",
+	})
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+
 
 	-- Indentation
 	use("lukas-reineke/indent-blankline.nvim")

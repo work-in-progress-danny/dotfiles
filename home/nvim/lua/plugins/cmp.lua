@@ -15,11 +15,11 @@ local check_backspace = function()
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
-
 -- stylua: ignore start 
 --   פּ ﯟ   some other good icons
+-- find more here: https://www.nerdfonts.com/cheat-sheet
 local kind_icons = {
-	copilot       = "",
+	Copilot       = "",
 	Text          = "",
 	Method        = "m",
 	Function      = "",
@@ -47,7 +47,6 @@ local kind_icons = {
 	TypeParameter = "",
 }
 -- stylua: ignore end
--- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup({
 	snippet = {
@@ -139,3 +138,20 @@ cmp.setup({
 		native_menu = false,
 	},
 })
+
+-- cmp.setup.cmdline(":", {
+-- 	mapping = cmp.mapping.preset.cmdline(),
+-- 	sources = cmp.config.sources({
+-- 		{ name = "path" },
+-- 	}, {
+-- 		{ name = "cmdline" },
+-- 	}),
+-- })
+--
+-- cmp.setup.cmdline("/", {
+-- 	sources = cmp.config.sources({
+-- 		{ name = "nvim_lsp_document_symbol" },
+-- 	}, {
+-- 		{ name = "buffer" },
+-- 	}),
+-- })
