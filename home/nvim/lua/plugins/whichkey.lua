@@ -60,8 +60,13 @@ local normal_mode_mappings = {
 	e = { Cmd("NvimTreeToggle"), "Toggle nvim-tree" },
 
 	-- Buffer Management
-	q = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
-	Q = { Cmd("Bdelete!"), "Force close buffer" }, -- (uses bbye)
+	q = {
+		name = "Close",
+		q = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
+		Q = { Cmd("Bdelete!"), "Force close buffer" }, -- (uses bbye)
+		w = { Cmd("windo close"), "Close window" },
+		a = { Cmd("qall"), "Quit nvim" },
+	},
 	w = { Cmd("w!"), "Force write buffer" },
 	h = { Cmd("noh"), "Remove highlights" },
 	r = { Cmd("lua vim.lsp.buf.rename()"), "Rename all instances" },
