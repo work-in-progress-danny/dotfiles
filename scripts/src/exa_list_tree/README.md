@@ -1,5 +1,9 @@
 # A simple [Exa](https://github.com/ogham/exa) ls-tree-like-command wrapper
 
+## TODO
+
+- make into nix flake and have it build on any system instead of including the binary in this repo
+
 A simple [exa](https://github.com/ogham/exa) [ls-tree-like-command (--level=(depth))](https://github.com/ogham/exa#filtering-options) wrapper to be included in my dotfiles and replace the shell script I had:
 
 ```zsh
