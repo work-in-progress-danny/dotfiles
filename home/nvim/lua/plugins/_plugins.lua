@@ -76,7 +76,6 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-cmdline", requires = "hrsh7th/nvim-cmp" }) -- cmdline completions
 	use({ "saadparwaiz1/cmp_luasnip", requires = "hrsh7th/nvim-cmp" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", requires = "hrsh7th/nvim-cmp" })
-	use({ "hrsh7th/cmp-nvim-lua", requires = "hrsh7th/nvim-cmp" })
 	use({ "f3fora/cmp-spell", requires = { "hrsh7th/nvim-cmp" } })
 
 	-- Github Copilot
