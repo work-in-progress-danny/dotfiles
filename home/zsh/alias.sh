@@ -37,6 +37,7 @@ alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
 alias dmod='cd ~/work/develop-module/working'
 alias cpth='cd ~/work/career-pathways/'
+alias yfd='yarn frontend dev'
 
 # Nix Home-Manager
 alias hms="home-manager switch"
