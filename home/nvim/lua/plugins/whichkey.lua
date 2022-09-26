@@ -38,6 +38,11 @@ local normal_mode_opts = {
 }
 
 local normal_mode_mappings = {
+	-- Code Management
+	--[[ keymap("n", "[e", '', opts) -- jump to previous error ]]
+	--[[ keymap("n", "]e", '', opts) - ]]
+	n = { Cmd("lua vim.diagnostic.goto_next({ border = 'rounded' })"), "Jump to next error" },
+	N = { Cmd("lua vim.diagnostic.goto_prev({ border = 'rounded' })"), "Jump to previous error" },
 	k = {
 		name = "signature help",
 		-- TODO add a script check whether there is diagnostics to show if not display variable signature
@@ -45,6 +50,9 @@ local normal_mode_mappings = {
 		k = { Cmd("lua vim.diagnostic.open_float()"), "Show diagnostics" },
 		K = { Cmd("lua vim.lsp.buf.hover()"), "Show hover" },
 	},
+	r = { Cmd("lua vim.lsp.buf.rename()"), "Rename all instances" },
+	a = { Cmd("lua vim.lsp.buf.code_action()"), "Display code action" },
+
 	-- Telescope
 	f = { Cmd("Telescope find_files hidden=true"), "Find files" },
 	G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
@@ -69,8 +77,6 @@ local normal_mode_mappings = {
 	},
 	w = { Cmd("w!"), "Force write buffer" },
 	h = { Cmd("noh"), "Remove highlights" },
-	r = { Cmd("lua vim.lsp.buf.rename()"), "Rename all instances" },
-	a = { Cmd("lua vim.lsp.buf.code_action()"), "Display code action" },
 
 	-- Get *
 	g = {
