@@ -44,8 +44,6 @@ alias hms="home-manager switch"
 alias ncg="nix-collect-garbage"
 
 # Git
-# it would be nice to have a script that captures the output of a failed git push and runs the given command anyway. Essentially never failing to push
-# this ^ now happens in the latest version of git, the Nix flake isn't up to date yet
 alias g='gitui'
 alias gwtc='~/.dotfiles/scripts/src/git_worktree_creator/target/release/git_worktree_creator'
 alias git_authors='git log | sed -n 's/Author://p'  | sort --unique --ignore-case| column -t -s "<\*>"'
@@ -66,7 +64,7 @@ alias gb='git branch'
 alias gpsh='git push'
 alias gpshfwl='git push --force-with-lease'
 alias gpll='git pull -r'
-alias dmb='git switch main && git branch --merged | grep -v \* | xargs git branch -d' # delete merged branches
+alias dmb='git switch main && git branch --merged | grep -v \* | xargs git branch -d' # delete merged branches TODO make this take a "main/master" target as a param
 alias gsw='git switch'
 alias gswc='git switch -c'
 # rebase
@@ -97,15 +95,10 @@ git_rebase_interactive_head_script(){
   fi
 }
 
-# git_reset_head_script(){
-#   git reset head~"$1"
-# }
-
-
 # C++
 alias gpp='g++ -Wall -std=c++1z'
 
-# JavaScript
+# Javascript
 # Typescript
 alias ts='ts-node'
 ## Jest
@@ -114,7 +107,7 @@ alias jof='jest --onlyFailures'
 # Yarn
 alias yd="yarn dev"
 alias yi="yarn install"
-
+alisa y="yarn"
 # Rails
 alias rs='rails server'
 alias rc='rails console'
