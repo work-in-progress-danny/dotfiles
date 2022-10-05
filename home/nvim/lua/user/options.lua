@@ -70,7 +70,7 @@ vim.opt.timeoutlen = 0 -- time to wait for a mapped sequence to complete (in mil
 -- On the BufWrite event, format the current buffer
 vim.api.nvim_create_autocmd({ "BufWrite" }, {
 	callback = function()
-		vim.lsp.buf.formatting_sync()
+		vim.lsp.buf.format()
 	end,
 })
 
