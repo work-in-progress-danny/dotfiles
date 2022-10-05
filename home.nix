@@ -57,12 +57,6 @@
       rnix-lsp
       statix
       shellcheck
-      ktlint # required to work with Kotlin
-
-      # Work
-      docker
-      postgresql
-      jdk11
     ];
 
     file = {

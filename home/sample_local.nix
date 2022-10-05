@@ -6,6 +6,10 @@
     sessionVariables = {
       VARIABLE_NAME = "value"; # useful for machine specific keys
     };
+
+    packages = with pkgs; [
+      # define any machine specific packages
+    ];
   };
 
 
