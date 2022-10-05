@@ -107,7 +107,7 @@ alias jof='jest --onlyFailures'
 # Yarn
 alias yd="yarn dev"
 alias yi="yarn install"
-alisa y="yarn"
+alias y="yarn"
 # Rails
 alias rs='rails server'
 alias rc='rails console'
