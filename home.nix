@@ -27,29 +27,29 @@
       zsh-history-substring-search
 
       # Tools
-      starship
-      bat
+      starship # shell prompt
       comma # shopify's comma
-      direnv
-      exa
-      neovim
-      ripgrep # required by neovim's Telescope
-      fd
+      direnv # directory aware environment variables
+      neovim # text editor
+      ripgrep # grep replacement. required by neovim's Telescope
+      fd # find replacement
+      bat # cat replacement
+      exa # ls replacement
       wget
-      tmux
-      htop-vim
+      tmux # terminal multiplexer
+      htop-vim # htop with vim bindings
 
-      # Git 
+      # Git
       git
-      gitui
+      gitui # a tui for git
 
       # Languages
-      # yarn # yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
-      rust-analyzer
-      wrangler
+      rust-analyzer # rust language server
+      wrangler # cloudflare worker cli
+      fnm # "fast" node version manager
       # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
+      # yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
       # rustc
-      fnm
 
       # Neovim deps
       cppcheck
