@@ -123,5 +123,5 @@ alias cr='cargo run'
 alias cb='cargo build'
 
 # Docker
-alias dcup="docker-compose up -d"
+alias dcup="docker-compose up"
 alias dcs="docker-compose stop"
