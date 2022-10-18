@@ -14,7 +14,7 @@
 
 
   programs.git = {
-    userName = "";
+    userName = ""; # you can have emoji's here as git supports utf-8 encoding
     userEmail = "";
 
     extraConfig = {
