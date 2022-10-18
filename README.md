@@ -50,6 +50,9 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
   - A better ls: [Exa](https://github.com/ogham/exa)
   - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
   - A tool to find and remove node_modules: [npkill](https://github.com/voidcosmos/npkill)
+- Mac apps:
+  - [Rectangle](https://rectangleapp.com/)
+  - [Clippy](https://github.com/Clipy/Clipy)
 
 ## Old Tools
 
