@@ -72,7 +72,7 @@ local normal_mode_mappings = {
 		name = "Close",
 		q = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
 		Q = { Cmd("Bdelete!"), "Force close buffer" }, -- (uses bbye)
-		w = { Cmd("windo close"), "Close window" },
+		b = { Cmd("bd"), "Close buffer" },
 		a = { Cmd("qall"), "Quit nvim" },
 	},
 	w = { Cmd("w!"), "Force write buffer" },
