@@ -3,6 +3,11 @@
 live_config_reload: true
 save_to_clipboard: true
 
+window:
+  decorations: "none"
+  # opacity: 0.99
+
+
 font:
   normal: 
     family: Hack Nerd Font
@@ -11,7 +16,6 @@ font:
   offset:
     x: 1
     y: 1
-  
 
 scrolling:
   # Specifying '0' will disable scrolling.
