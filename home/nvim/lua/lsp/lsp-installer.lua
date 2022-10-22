@@ -15,17 +15,18 @@ end
 
 lsp_installer.setup({
 	ensure_installed = {
-		"sumneko_lua",
-		"pyright",
-		"jsonls",
-		"tsserver",
-		"tailwindcss",
-		"cssls",
-		"rust_analyzer",
-		"rnix",
 		"bashls",
 		"clangd",
+		"cssls",
+		"jsonls",
 		"kotlin_language_server",
+		"pyright",
+		"rnix",
+		"rust_analyzer",
+		"sumneko_lua",
+		"tailwindcss",
+		"taplo",
+		"tsserver",
 	},
 })
 
@@ -65,11 +66,6 @@ lspconfig.cssls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.rust_analyzer.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
 lspconfig.rnix.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -90,8 +86,14 @@ lspconfig.kotlin_language_server.setup({
 	capabilities = capabilities,
 })
 
-rust_tools.setup({
-	tools = { -- rust-tools options
+rust_tools.setup({ -- rust-tools is a special thing, and doesn't get setup with lspconfig or null-ls
+	expand_macro = true,
+	tools = {
+		on_initialized = function()
+			vim.cmd([[
+            autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
+          ]])
+		end,
 		autoSetHints = true,
 		-- hover_with_actions = true, deprecated unknown reason 16/8/22
 		inlay_hints = {
@@ -100,23 +102,18 @@ rust_tools.setup({
 			other_hints_prefix = "",
 		},
 	},
-
-	-- all the opts to send to nvim-lspconfig
-	-- these override the defaults set by rust-tools.nvim
-	-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 	server = {
-		-- on_attach is a callback called when the language server attachs to the buffer
-		on_attach = on_attach,
-		capabilities = capabilities,
-		-- settings = {
-		-- to enable rust-analyzer settings visit:
-		-- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-		-- ["rust-analyzer"] = {
-		-- enable clippy on save
-		-- checkOnSave = {
-		-- 	command = "clippy",
-		-- 	-- },
-		-- },
-		-- },
+		settings = {
+			-- on_attach = on_attach, -- broken for some reason 22/10/22
+			capabilities = capabilities,
+			["rust-analyzer"] = {
+				lens = {
+					enable = true,
+				},
+				checkOnSave = {
+					command = "clippy",
+				},
+			},
+		},
 	},
 })
