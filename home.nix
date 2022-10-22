@@ -60,7 +60,7 @@
     ];
 
     file = {
-      # ~
+      # ~/
       ".zshrc".source = ~/.dotfiles/home/zsh/.zshrc;
       ".zprofile".source = ~/.dotfiles/home/zsh/.zprofile;
       ".tmux.conf".source = ~/.dotfiles/home/.tmux.conf;

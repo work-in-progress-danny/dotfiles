@@ -149,6 +149,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
--- Noteworthy plugins:
--- Alpha, Neovim boot screen "goolord/alpha-nvim"
