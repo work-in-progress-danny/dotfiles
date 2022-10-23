@@ -10,6 +10,7 @@ alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias l='exa -hal --group-directories-first --git --time-style=long-iso' # exa ( modern ls replacement https://github.com/ogham/exa )
 alias ltree='~/.dotfiles/scripts/exa_list_tree'
+alias imfl="~/.dotfiles/scripts/git_config_emoji_switcher && hms"
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
