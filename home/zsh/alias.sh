@@ -9,7 +9,7 @@ alias cv='cv -i'
 alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias l='~/.dotfiles/scripts/binaries/fully_sick_ls'
-alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
+alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher && hms"
 alias r="~/.dotfiles/scripts/binaries/bin_chicken"
 alias rm="r"
 
