@@ -8,9 +8,9 @@ alias rm='rm -i'
 alias cv='cv -i'
 alias ln='ln -i'
 alias mkdir='mkdir -p'
-alias l='~/.dotfiles/scripts/fully_sick_ls/target/release/exa_list_tree'
-alias imfl="~/.dotfiles/scripts/git_config_emoji_switcher/target/release/git_config_emoji_switcher && hms"
-alias r="~/.dotfiles/scripts/bin_chicken/target/release/bin_chicken"
+alias l='~/.dotfiles/scripts/binaries/fully_sick_ls'
+alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
+alias r="~/.dotfiles/scripts/binaries/bin_chicken"
 alias rm="r"
 
 # Helpers/shortcuts
