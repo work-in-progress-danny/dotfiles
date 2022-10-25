@@ -6,12 +6,12 @@ use std::{path::Path, process::Command};
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None )]
 struct Args {
-    /// The pattern to look for
-    #[arg(default_value = "1")]
-    depth: String,
     /// The path to the file to read
     #[arg(default_value = "./")]
     path: String,
+    /// The pattern to look for
+    #[arg(default_value = "1")]
+    depth: String,
 }
 
 fn main() {
