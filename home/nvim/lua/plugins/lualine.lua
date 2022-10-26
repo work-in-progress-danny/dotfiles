@@ -5,76 +5,54 @@ if not status_ok then
 	return
 end
 
--- local ok, gruvbox = pcall(require, "gruvbox")
--- if not status_ok then
--- 	return
--- end
-
--- local colors = gruvbox.config.colors
-
-
 -- Color table for highlights
 -- stylua: ignore start
-local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
-}
-
 local mode_color = {
-	n      = colors.red,
-	i      = colors.green,
-	v      = colors.blue,
-	[""] = colors.blue,
-	V      = colors.blue,
-	c      = colors.magenta,
-	no     = colors.red,
-	s      = colors.orange,
-	S      = colors.orange,
-	[""] = colors.orange,
-	ic     = colors.yellow,
-	R      = colors.violet,
-	Rv     = colors.violet,
-	cv     = colors.red,
-	ce     = colors.red,
-	r      = colors.cyan,
-	rm     = colors.cyan,
-	["r?"] = colors.cyan,
-	["!"]  = colors.red,
-	t      = colors.red,
+  n      = Colors.red,
+  i      = Colors.green,
+  v      = Colors.blue,
+  [""]  = Colors.blue,
+  V      = Colors.blue,
+  c      = Colors.magenta,
+  no     = Colors.red,
+  s      = Colors.orange,
+  S      = Colors.orange,
+  [""]  = Colors.orange,
+  ic     = Colors.yellow,
+  R      = Colors.violet,
+  Rv     = Colors.violet,
+  cv     = Colors.red,
+  ce     = Colors.red,
+  r      = Colors.cyan,
+  rm     = Colors.cyan,
+  ["r?"] = Colors.cyan,
+  ["!"]  = Colors.red,
+  t      = Colors.red,
 }
 
 local mode_label = {
-	n      = "Normal",
-	i      = "Insert",
-	v      = "Visual",
-	[""] = "Visual Block",
-	V      = "Visual Line",
-	c      = "Command",
-	r      = colors.cyan,
-	rm     = colors.cyan,
-	["r?"] = colors.cyan,
-	["!"]  = colors.red,
-	t      = colors.red,
+  n      = "Normal",
+  i      = "Insert",
+  v      = "Visual",
+  [""]  = "Visual Block",
+  V      = "Visual Line",
+  c      = "Command",
+  r      = Colors.cyan,
+  rm     = Colors.cyan,
+  ["r?"] = Colors.cyan,
+  ["!"]  = Colors.red,
+  t      = Colors.red,
 
-	-- don't know what modes these are
-	no     = colors.red,
-	s      = colors.orange,
-	S      = colors.orange,
-	[""] = colors.orange,
-	ic     = colors.yellow,
-	R      = "Replace",
-	Rv     = colors.violet,
-	cv     = colors.red,
-	ce     = colors.red,
+  -- don't know what modes these are
+  no    = Colors.red,
+  s     = Colors.orange,
+  S     = Colors.orange,
+  [""] = Colors.orange,
+  ic    = Colors.yellow,
+  R     = "Replace",
+  Rv    = Colors.violet,
+  cv    = Colors.red,
+  ce    = Colors.red,
 }
 -- stylua: ignore end
 
@@ -102,8 +80,8 @@ local config = {
 			-- We are going to use lualine_c an lualine_x as left and
 			-- right section. Both are highlighted by c theme .  So we
 			-- are just setting default looks o statusline
-			normal = { c = { fg = colors.fg, bg = colors.bg } },
-			inactive = { c = { fg = colors.fg, bg = colors.bg } },
+			normal = { c = { fg = Colors.fg, bg = Colors.bg } },
+			inactive = { c = { fg = Colors.fg, bg = Colors.bg } },
 		},
 	},
 	sections = {
@@ -154,7 +132,7 @@ ins_left({
 	"filename",
 	file_status = true, -- displays file status (readonly status, modified status)
 	path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
-	color = { fg = colors.violet },
+	color = { fg = Colors.violet },
 })
 
 ins_left({
@@ -165,16 +143,16 @@ ins_left({
 
 ins_left({ "location", cond = conditions.buffer_not_empty })
 
-ins_left({ "progress", color = { fg = colors.fg }, padding = { left = -1 } })
+ins_left({ "progress", color = { fg = Colors.fg }, padding = { left = -1 } })
 
 ins_left({
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
 	symbols = { error = " ", warn = " ", info = " " },
 	diagnostics_color = {
-		color_error = { fg = colors.red },
-		color_warn = { fg = colors.yellow },
-		color_info = { fg = colors.cyan },
+		color_error = { fg = Colors.red },
+		color_warn = { fg = Colors.yellow },
+		color_info = { fg = Colors.cyan },
 	},
 })
 
@@ -212,20 +190,20 @@ ins_right({
 	"o:encoding", -- option component same as &encoding in viml
 	fmt = string.upper, -- I'm not sure why it's upper case either ;)
 	cond = conditions.hide_in_width,
-	color = { fg = colors.green },
+	color = { fg = Colors.green },
 })
 
 ins_right({
 	"fileformat",
 	fmt = string.upper,
 	icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-	color = { fg = colors.green },
+	color = { fg = Colors.green },
 })
 
 ins_right({
 	"branch",
 	icon = "",
-	color = { fg = colors.violet },
+	color = { fg = Colors.violet },
 })
 
 ins_right({
@@ -233,9 +211,9 @@ ins_right({
 	-- Is it me or the symbol for modified us really weird
 	symbols = { added = " ", modified = "柳", removed = " " },
 	diff_color = {
-		added = { fg = colors.green },
-		modified = { fg = colors.orange },
-		removed = { fg = colors.red },
+		added = { fg = Colors.green },
+		modified = { fg = Colors.orange },
+		removed = { fg = Colors.red },
 	},
 	cond = conditions.hide_in_width,
 })
