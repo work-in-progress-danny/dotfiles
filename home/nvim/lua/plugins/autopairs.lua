@@ -5,8 +5,8 @@ if not status_ok then
 	return
 end
 
-local status_ok, nvim_ts_autotag = pcall(require, "nvim-ts-autotag")
-if not status_ok then
+local status_ok_autotag, nvim_ts_autotag = pcall(require, "nvim-ts-autotag")
+if not status_ok_autotag then
 	return
 end
 
