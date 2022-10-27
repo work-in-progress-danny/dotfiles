@@ -19,4 +19,4 @@
 # Related:
 
 # run > git_authors "name" -> to find the correct details
-# Co-authored-by: name <name@example.com>
+# Co-authored-by: name <name@example.com> (wrapping <> is required)
