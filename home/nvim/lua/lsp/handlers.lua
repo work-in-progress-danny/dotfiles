@@ -44,22 +44,6 @@ M.setup = function()
 	})
 end
 
-local function lsp_highlight_document(client)
-	-- Set autocommands conditional on server_capabilities
-	if client.server_capabilities.document_highlight then
-		vim.api.nvim_exec(
-			[[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
-			false
-		)
-	end
-end
-
 M.on_attach = function(client)
 	if
 		client.name == "tsserver"
@@ -68,10 +52,8 @@ M.on_attach = function(client)
 		or client.name == "rust_analyzer"
 		or client.name == "sumneko_lua"
 	then
-		-- disable language servers that also do formatting, leave it up to null-ls
-		client.server_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false -- disable language servers that also do formatting, leave it up to null-ls
 	end
-	lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
