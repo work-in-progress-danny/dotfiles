@@ -16,7 +16,7 @@ alias rm="bin_chicken"
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
 alias v='open_nvim_script'
 open_nvim_script(){
-  if [ "$1" -gt 0 ]
+  if [ "$1" ]
   then
     ~/.nix-profile/bin/nvim "$1"
   else
