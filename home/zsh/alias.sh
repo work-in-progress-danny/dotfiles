@@ -14,7 +14,10 @@ alias rm="bin_chicken"
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
-alias v='open_nvim_script'
+
+alias vr='nvim' # nvim auto-sessions will resume if nvim is opened without a flag or path to the cwd
+alias v='nvim .' # this will open nvim and not resume auto-sessions
+# alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a path
 open_nvim_script(){
   if [ "$1" ]
   then

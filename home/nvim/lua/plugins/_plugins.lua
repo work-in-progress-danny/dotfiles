@@ -56,6 +56,9 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	-- Auto sessions
+	use("rmagatti/auto-session") -- Automatically save and restore sessions)
+
 	use({ "RRethy/vim-illuminate" })
 	-- Toggle Term ( Floating Neovim terminal )
 	use("akinsho/toggleterm.nvim")
