@@ -21,7 +21,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		-- Javascript
-		formatting.prettierd,
+		formatting.prettierd.with({ extra_filetypes = { "astro" } }),
 		diagnostics.eslint_d,
 
 		-- Lua
