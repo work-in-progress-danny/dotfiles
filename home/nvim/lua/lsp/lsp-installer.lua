@@ -27,6 +27,7 @@ lsp_installer.setup({
 		"tailwindcss",
 		"taplo",
 		"tsserver",
+		"astro",
 	},
 })
 
@@ -56,9 +57,15 @@ lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.astro.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 lspconfig.tailwindcss.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	filetypes = { "astro", "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 })
 
 lspconfig.cssls.setup({

@@ -22,7 +22,7 @@ null_ls.setup({
 	sources = {
 		-- Javascript
 		formatting.prettierd.with({ extra_filetypes = { "astro" } }),
-		diagnostics.eslint_d,
+		diagnostics.eslint_d.with({ extra_filetypes = { "astro" } }),
 
 		-- Lua
 		formatting.stylua,
