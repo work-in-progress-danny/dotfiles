@@ -6,12 +6,12 @@ All these settings and preferences are quite specific to me, myself and my MacBo
 
 I wouldn't recommend this as I don't have a comprehensive list of installed software, the configuration assumes many things are already installed and this could break your dev environment.
 
-1. Install nix on the new system see [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223).
+1. Install nix on your new system see [reference](https://gist.github.com/mandrean/65108e0898629e20afe1002d8bf4f223).
 2. Run `chmod +x ./install.sh && ./install.sh`
 3. Create a local.nix file with `cp ~/.dotfiles/home/sample_local.nix ~/.dotfiles/home/local.nix`, in there fill out your install specific details
-4. Run `home-manager switch` to install all software
-5. I use [ 1password ](https://1password.com/) as an ssh agent, you'll need to install it [ here (mac)](https://1password.com/downloads/mac/).
-   1. run `mkdir -p ~/.1password && ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock` to use the 1password agent. [ docs ](https://developer.1password.com/docs/ssh/get-started#step-4-configure-your-ssh-or-git-client)
+4. Run `home-manager switch` to install all the software, this will take a while.
+5. I use [ 1password ](https://1password.com/) as an ssh agent to sign all of my commits, you'll need to install it [ here (mac)](https://1password.com/downloads/mac/), it is a paid service. To opt out of using it, update `home/git/default.nix` to match you git config
+   1. To use the 1password agent follow these [ docs ](https://developer.1password.com/docs/ssh/git-commit-signing).
 6. Everything should be installed now and ready to use, if there are any problems open up an issue on github!
 
 ### Manual installation of packages
@@ -45,6 +45,8 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - Dotfiles Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
+- Password Manager: [1Password](https://1password.com/)
+- GPG Program: [1Password](https://developer.1password.com/docs/ssh) supports ssh keys and commit signing with auto-fill and touch-id
 - CLI apps:
   - A better cat: [Bat](https://github.com/sharkdp/bat)
   - A better ls: [Exa](https://github.com/ogham/exa)
