@@ -34,7 +34,7 @@ alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/proj
 
 # Dotfiles
 alias d='cd ~/.dotfiles/'
-alias od='v ~/.dotfiles/'
+alias od='nvim ~/.dotfiles/'
 
 # Brain 
 alias b='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
@@ -47,7 +47,7 @@ alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/pro
 # Work
 alias work='cd ~/work'
 alias mlab='cd ~/work/manager-lab'
-alias dmod='cd ~/work/develop-module/working'
+alias dmod='cd ~/work/develop-module'
 alias cpth='cd ~/work/career-pathways/'
 alias yfd='yarn frontend dev'
 
