@@ -18,7 +18,7 @@ alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashin
 alias vr='nvim' # nvim auto-sessions will resume if nvim is opened without a flag or path to the cwd
 alias v='nvim .' # this will open nvim and not resume auto-sessions
 # alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a path
-open_nvim_script(){
+open_nvim_script () {
   if [ "$1" ]
   then
     ~/.nix-profile/bin/nvim "$1"
@@ -97,14 +97,19 @@ alias gs='git status'
 alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
+
 # scripts
-git_rebase_interactive_head_script(){
+git_rebase_interactive_head_script () {
   if [ "$1" -gt 0 ]
   then
       git rebase -i HEAD~"$1"
   else
       echo "Please provide a number to rebase by";
   fi
+}
+
+gho () { # github open branch in browser
+  gh pr view -w || gh browse -b `git branch --show-current`
 }
 
 # C++

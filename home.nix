@@ -38,6 +38,7 @@
       wget
       tmux # terminal multiplexer
       htop-vim # htop with vim bindings
+      gh # github cli
 
       # Git
       git
