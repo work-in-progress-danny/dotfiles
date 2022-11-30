@@ -58,7 +58,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.scrolloff = 12 -- is one of my fav
 vim.opt.sidescrolloff = 15
-vim.opt.showtabline = 2 -- always show tabs
+vim.opt.showtabline = 0 -- don't show tabs
 vim.opt.relativenumber = true -- set relative numbered lines
 vim.opt.number = true -- set numbered lines
 -- cursor
