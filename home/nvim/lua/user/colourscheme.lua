@@ -1,7 +1,12 @@
-local colorscheme = "gruvbox"
+local colorscheme = "tokyonight-moon"
 
 local gruvbox_status_ok, gruvbox = pcall(require, "gruvbox")
 if not gruvbox_status_ok then
+  return
+end
+
+local tokyonight_status_ok, tokyonight = pcall(require, "tokyonight")
+if not tokyonight_status_ok then
   return
 end
 
