@@ -46,8 +46,6 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-	-- Bufferline ( Tab-like line at the top of the buffer showing all open buffers like tabs )
-	use("akinsho/bufferline.nvim") -- a tab-like line displaying all open buffers
 	use("moll/vim-bbye") -- Easily dismiss buffers
 
 	-- Lualine ( Info line at the bottom of the buffer showing git diff and location )
@@ -56,11 +54,6 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-	-- Auto sessions
-	use("rmagatti/auto-session") -- Automatically save and restore sessions)
-
-	use({ "RRethy/vim-illuminate" })
-	-- Toggle Term ( Floating Neovim terminal )
 	use("akinsho/toggleterm.nvim")
 
 	-- Nvim Tree ( File Explorer )
