@@ -56,11 +56,11 @@ local normal_mode_mappings = {
 	-- Telescope
 	f = { Cmd("Telescope find_files hidden=true"), "Find files" },
 	G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
+	b = { Cmd("Telescope buffers"), "Buffers" },
 	T = {
 		name = "Telescope",
 		t = { Cmd("Telescope"), "Toggle Telescope" },
 		c = { Cmd("Telescope command_history"), "Command History" },
-		b = { Cmd("Telescope buffers"), "Buffers" },
 		r = { Cmd("Telescope resume"), "Resume last Telescope instance" },
 	},
 
