@@ -15,9 +15,9 @@ alias rm="bin_chicken"
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
 
-alias vr='nvim' # nvim auto-sessions will resume if nvim is opened without a flag or path to the cwd
-alias v='nvim .' # this will open nvim and not resume auto-sessions
-# alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a path
+# alias vr='nvim' # nvim auto-sessions will resume if nvim is opened without a flag or path to the cwd
+# alias v='nvim .' # this will open nvim and not resume auto-sessions
+alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a path
 open_nvim_script () {
   if [ "$1" ]
   then
@@ -54,6 +54,9 @@ alias yfd='yarn frontend dev'
 # Nix Home-Manager
 alias hms="home-manager switch"
 alias ncg="nix-collect-garbage"
+alias ncu="nix-channel --update"
+alias wc="ncu && hms && ncg"
+
 
 # Git
 alias g='gitui'
@@ -76,6 +79,7 @@ alias gb='git branch'
 alias gpsh='git push'
 alias gpshfwl='git push --force-with-lease'
 alias gpll='git pull -r'
+alias gpllom='gpll origin main' # this will break if the "main" branch is master
 alias dmb='git switch main && git branch --merged | grep -v \* | xargs git branch -d' # delete merged branches TODO make this take a "main/master" target as a param
 alias gsw='git switch'
 alias gswc='git switch -c'
@@ -115,8 +119,7 @@ gho () { # github open branch in browser
 # C++
 alias gpp='g++ -Wall -std=c++1z'
 
-# Javascript
-# Typescript
+# Javascript/Typescript
 alias ts='ts-node'
 ## Jest
 alias jtd='jest -o'
@@ -125,6 +128,7 @@ alias jof='jest --onlyFailures'
 alias yd="yarn dev"
 alias yi="yarn install"
 alias y="yarn"
+
 # Rails
 alias rs='rails server'
 alias rc='rails console'
