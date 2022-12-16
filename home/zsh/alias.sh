@@ -43,6 +43,7 @@ alias ob='v ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 ## Projects
 alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
 alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
+alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/2022'
 
 # Work
 alias work='cd ~/work'
