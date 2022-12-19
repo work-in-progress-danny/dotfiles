@@ -90,7 +90,7 @@ local normal_mode_mappings = {
 	-- Terminal
 	t = {
 		name = "Terminal",
-		t = { Cmd("ToggleTerm"), "Open Terminal" },
+		t = { TERMINAL_TOGGLE, "Open Terminal" },
 		g = { GITUI_TOGGLE, "Open GitUI" }, -- GITUI_TOGGLE global is defined in toggle-term
 		h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
 		n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term

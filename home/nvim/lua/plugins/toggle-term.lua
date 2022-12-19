@@ -12,6 +12,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
+	persist_mode = true,
 	direction = "float",
 	close_on_exit = true,
 	shell = vim.o.shell,
@@ -29,29 +30,16 @@ function _G.set_terminal_keymaps()
 	local opts = { noremap = true }
 	vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts) -- allow for escape to exit insert mode
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
-	-- vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
-	-- vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
-	-- vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-local terminal_opts = {
-	hidden = true,
-	close_on_exit = true,
-	start_in_insert = true,
-	persist_mode = false,
-}
-
-local function new_terminal(cmd)
-	return Terminal:new({ cmd, terminal_opts })
-end
-
-local gitui = new_terminal("gitui")
-local htop = new_terminal("htop")
-local node = new_terminal("node")
+local gitui = Terminal:new({ cmd = "gitui" })
+local htop = Terminal:new({ cmd = "htop" })
+local node = Terminal:new({ cmd = "node" })
+local terminal = Terminal:new()
 
 function GITUI_TOGGLE()
 	gitui:toggle()
@@ -63,6 +51,10 @@ end
 
 function NODE_TOGGLE()
 	node:toggle()
+end
+
+function TERMINAL_TOGGLE()
+	terminal:toggle()
 end
 
 -- local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
