@@ -99,6 +99,7 @@ return packer.startup(function(use)
 			require("copilot_cmp").setup({ method = "getCompletionsCycling" })
 		end,
 	})
+	use("lewis6991/impatient.nvim")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
