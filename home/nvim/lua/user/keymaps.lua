@@ -59,7 +59,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Visual --
--- Stay in indent mode
+-- Indent selected text
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
