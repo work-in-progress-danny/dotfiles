@@ -94,6 +94,7 @@ local normal_mode_mappings = {
 		h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
 		n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term
 	},
+	z = { Cmd("Telescope symbols"), "z-emojis of course" },
 }
 
 local visual_mode_opts = {

@@ -118,6 +118,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "nvim-telescope/telescope-media-files.nvim", requires = { "nvim-telescope/telescope.nvim" } })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", requires = { "nvim-telescope/telescope.nvim" }, run = "make" })
+	use("nvim-telescope/telescope-symbols.nvim") -- adds emojis to telescope
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
