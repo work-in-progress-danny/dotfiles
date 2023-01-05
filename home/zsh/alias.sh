@@ -56,7 +56,7 @@ alias yfd='yarn frontend dev'
 alias hms="home-manager switch"
 alias ncg="nix-collect-garbage"
 alias ncu="nix-channel --update"
-alias wc="ncu && hms && ncg"
+alias wc="ncu && hms"
 
 
 # Git
