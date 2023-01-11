@@ -53,6 +53,7 @@ local normal_mode_mappings = {
 
 	-- Telescope
 	f = { Cmd("Telescope find_files hidden=true"), "Find files" },
+	d = { Cmd("Telescope git_status hidden=true"), "Git diff" },
 	G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
 	b = { Cmd("Telescope buffers"), "Buffers" },
 	s = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
