@@ -74,12 +74,6 @@ nvim_tree.setup({
 	},
 	disable_netrw = true,
 	hijack_netrw = true,
-	open_on_setup = true,
-	ignore_ft_on_setup = {
-		"startify",
-		"dashboard",
-		"alpha",
-	},
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = true,
@@ -118,3 +112,41 @@ nvim_tree.setup({
 		require_confirm = true,
 	},
 })
+
+local function open_nvim_tree(data)
+	local IGNORED_FT = {
+		"startify",
+		"dashboard",
+		"alpha",
+	}
+	-- buffer is a [No Name]
+	local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+
+	-- buffer is a directory
+	local directory = vim.fn.isdirectory(data.file) == 1
+
+	if not no_name and not directory then
+		return
+	end
+
+	-- &ft
+	local filetype = vim.bo[data.buf].ft
+
+	-- change to the directory
+	if directory then
+		vim.cmd.cd(data.file)
+	end
+
+	-- skip ignored filetypes
+	if vim.tbl_contains(IGNORED_FT, filetype) then
+		return
+	end
+
+	-- open the tree
+	require("nvim-tree.api").tree.open()
+end
+
+-- this is a callback to open nvim_tree on nvim start. There used to be a nice setting in the setup
+-- function but it was removed. This is a workaround to open the tree on nvim start.
+-- see: https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
