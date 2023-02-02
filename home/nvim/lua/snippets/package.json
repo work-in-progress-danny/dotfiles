@@ -1,0 +1,16 @@
+{
+  "name": "Danny's snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "jsx",
+          "tsx"
+        ],
+        "path": "./javascript.json"
+      }
+    ]
+  }
+}
