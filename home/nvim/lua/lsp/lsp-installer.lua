@@ -23,7 +23,7 @@ lsp_installer.setup({
 		"pyright",
 		"rnix",
 		"rust_analyzer",
-		"sumneko_lua",
+		"lua_ls",
 		"tailwindcss",
 		"taplo",
 		"tsserver",
@@ -34,8 +34,8 @@ lsp_installer.setup({
 local on_attach = require("lsp.handlers").on_attach
 local capabilities = require("lsp.handlers").capabilities
 
-lspconfig.sumneko_lua.setup({
-	settings = require("lsp.settings.sumneko_lua").settings,
+lspconfig.lua_ls.setup({
+	settings = require("lsp.settings.lua_ls").settings,
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

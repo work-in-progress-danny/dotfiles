@@ -50,7 +50,7 @@ M.on_attach = function(client)
 		or client.name == "jsonls"
 		or client.name == "rustfmt"
 		or client.name == "rust_analyzer"
-		or client.name == "sumneko_lua"
+		or client.name == "lua_ls"
 	then
 		client.server_capabilities.document_formatting = false -- disable language servers that also do formatting, leave it up to null-ls
 	end
