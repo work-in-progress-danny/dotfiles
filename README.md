@@ -46,7 +46,7 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 - Dotfiles Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
 - Password Manager: [1Password](https://1password.com/)
-- GPG Program: [1Password](https://developer.1password.com/docs/ssh) supports ssh keys and commit signing with auto-fill and touch-id
+- GPG Program: [1Password](https://developer.1password.com/docs/ssh) supports ssh keys and commit signing with Touch-Id and Apple Watch
 - CLI apps:
   - A better cat: [Bat](https://github.com/sharkdp/bat)
   - A better ls: [Exa](https://github.com/ogham/exa)
