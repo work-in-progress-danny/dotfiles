@@ -5,9 +5,12 @@
       {
         "language": [
           "javascript",
+          "javascriptreact",
           "typescript",
+          "typescriptreact",
           "jsx",
-          "tsx"
+          "tsx",
+          "react"
         ],
         "path": "./javascript.json"
       }
