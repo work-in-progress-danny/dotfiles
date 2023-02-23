@@ -42,7 +42,12 @@
       # Languages
       rust-analyzer # rust language server
       wrangler # cloudflare worker cli
-      fnm # "fast" node version manager
+      fnm # "fast" node (version) manager
+      # if I ever am not using Kotlin or Java and want to remove them from nvim. Also remove these below 
+      jdk11
+      kotlin
+      maven
+
       # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
       # yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
       # rustc
@@ -53,6 +58,7 @@
       rnix-lsp
       statix
       shellcheck
+      ktlint # required to work with Kotlin
     ];
 
     file = {
