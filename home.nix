@@ -68,11 +68,6 @@
       ".tmux.conf".source = ~/.dotfiles/home/.tmux.conf;
       ".ssh/config".source = ~/.dotfiles/home/ssh/config;
 
-      # ~/.config/
-      ".config/nvim" = {
-        source = ~/.dotfiles/home/nvim;
-        recursive = true; # https://github.com/nix-community/home-manager/issues/2282
-      };
       ".config/gitui".source = ~/.dotfiles/home/gitui;
       ".config/alacritty.yml".source = ~/.dotfiles/home/alacritty.yml;
       ".config/starship.toml".source = ~/.dotfiles/home/starship.toml;

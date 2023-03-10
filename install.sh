@@ -10,7 +10,7 @@ echo "This install script is broken at them moment"
 # echo "symlinking dotfiles contents into the new directory"
 #
 # # ln ~/.dotfiles/home.nix ~/.config/nixpkgs 
-# # ln -s ~/.dotfiles/home/ ~/.config/nixpkgs/ 
+ln -s ~/.dotfiles/home/nvim/ ~/.config/ 
 #
 # echo "Running first home-manager install"
 #
