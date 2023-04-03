@@ -73,6 +73,8 @@ $status\
 $shell\
 $character"""
 
+[character]
+vicmd_symbol = '[](bold green) '
 
 [git_branch]
 format = " [$symbol$branch]($style) "
@@ -88,7 +90,6 @@ added_style = "green"
 deleted_style =	"red"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 disabled = false
-
 
 [docker_context]
 disabled = true
