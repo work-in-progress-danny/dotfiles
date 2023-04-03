@@ -64,14 +64,29 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
+
+$fill\
+
+$time\
 $cmd_duration\
+
 $line_break\
+
 $jobs\
 $battery\
-$time\
 $status\
 $shell\
 $character"""
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+format = '[$time](#FFA500) '
+
+[cmd_duration]
+format = '[$duration](#FFA500) '
 
 [character]
 vicmd_symbol = '[](bold green) '
@@ -80,23 +95,20 @@ vicmd_symbol = '[](bold green) '
 format = " [$symbol$branch]($style) "
 
 [git_status]
-style = "bold #FFA500"
+style = "#FFA500"
 ahead = "⇡${count}"
-diverged = "⇕[⇡${ahead_count}](bold green)[⇣${behind_count}](bold red)"
+diverged = "[⇡${ahead_count}](bold green)[⇣${behind_count}](bold red)"
 behind = "⇣${count}"
 
 [git_metrics]
-added_style = "green" 	
-deleted_style =	"red"
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+format = '[+$added](green)/[-$deleted](red) '
 disabled = false
 
 [docker_context]
 disabled = true
 
 [ruby]
-format = " [$symbol($version )]($style)"
-symbol = " "
+format = " [ ($version) ]($style)"
 
 [nodejs]
 format = " [$symbol($version )]($style)"
