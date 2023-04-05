@@ -12,6 +12,9 @@
     # username = "";
     # homeDirectory = "";
 
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
 
 
     packages = with pkgs; [
@@ -20,6 +23,7 @@
       zsh-autosuggestions
       zsh-syntax-highlighting
       zsh-history-substring-search
+      helix
 
       # Tools
       starship # shell prompt
