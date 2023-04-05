@@ -1,10 +1,5 @@
 local colorscheme = "gruvbox"
 
-local gruvbox_status_ok, gruvbox = pcall(require, "gruvbox")
-if not gruvbox_status_ok then
-  return
-end
-
 -- stylua: ignore start
 Colors = {
   bg       = "#1d2021",
@@ -21,20 +16,30 @@ Colors = {
 }
 -- stylua: ignore end
 
+-- this is for whenever you want to change you colour scheme
+--[[ local colorscheme_plugin_status_ok, gruvbox = pcall(require, "gruvbox") ]]
+--[[ if not colorscheme_plugin_status_ok then ]]
+--[[ 	return ]]
+--[[ end ]]
+local gruvbox_status_ok, gruvbox = pcall(require, "gruvbox")
+if not gruvbox_status_ok then
+	return
+end
+
+-- gruvbox only
 gruvbox.setup({
-  contrast = "hard",
-  overrides = {
-    SignColumn = { -- TODO this is still broken, not sure if it's gitsigns or not 26/10/2022
-      link = "LineNr",
-    },
-  },
+	contrast = "hard",
+	overrides = {
+		SignColumn = { -- TODO this is still broken, not sure if it's gitsigns or not 26/10/2022
+			link = "LineNr",
+		},
+	},
 })
 
-vim.o.termguicolors = true
 vim.cmd("set background=dark")
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-  vim.notify_once('Whoops colorscheme "' .. colorscheme .. '" not found!')
-  return
+	vim.notify_once('Whoops colorscheme "' .. colorscheme .. '" not found!')
+	return
 end
