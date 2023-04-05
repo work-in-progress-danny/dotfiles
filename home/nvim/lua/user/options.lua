@@ -74,30 +74,3 @@ vim.api.nvim_create_autocmd({ "BufWrite" }, {
 		vim.lsp.buf.format()
 	end,
 })
-
--- vim.cmd "set whichwrap+=<,>,[,],h,l"
--- vim.cmd [[set iskeyword+=-]]
--- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-
--- MINE
--- syntax on
--- set relativenumber
--- set nu
--- set smartcase
--- set noswapfile
--- set nobackup
--- set hidden
--- set incsearch
--- set cursorline
--- set backspace=indent,eol,start
--- set showmatch
--- set matchtime=3
--- filetype plugin indent on
--- " Spelling
--- " Undo
--- set undofile
--- " Colours
--- set colorcolumn=100
--- colorscheme gruvbox
--- highlight ColorColumn ctermbg=0 guibg=lightgrey
--- vim.opt.shortmess:append "c"
