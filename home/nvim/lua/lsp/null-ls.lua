@@ -18,11 +18,31 @@ local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
-	debug = false,
+	--[[ debug = true, ]]
 	sources = {
 		-- Javascript
-		formatting.prettierd.with({ extra_filetypes = { "astro" } }),
-		diagnostics.eslint_d.with({ extra_filetypes = { "astro" } }),
+		diagnostics.eslint_d,
+		code_actions.eslint_d, -- .with({ extra_filetypes = { "astro" } }),
+		formatting.eslint_d,
+		--[[ j.with({ ]]
+		--[[ extra_filetypes = { "astro" }, ]]
+		--[[ arg = { "--fix-to-stdout", "--stdin", "--stdin-filename", "$FILENAME" }, ]]
+		--[[ }), ]]
+
+		formatting.prettierd.with({
+			extra_filetypes = {
+				"TOML",
+				"astro",
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"yaml",
+				"markdown",
+				"graphql",
+			},
+		}),
 
 		-- Lua
 		formatting.stylua,
@@ -41,12 +61,6 @@ null_ls.setup({
 		-- Kotlin
 		diagnostics.ktlint,
 		formatting.ktlint,
-
-		-- TOML
-		formatting.prettierd.with({
-			extra_filetypes = { "toml" },
-			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-		}),
 
 		-- Python
 		-- formatting.black.with { extra_args = { "--fast" } },
