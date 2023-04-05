@@ -78,14 +78,14 @@ return packer.startup(function(use)
 	-- Github Copilot
 	use({
 		"zbirenbaum/copilot.lua",
-		event = "InsertEnter",
+		--[[ event = "InsertEnter", ]]
 		config = function()
 			vim.schedule(function()
 				require("copilot").setup({
 					ft_disable = {
 						"markdown",
 						"TelescopePrompt",
-						".git/COMMIT_EDITMSG",
+						--[[ ".git/COMMIT_EDITMSG", ]]
 					},
 				})
 			end)
