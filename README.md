@@ -51,10 +51,11 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
   - A better cat: [Bat](https://github.com/sharkdp/bat)
   - A better ls: [Exa](https://github.com/ogham/exa)
   - Git TUI: [Gitui](https://github.com/extrawurst/gitui#6--installation-top-)
+  - Htop with vim-like key bindings: [htop-vim](https://github.com/KoffeinFlummi/htop-vim) 
   - A tool to find and remove node_modules: [npkill](https://github.com/voidcosmos/npkill)
 - Mac apps:
-  - [Rectangle](https://rectangleapp.com/)
-  - [Clippy](https://github.com/Clipy/Clipy)
+  - A nice keyboard based window manager: [Rectangle](https://rectangleapp.com/)
+  - A clipboard manager: [Clippy](https://github.com/Clipy/Clipy)
 
 ## Old Tools
 
