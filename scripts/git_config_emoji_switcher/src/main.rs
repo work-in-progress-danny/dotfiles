@@ -24,6 +24,10 @@ fn main() -> std::io::Result<()> {
         "😴",
         "🤠",
         "🥸",
+        "🦆",
+        "😋",
+        "🤭",
+        "🥲",
     ];
 
     let new_emoji = emjois.choose(&mut rand::thread_rng()).unwrap();
@@ -35,7 +39,6 @@ fn main() -> std::io::Result<()> {
     let mut contents = String::new();
     buf_reader.read_to_string(&mut contents)?;
 
-    // WHAT THE ACTUAL FUCK, YOU CAN NAME CAPTURE GROUPS... AHH 😍
     let re = Regex::new(r#""(?P<name>Danny Lowater) (?P<emoji>.*)""#).unwrap();
     let str = &contents;
 
