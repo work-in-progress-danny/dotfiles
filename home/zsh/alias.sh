@@ -54,7 +54,7 @@ alias yfd='yarn frontend dev'
 
 # Nix Home-Manager
 alias hms="home-manager -f ~/.dotfiles/home.nix switch"
-alias ncg="nix-collect-garbage"
+alias ncg="nix-collect-garbage --delete-older-than 7d"
 alias ncu="nix-channel --update"
 alias wc="ncu && hms"
 
