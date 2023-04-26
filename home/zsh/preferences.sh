@@ -17,4 +17,6 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
 export EXA_COLORS="da=32" # da: timestamp
 
+bindkey -e # use emacs keybindings in zsh instead of vi
+
 autoload -U compinit && compinit
