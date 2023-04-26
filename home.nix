@@ -23,25 +23,27 @@
       zsh-autosuggestions
       zsh-syntax-highlighting
       zsh-history-substring-search
-      helix
+      zsh-fzf-tab
+      starship # shell prompt
 
       # Tools
-      starship # shell prompt
+      helix
       comma # shopify's comma
       direnv # directory aware environment variables
       neovim # text editor
-      ripgrep # grep replacement. required by neovim's Telescope
+      ripgrep # grep replacement (required by neovim's Telescope)
       fd # find replacement
       bat # cat replacement
       exa # ls replacement
       wget # download tool
       tmux # terminal multiplexer
       htop-vim # htop with vim bindings
-      gh # github cli
+      fzf # fuzzy finder (required by zsh-fzf-tab)
 
       # Git
       git
       gitui # a tui for git
+      gh # github cli
 
       # Languages
       rust-analyzer # rust language server

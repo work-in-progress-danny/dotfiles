@@ -3,6 +3,7 @@
 source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.nix-profile/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
 source "$HOME/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.nix-profile/share/fzf-tab/fzf-tab.plugin.zsh"
 
 # Auto suggest plugin settings
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
