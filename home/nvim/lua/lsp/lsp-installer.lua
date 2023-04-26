@@ -1,4 +1,4 @@
-local _, lsp_installer = pcall(require, "nvim-lsp-installer")
+local _, mason_lspconfig = pcall(require, "mason-lspconfig.nvim")
 if not _ then
 	return
 end
@@ -13,7 +13,7 @@ if not _ then
 	return
 end
 
-lsp_installer.setup({
+mason_lspconfig.setup({
 	ensure_installed = {
 		"bashls",
 		"clangd",

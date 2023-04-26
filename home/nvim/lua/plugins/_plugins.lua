@@ -110,6 +110,8 @@ return packer.startup(function(use)
 
 	-- LSP ( Language Server Protocol support )
 	use("neovim/nvim-lspconfig") -- enable LSP
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use({ "j-hui/fidget.nvim", requires = { "jose-elias-alvarez/null-ls.nvim" } }) -- nice little notifier in the corner communicating the current state of Null-ls

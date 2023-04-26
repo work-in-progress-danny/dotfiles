@@ -1,10 +1,13 @@
 pcall(require, "impatient")
+--[[ require("mason").setup() ]]
 
 require("user.options")
 require("user.keymaps")
 require("user.colourscheme")
 
 require("lsp.lsp")
+require("lsp.mason")
+require("lsp.lsp-installer")
 require("lsp.null-ls")
 
 require("plugins._plugins")
