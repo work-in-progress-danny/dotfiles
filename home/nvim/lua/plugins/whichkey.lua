@@ -1,5 +1,6 @@
 -- https://github.com/folke/which-key.nvim
--- see telescope bug https://github.com/folke/which-key.nvim/issues/273
+-- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/which-key.lua
+
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
@@ -30,7 +31,7 @@ local setup_preferences = {
 
 local normal_mode_opts = {
 	mode = "n", -- NORMAL mode
-	prefix = "<leader>",
+	prefix = " ",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
@@ -85,6 +86,7 @@ local normal_mode_mappings = {
 		d = { Cmd("lua vim.lsp.buf.definition()"), "Definition" },
 		i = { Cmd("lua vim.lsp.buf.implementation()"), "Implementation" },
 		r = { Cmd("Telescope lsp_references"), "All references in code base" },
+		["/"] = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
 	},
 
 	-- Terminal
@@ -96,11 +98,12 @@ local normal_mode_mappings = {
 		n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term
 	},
 	z = { Cmd("Telescope symbols"), "z-emojis of course" },
+	["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 }
 
 local visual_mode_opts = {
 	mode = "x",
-	prefix = "<leader>",
+	prefix = " ",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
@@ -108,7 +111,7 @@ local visual_mode_opts = {
 }
 
 local visual_mode_mappings = {
-	i = { ":echo hello", "Git danny hunk" },
+	["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle current highlight" },
 }
 
 which_key.setup(setup_preferences)

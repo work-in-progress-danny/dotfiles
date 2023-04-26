@@ -9,10 +9,10 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--Remap space as leader key (whichkey.lua now handles this)
+--[[ keymap("", "<Space>", "<Nop>", opts) ]]
+--[[ vim.g.mapleader = " " ]]
+--[[ vim.g.maplocalleader = " " ]]
 
 -- Modes
 --   all modes = "",
@@ -30,29 +30,12 @@ keymap("", "q", "<Nop>", opts) -- remap q to nothing because its annoying when t
 keymap("n", "<S-b>", "^", opts) -- shift b moves the Cursor to the start of the line
 keymap("n", "<S-e>", "$", opts) -- shift e moves the Cursor to the end of the line
 
--- No highlight
-keymap("n", "<leader>h", Cmd("noh"), opts) -- turn off highlighted search results
-
--- Use Telescope current_buffer_fuzzy_find over vim's /
--- keymap("", "/", Cmd("Telescope current_buffer_fuzzy_find"), opts)
-
--- Comment
--- [reference](https://github.com/numToStr/Comment.nvim/blob/master/doc/API.md#%EF%B8%8F-usage)
-keymap("n", "<leader>/", ":lua require('Comment.api').toggle.linewise.current()<cr>", opts) -- leader / comment out the current line when in normal mode
-keymap("v", "<leader>/", ":lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", opts) -- leader / comments out all highlighted lines when in visual mode
-
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts) -- move cursor window to the left
 keymap("n", "<C-j>", "<C-w>j", opts) -- move cursor window down
 keymap("n", "<C-k>", "<C-w>k", opts) -- move cursor window up
 keymap("n", "<C-l>", "<C-w>l", opts) -- move cursor window to the right
 keymap("n", "<C-e>", Cmd("NvimTreeFocus"), opts) -- jump to nvim tree window
-
--- Resize with arrows. These can't work on Mac, they are already mapped to window management commands
--- keymap("n", "<C-Up>", Cmd("resize +2"), opts)
--- keymap("n", "<C-Down>", Cmd("resize -2"), opts)
--- keymap("n", "<C-Left>", Cmd("vertical resize -2"), opts)
--- keymap("n", "<C-Right>", Cmd("vertical resize +2"), opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
