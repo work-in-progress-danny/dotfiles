@@ -46,7 +46,7 @@
       gh # github cli
 
       # Languages
-      rust-analyzer # rust language server
+      # rust-analyzer # rust language server
       wrangler # cloudflare worker cli
       fnm # "fast" node (version) manager
       # if I ever am not using Kotlin or Java and want to remove them from nvim. Also remove these below 
