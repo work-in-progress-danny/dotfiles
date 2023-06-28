@@ -24,6 +24,10 @@
         editor = "nvim";
       };
 
+      init = {
+        defaultBranch = "main";
+      };
+
       # merge.conflictStyle = "diff3"; # this setting displace the head/latest common commit/incoming 
       pull.rebase = true;
       push.autoSetupRemote = true;
