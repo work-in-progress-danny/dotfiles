@@ -1,8 +1,10 @@
-local _, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not _ then
-	return
-end
+require("mason").setup()
+require("mason-lspconfig").setup()
 
+-- After setting up mason-lspconfig you may set up servers via lspconfig
+-- require("lspconfig").lua_ls.setup {}
+-- require("lspconfig").rust_analyzer.setup {}
+-- ...
 local _, lspconfig = pcall(require, "lspconfig")
 if not _ then
 	return
@@ -12,24 +14,6 @@ local _, rust_tools = pcall(require, "rust-tools")
 if not _ then
 	return
 end
-
-lsp_installer.setup({
-	ensure_installed = {
-		"bashls",
-		"clangd",
-		"cssls",
-		"jsonls",
-		"kotlin_language_server",
-		"pyright",
-		"rnix",
-		"rust_analyzer",
-		"lua_ls",
-		"tailwindcss",
-		"taplo",
-		"tsserver",
-		"astro",
-	},
-})
 
 local on_attach = require("lsp.handlers").on_attach
 local capabilities = require("lsp.handlers").capabilities
@@ -62,10 +46,25 @@ lspconfig.astro.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.svelte.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 lspconfig.tailwindcss.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "astro", "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	filetypes = {
+		"astro",
+		"html",
+		"css",
+		"scss",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"svelte",
+	},
 })
 
 lspconfig.cssls.setup({

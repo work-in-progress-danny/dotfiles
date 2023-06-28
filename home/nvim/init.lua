@@ -4,7 +4,6 @@ require("user.options")
 require("user.keymaps")
 require("user.colourscheme")
 
-require("lsp.lsp")
 require("lsp.null-ls")
 
 require("plugins._plugins")
@@ -22,3 +21,4 @@ require("plugins.telescope")
 require("plugins.toggle-term")
 require("plugins.treesitter")
 require("plugins.whichkey")
+require("plugins.mason")
