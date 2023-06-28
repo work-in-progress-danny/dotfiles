@@ -31,6 +31,7 @@ open_nvim_script () {
 alias desktop="cd ~/Desktop"
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
+alias goose='pro && cd GooseElectronics'
 
 # Dotfiles
 alias d='cd ~/.dotfiles/'
@@ -43,21 +44,13 @@ alias ob='v ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 ## Projects
 alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
 alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
-alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/2022'
-
-# Work
-alias work='cd ~/work'
-alias mlab='cd ~/work/manager-lab'
-alias dmod='cd ~/work/develop-module'
-alias cpth='cd ~/work/career-pathways/'
-alias yfd='yarn frontend dev'
+alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/'
 
 # Nix Home-Manager
 alias hms="home-manager -f ~/.dotfiles/home.nix switch"
 alias ncg="nix-collect-garbage --delete-older-than 7d"
 alias ncu="nix-channel --update"
-alias wc="ncu && hms"
-
+alias wc="ncu && hms && ncg"
 
 # Git
 alias g='gitui'
@@ -116,6 +109,17 @@ git_rebase_interactive_head_script () {
 gho () { # github open branch in browser
   gh pr view -w || gh browse -b `git branch --show-current`
 }
+
+alias aoct='aoc_template'
+aoc_template () {
+  if [ "$1" ]
+  then
+      touch "$1".rs && touch "$1"_input.txt && touch "$1"_prompt.md
+  else
+      echo "Please provide a name for the day i.e day_1";
+  fi
+}
+
 
 # C++
 alias gpp='g++ -Wall -std=c++1z'
