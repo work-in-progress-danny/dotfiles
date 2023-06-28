@@ -116,7 +116,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use({ "j-hui/fidget.nvim", requires = { "jose-elias-alvarez/null-ls.nvim" } }) -- nice little notifier in the corner communicating the current state of Null-ls
+	use({ "j-hui/fidget.nvim", tag = "legacy" }) -- nice little notifier in the corner communicating the current state of Null-ls
 
 	-- Telescope ( Search Client and UI )
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
