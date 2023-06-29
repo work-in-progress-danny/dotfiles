@@ -1,5 +1,6 @@
-local ok, git_conflict = pcall(require, "git-conflict")
-if not ok then
+local git_conflict = TryRequire("git-conflict")
+
+if not git_conflict then
 	return
 end
 

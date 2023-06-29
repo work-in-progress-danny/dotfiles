@@ -1,8 +1,13 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-	return
-end
+function EnsureInstalled(package_name)
+	local status_ok, package = pcall(require, package_name)
 
+	if not status_ok then
+		error("Couldn't find: " .. package_name .. "\n have you run :PackerSync yet?")
+	end
+
+	return package
+end
+local alpha = EnsureInstalled("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
