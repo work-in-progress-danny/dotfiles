@@ -19,26 +19,28 @@
 
     packages = with pkgs; [
       # Shell
+      starship # shell prompt
       zsh
       zsh-autosuggestions
-      zsh-syntax-highlighting
-      zsh-history-substring-search
       zsh-fzf-tab
-      starship # shell prompt
+      zsh-history-substring-search
+      zsh-syntax-highlighting
 
       # Tools
-      helix
-      comma # shopify's comma
+      SDL2
+      bat # cat replacement
       direnv # directory aware environment variables
+      docker
+      exa # ls replacement
+      fd # find replacement
+      fzf # fuzzy finder (required by zsh-fzf-tab)
+      helix
+      htop-vim # htop with vim bindings
       neovim # text editor
       ripgrep # grep replacement (required by neovim's Telescope)
-      fd # find replacement
-      bat # cat replacement
-      exa # ls replacement
-      wget # download tool
       tmux # terminal multiplexer
-      htop-vim # htop with vim bindings
-      fzf # fuzzy finder (required by zsh-fzf-tab)
+      wget # download tool
+      wrangler # cloudflare worker cli
 
       # Git
       git
@@ -46,13 +48,8 @@
       gh # github cli
 
       # Languages
-      # rust-analyzer # rust language server
-      wrangler # cloudflare worker cli
+      lua
       fnm # "fast" node (version) manager
-      # if I ever am not using Kotlin or Java and want to remove them from nvim. Also remove these below 
-      jdk11
-      kotlin
-      maven
 
       # cargo installing these two manually as rust analyser can't find what it needs to run. see https://github.com/rust-lang/rust-analyzer/issues/9506
       # yarn installs by default 16.14.2 and doesn't adhear to other installed versions see https://github.com/NixOS/nixpkgs/issues/145634
@@ -60,11 +57,9 @@
 
       # Neovim deps
       cppcheck
-      stylua
-      rnix-lsp
-      statix
-      shellcheck
-      ktlint # required to work with Kotlin
+      luarocks # lua package manager
+      rnix-lsp # nix language server
+      statix # nix formatter
     ];
 
     file = {
