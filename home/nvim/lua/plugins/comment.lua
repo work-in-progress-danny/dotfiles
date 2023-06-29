@@ -1,7 +1,7 @@
 -- https://www.youtube.com/watch?v=aH50njzReXQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=13
 
-local status_ok, comment = pcall(require, "Comment")
-if not status_ok then
+local comment = TryRequire("Comment")
+if not comment then
 	return
 end
 

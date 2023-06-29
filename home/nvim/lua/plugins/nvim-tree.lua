@@ -1,7 +1,7 @@
 -- https://www.youtube.com/watch?v=SpexCBrZ1pQ&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=15
 
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
+local nvim_tree = TryRequire("nvim-tree")
+if not nvim_tree then
 	return
 end
 

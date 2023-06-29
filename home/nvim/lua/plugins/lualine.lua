@@ -1,7 +1,8 @@
 -- Reference: https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
 
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
+local lualine = TryRequire("lualine")
+
+if not lualine then
 	return
 end
 
@@ -44,15 +45,15 @@ local mode_label = {
   t      = Colors.red,
 
   -- don't know what modes these are
-  no    = Colors.red,
-  s     = Colors.orange,
-  S     = Colors.orange,
-  [""] = Colors.orange,
-  ic    = Colors.yellow,
-  R     = "Replace",
-  Rv    = Colors.violet,
-  cv    = Colors.red,
-  ce    = Colors.red,
+  no     = Colors.red,
+  s      = Colors.orange,
+  S      = Colors.orange,
+  [""]  = Colors.orange,
+  ic     = Colors.yellow,
+  R      = "Replace",
+  Rv     = Colors.violet,
+  cv     = Colors.red,
+  ce     = Colors.red,
 }
 -- stylua: ignore end
 

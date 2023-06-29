@@ -1,10 +1,7 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-	return
-end
+local cmp = TryRequire("cmp")
+local luasnip = TryRequire("luasnip")
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
+if not cmp or not luasnip then
 	return
 end
 
@@ -15,36 +12,36 @@ local check_backspace = function()
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
--- stylua: ignore start 
+-- stylua: ignore start
 --   פּ ﯟ   some other good icons
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 local kind_icons = {
-	Copilot       = "",
-	Text          = "",
-	Method        = "m",
-	Function      = "",
-	Constructor   = "",
-	Field         = "",
-	Variable      = "",
-	Class         = "",
-	Interface     = "",
-	Module        = "",
-	Property      = "",
-	Unit          = "",
-	Value         = "",
-	Enum          = "",
-	Keyword       = "",
-	Snippet       = "",
-	Color         = "",
-	File          = "",
-	Reference     = "",
-	Folder        = "",
-	EnumMember    = "",
-	Constant      = "",
-	Struct        = "",
-	Event         = "",
-	Operator      = "",
-	TypeParameter = "",
+  Copilot       = "",
+  Text          = "",
+  Method        = "m",
+  Function      = "",
+  Constructor   = "",
+  Field         = "",
+  Variable      = "",
+  Class         = "",
+  Interface     = "",
+  Module        = "",
+  Property      = "",
+  Unit          = "",
+  Value         = "",
+  Enum          = "",
+  Keyword       = "",
+  Snippet       = "",
+  Color         = "",
+  File          = "",
+  Reference     = "",
+  Folder        = "",
+  EnumMember    = "",
+  Constant      = "",
+  Struct        = "",
+  Event         = "",
+  Operator      = "",
+  TypeParameter = "",
 }
 -- stylua: ignore end
 

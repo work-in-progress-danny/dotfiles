@@ -1,7 +1,7 @@
 -- https://www.youtube.com/watch?v=OhnLevLpGB4&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=9
 
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
+local telescope = TryRequire("telescope")
+if not telescope then
 	return
 end
 

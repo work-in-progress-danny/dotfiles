@@ -1,7 +1,8 @@
 -- https://www.youtube.com/watch?v=ZgyVY7tArwg&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=14
 
-local status_ok, gitsigns = pcall(require, "gitsigns")
-if not status_ok then
+local gitsigns = TryRequire("gitsigns")
+
+if not gitsigns then
 	return
 end
 

@@ -1,5 +1,6 @@
-local status_ok, toggleterm = pcall(require, "toggleterm")
-if not status_ok then
+local toggleterm = TryRequire("toggleterm")
+
+if not toggleterm then
 	return
 end
 

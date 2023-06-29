@@ -1,16 +1,12 @@
 -- https://github.com/folke/which-key.nvim
 -- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/which-key.lua
 
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
+local which_key = TryRequire("which-key")
+if not which_key then
 	return
 end
 
 require("plugins.toggle-term") -- needed for Gitui_toggle
-
-function Cmd(command_body)
-	return "<cmd>" .. command_body .. "<cr>"
-end
 
 local setup_preferences = {
 	ignore_missing = true,

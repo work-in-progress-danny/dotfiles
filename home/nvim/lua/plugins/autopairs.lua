@@ -1,18 +1,10 @@
 -- https://www.youtube.com/watch?v=_hbvvBgXlBo&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=12
 
-local status_ok, nvim_autopairs = pcall(require, "nvim-autopairs")
-if not status_ok then
-	return
-end
+local nvim_autopairs = TryRequire("nvim-autopairs")
+local nvim_ts_autotag = TryRequire("nvim-ts-autotag")
+local cmp = TryRequire("cmp")
 
-local status_ok_autotag, nvim_ts_autotag = pcall(require, "nvim-ts-autotag")
-if not status_ok_autotag then
-	return
-end
-
--- Setup nvim-cmp
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
+if not cmp or not nvim_autopairs or not nvim_ts_autotag then
 	return
 end
 
