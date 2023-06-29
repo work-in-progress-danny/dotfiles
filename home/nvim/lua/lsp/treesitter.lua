@@ -1,7 +1,7 @@
 -- https://www.youtube.com/watch?v=hkxPa5w3bZ0&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=10
 
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
+local configs = TryRequire("nvim-treesitter.configs")
+if not configs then
 	return
 end
 

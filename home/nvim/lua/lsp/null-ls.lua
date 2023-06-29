@@ -1,12 +1,9 @@
 -- https://www.youtube.com/watch?v=e3xxkEbhG0o
 
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
-if not null_ls_status_ok then
-	return
-end
+local null_ls = TryRequire("null-ls")
+local fidget = TryRequire("fidget")
 
-local _, fidget = pcall(require, "fidget")
-if not _ then
+if not null_ls or not fidget then
 	return
 end
 
@@ -20,14 +17,10 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	--[[ debug = true, ]]
 	sources = {
-		-- Javascript
+		-- Javascript / Typescript
 		diagnostics.eslint_d,
-		code_actions.eslint_d, -- .with({ extra_filetypes = { "astro" } }),
+		code_actions.eslint_d,
 		formatting.eslint_d,
-		--[[ j.with({ ]]
-		--[[ extra_filetypes = { "astro" }, ]]
-		--[[ arg = { "--fix-to-stdout", "--stdin", "--stdin-filename", "$FILENAME" }, ]]
-		--[[ }), ]]
 
 		formatting.prettierd.with({
 			extra_filetypes = {
@@ -46,6 +39,7 @@ null_ls.setup({
 
 		-- Lua
 		formatting.stylua,
+		diagnostics.luacheck,
 
 		-- Nix
 		diagnostics.statix,
@@ -58,14 +52,24 @@ null_ls.setup({
 		diagnostics.cppcheck,
 		-- formatting is done by clangd (lsp-config)
 
-		-- Kotlin
-		diagnostics.ktlint,
-		formatting.ktlint,
+		-- Rust (rust-analyzer) is handled by rust-tools.nvim
+		formatting.rustfmt.with({
+			extra_args = function(params)
+				local Path = require("plenary.path")
+				local cargo_toml = Path:new(params.root .. "/" .. "Cargo.toml")
 
-		-- Python
-		-- formatting.black.with { extra_args = { "--fast" } },
-		-- formatting.yapf,
-		-- diagnostics.flake8,
+				if cargo_toml:exists() and cargo_toml:is_file() then
+					for _, line in ipairs(cargo_toml:readlines()) do
+						local edition = line:match([[^edition%s*=%s*%"(%d+)%"]])
+						if edition then
+							return { "--edition=" .. edition }
+						end
+					end
+				end
+				-- default edition when we don't find `Cargo.toml` or the `edition` in it.
+				return { "--edition=2021" }
+			end,
+		}),
 	},
 })
 
