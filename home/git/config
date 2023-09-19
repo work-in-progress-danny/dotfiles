@@ -1,0 +1,34 @@
+[branch]
+	autorebase = true
+
+[commit]
+	gpgsign = true
+	template = "~/.dotfiles/home/git/commitmessage"
+	verbose = true
+
+[core]
+	editor = "nvim"
+	excludesfile = "~/.dotfiles/home/git/.gitignore_global"
+
+[gpg]
+	format = "ssh"
+
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[init]
+	defaultBranch = "main"
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[user]
+	email = ""
+	name = ""
+	signingkey = ""
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig_work

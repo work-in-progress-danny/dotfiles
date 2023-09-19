@@ -2,7 +2,6 @@
 
 {
   imports = [
-    home/git
     home/local.nix
   ];
 
