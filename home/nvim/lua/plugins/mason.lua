@@ -134,7 +134,6 @@ return {
           ]])
 				end,
 				autoSetHints = true,
-				-- hover_with_actions = true, deprecated unknown reason 16/8/22
 				inlay_hints = {
 					show_parameter_hints = false,
 					parameter_hints_prefix = "",
@@ -143,7 +142,6 @@ return {
 			},
 			server = {
 				settings = {
-					--[[ on_attach = on_attach, -- broken for some reason 22/10/22 ]]
 					capabilities = capabilities,
 					["rust-analyzer"] = {
 						lens = {
@@ -163,9 +161,13 @@ return {
 			{ name = "DiagnosticSignHint", text = "" },
 			{ name = "DiagnosticSignInfo", text = "" },
 		}
+		Get_and_set_gruvbox_highlight_group("GruvboxRed", "guifg", "DiagnosticSignError", "guifg")
+		Get_and_set_gruvbox_highlight_group("GruvboxYellow", "guifg", "DiagnosticSignWarn", "guifg")
+		Get_and_set_gruvbox_highlight_group("GruvboxAqua", "guifg", "DiagnosticSignHint", "guifg")
+		Get_and_set_gruvbox_highlight_group("GruvboxPurple", "guifg", "DiagnosticSignInfo", "guifg")
 
 		for _, sign in ipairs(signs) do
-			vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+			vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text })
 		end
 
 		vim.diagnostic.config({
@@ -177,7 +179,6 @@ return {
 			underline = true,
 			severity_sort = true,
 			float = {
-				--[[ focusable = false, ]]
 				style = "minimal",
 				border = "rounded",
 				source = "always",
