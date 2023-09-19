@@ -2,4 +2,5 @@
 **/target/
 /home/nvim/plugin/
 /home/local.nix
+**/work.*
 
