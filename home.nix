@@ -1,4 +1,5 @@
 { pkgs, ... }:
+
 {
   imports = [
     home/git
@@ -6,7 +7,7 @@
   ];
 
   home = {
-    stateVersion = "22.11";
+    stateVersion = "23.05";
 
     # these are defined in ~/.dotfiles/home/local.nix
     # username = "";
@@ -15,7 +16,6 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
-
 
     packages = with pkgs; [
       # Shell

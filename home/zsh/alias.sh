@@ -107,7 +107,7 @@ git_rebase_interactive_head_script () {
 }
 
 gho () { # github open branch in browser
-  gh pr view -w || gh browse -b `git branch --show-current`
+  gh pr view -w || gh browse -b "$(git branch --show-current)"
 }
 
 alias aoct='aoc_template'
@@ -133,6 +133,8 @@ alias jof='jest --onlyFailures'
 alias yd="yarn dev"
 alias yi="yarn install"
 alias y="yarn"
+# NPM
+alias nr="npm run"
 
 # Rails
 alias rs='rails server'

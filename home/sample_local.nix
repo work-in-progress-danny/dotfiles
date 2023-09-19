@@ -1,10 +1,12 @@
+{ pkgs, ... }:
+
 {
   home = {
-    username = "";
-    homeDirectory = "";
+    username = ""; # "danny"
+    homeDirectory = ""; # "/Users/danny";
 
     sessionVariables = {
-      VARIABLE_NAME = "value"; # useful for machine specific keys
+      # VARIABLE_NAME = "value"; # useful for machine specific keys
     };
 
     packages = with pkgs; [
