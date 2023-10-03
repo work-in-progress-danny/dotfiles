@@ -30,7 +30,7 @@
       bat # cat replacement
       direnv # directory aware environment variables
       docker
-      exa # ls replacement
+      eza # ls replacement
       fd # find replacement
       fzf # fuzzy finder (required by zsh-fzf-tab)
       helix
