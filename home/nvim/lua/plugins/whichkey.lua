@@ -85,6 +85,13 @@ return {
 				c = { Cmd("Telescope command_history"), "Command History" },
 			},
 
+			-- Marks
+			m = {
+				name = "Marks",
+				a = { Cmd('lua require("harpoon.mark").add_file()'), "Add Mark" },
+				m = { Cmd("Telescope harpoon marks"), "Open Marks list" },
+			},
+
 			-- NvimTree
 			e = { Cmd("NvimTreeToggle"), "Toggle nvim-tree" },
 
