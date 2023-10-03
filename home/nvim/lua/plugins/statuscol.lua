@@ -12,6 +12,7 @@ return {
 
     Get_and_set_gruvbox_highlight_group("GruvboxBg0", "guifg", "FoldColumn", "guibg")
     Get_and_set_gruvbox_highlight_group("GruvboxFg1", "guifg", "FoldColumn", "guifg")
+    Get_and_set_gruvbox_highlight_group("GruvboxFg1", "guifg", "FoldColumn", "guifg")
 
     require("statuscol").setup({
 
@@ -41,11 +42,8 @@ return {
             fillcharhl = nil, -- highlight group used for fillchar (SignColumn/CursorLineSign if omitted)
           },
         },
-        {
-          sign = { name = { "Diagnostic" }, maxwidth = 1 },
-          click = "v:lua.ScSa",
-        },
         { text = { builtin.lnumfunc }, click = "v:lua.ScLa" },
+        { text = { "%s" },             click = "v:lua.ScSa" },
         {
           sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, wrap = true, auto = true },
           click = "v:lua.ScSa",
