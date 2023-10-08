@@ -2,6 +2,7 @@
 
 return {
   "jose-elias-alvarez/null-ls.nvim",
+  event = "BufRead",
   dependencies = {
     "jay-babu/mason-null-ls.nvim",
     { "j-hui/fidget.nvim", tag = "legacy" }, -- nice little notifier in the corner communicating the current state of Null-ls

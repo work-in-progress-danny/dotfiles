@@ -1,6 +1,7 @@
 -- https://www.youtube.com/watch?v=ZgyVY7tArwg&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=14
 return {
   "lewis6991/gitsigns.nvim",
+  event = "BufRead",
   dependencies = {
     --[[ "nvim-lua/plenary.nvim", ]]
   },

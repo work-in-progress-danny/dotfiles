@@ -10,7 +10,7 @@ alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias l='~/.dotfiles/scripts/binaries/fully_sick_ls'
 alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
-alias rm="bin_chicken"
+# alias rm="bin_chicken"
 
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
