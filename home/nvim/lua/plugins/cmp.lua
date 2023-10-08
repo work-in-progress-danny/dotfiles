@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-buffer",     -- buffer completions
     "hrsh7th/cmp-path",       -- path completions
@@ -7,13 +8,8 @@ return {
     "saadparwaiz1/cmp_luasnip", -- snippet completions
     "hrsh7th/cmp-nvim-lsp",   -- LSP completions
     "f3fora/cmp-spell",       -- spell completions
-    {
-      "zbirenbaum/copilot-cmp", -- copilot completions
-      after = { "copilot.lua" },
-      config = function()
-        require("copilot_cmp").setup({ method = "getCompletionsCycling" })
-      end,
-    },
+    "windwp/nvim-autopairs",
+    "zbirenbaum/copilot.lua",
   },
   config = function()
     local cmp = TryRequire("cmp")
@@ -35,27 +31,27 @@ return {
     -- find more here: https://www.nerdfonts.com/cheat-sheet
     local kind_icons = {
       Copilot       = "",
-      Text          = "",
+      Text          = "󰊄",
       Method        = "m",
-      Function      = "",
+      Function      = "󰊕",
       Constructor   = "",
       Field         = "",
-      Variable      = "",
-      Class         = "",
+      Variable      = "󰫧",
+      Class         = "",
       Interface     = "",
       Module        = "",
       Property      = "",
       Unit          = "",
-      Value         = "",
+      Value         = "",
       Enum          = "",
       Keyword       = "",
       Snippet       = "",
-      Color         = "",
-      File          = "",
+      Color         = "󰉦",
+      File          = "",
       Reference     = "",
-      Folder        = "",
+      Folder        = "",
       EnumMember    = "",
-      Constant      = "",
+      Constant      = "",
       Struct        = "",
       Event         = "",
       Operator      = "",
@@ -155,4 +151,3 @@ return {
     })
   end,
 }
-
