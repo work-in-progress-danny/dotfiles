@@ -83,6 +83,7 @@ return {
 				name = "Telescope",
 				t = { Cmd("Telescope"), "Toggle Telescope" },
 				c = { Cmd("Telescope command_history"), "Command History" },
+				h = { Cmd("Telescope help_tags"), "Search Help Tags" },
 			},
 
 			-- Marks
