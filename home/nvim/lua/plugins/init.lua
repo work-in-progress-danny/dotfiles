@@ -1,6 +1,6 @@
 return {
 	-- Utilities
-	"folke/lazy.nvim",
+	{ "folke/lazy.nvim" },
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
@@ -34,6 +34,4 @@ return {
 	{ "AndrewRadev/splitjoin.vim", event = "BufRead" }, -- split a single line of code into multiple and multiple into single
 	{ "tpope/vim-surround", event = "BufRead" }, -- Provides an interface to wrap a given block with a symbol
 	{ "godlygeek/tabular", event = "BufRead" }, -- Takes a regular expression and aligns a block of text depending on that
-
-	-- Automatically set up configuration after cloning packer.nvim
 }
