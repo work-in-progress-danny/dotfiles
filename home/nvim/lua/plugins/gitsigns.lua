@@ -54,7 +54,9 @@ return {
         virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
         delay = 100,
         ignore_whitespace = false,
+        abbrev_sha = true,
       },
+      current_line_blame_formatter = " <author>, <author_time> - <summary> #<abbrev_sha>",
       current_line_blame_formatter_opts = {
         relative_time = false,
       },
