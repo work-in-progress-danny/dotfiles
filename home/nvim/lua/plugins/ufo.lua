@@ -1,4 +1,4 @@
-local handler = function(virtText, lnum, endLnum, width, truncate)
+local ufo_fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
   local suffix = (" 󰁂 %d "):format(endLnum - lnum)
   local sufWidth = vim.fn.strdisplaywidth(suffix)
@@ -28,20 +28,12 @@ end
 
 return {
   "kevinhwang91/nvim-ufo",
-  event = "BufRead",
+  event = "LspAttach",
   dependencies = { "kevinhwang91/promise-async" },
-  config = function()
-    -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-    vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-    vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-
-    require("ufo").setup({
-      fold_virt_text_handler = handler,
-      providers = {
-        provider_selector = function()
-          return { "treesitter", "indent" }
-        end,
-      },
-    })
-  end,
+  config = {
+    fold_virt_text_handler = ufo_fold_virt_text_handler,
+    providers = {
+      provider_selector = { "treesitter", "indent" },
+    },
+  },
 }
