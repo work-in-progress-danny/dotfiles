@@ -44,7 +44,7 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
-	config = function()
+	opts = function()
 		local nvim_tree = require("nvim-tree")
 		nvim_tree.setup({
 			renderer = {

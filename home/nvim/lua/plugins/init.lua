@@ -8,7 +8,7 @@ return {
 			require("gruvbox").setup({
 				contrast = "hard",
 				overrides = {
-					SignColumn = { -- TODO this is still broken, not sure if it's gitsigns or not 26/10/2022
+					SignColumn = {
 						link = "LineNr",
 					},
 				},
