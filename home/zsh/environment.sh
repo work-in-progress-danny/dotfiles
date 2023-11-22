@@ -16,3 +16,5 @@ export PATH=~/Library/Python/3.8/bin:$PATH
 eval "$(~/.nix-profile/bin/starship init zsh)"
 
 export PATH=/Users/danny.lowater/Library/Android/sdk/platform-tools:$PATH
+
+curl -s -H \"Accept: text/plain\" https://icanhazdadjoke.com/ | cowsay
