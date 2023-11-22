@@ -47,9 +47,17 @@ vim.opt.cursorline = true -- highlight the current line
 vim.opt.errorbells = false
 vim.opt.timeoutlen = 0 -- time to wait for a mapped sequence to complete (in milliseconds)
 
--- On the BufWrite event, format the current buffer
-vim.api.nvim_create_autocmd({ "BufWrite" }, {
-  callback = function()
-    vim.lsp.buf.format()
-  end,
+--[[ -- On thejBufWrite event, format the current buffer ]]
+--[[ --[[ vim.api.nvim_create_autocmd({ "BufWrite" }, { ]]
+--[[ --[[   callback = function() ]]
+--[[ --[[     vim.lsp.buf.format() ]]
+--[[ --[[   end,] ]]
+--[[ --[[ }) ]]
+
+-- just before vim exits kill eslint_d and prettierd
+vim.api.nvim_create_autocmd({ "QuitPre", "VimLeavePre" }, {
+	callback = function()
+		os.execute("pkill -f 'eslint_d'")
+		os.execute("pkill -f 'prettierd'")
+	end,
 })

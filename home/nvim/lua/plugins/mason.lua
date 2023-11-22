@@ -5,13 +5,14 @@ end
 
 local on_attach = function(client)
 	if
-		client.name == "biome"
-		or client.name == "jsonls"
+		--[[ client.name == "tsserver" uncomment when using Biome ]]
+		client.name == "jsonls"
 		or client.name == "rustfmt"
 		or client.name == "rust_analyzer"
-		--[[ client.name == "lua_ls" ]]
+		or client.name == "lua_ls"
 	then
-		client.server_capabilities.document_formatting = false -- disable language servers that also do formatting, leave it up to null-ls
+		client.server_capabilities.documentFormattingProvider = false -- disable language servers that also do formatting, leave it up to null-ls
+		client.server_capabilities.documentRangeFormattingProvider = false -- disable language servers that also do formatting, leave it up to null-ls
 	end
 end
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -56,24 +57,7 @@ return {
 			capabilities = capabilities,
 		})
 
-		lspconfig.biome.setup({
-			filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-
-		lspconfig.pyright.setup({
-			settings = require("lsp.settings.pyright").settings,
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-
-		lspconfig.astro.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-
-		lspconfig.svelte.setup({
+		lspconfig.tsserver.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
