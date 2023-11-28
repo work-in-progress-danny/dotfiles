@@ -44,6 +44,13 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+	keys = {
+		{
+			"v",
+			'<cmd>lua require("nvim-tree.api").node.open.vertical()<cr>',
+			ft = { "NvimTree" },
+		},
+	},
 	config = function()
 		local nvim_tree = require("nvim-tree")
 		nvim_tree.setup({
