@@ -127,6 +127,7 @@ return {
 			},
 			z = { Cmd("Telescope symbols"), "z-emojis of course" },
 			["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
+			["="] = { Cmd("wincmd ="), "Reset window distribution" },
 		}
 
 		local visual_mode_opts = {
