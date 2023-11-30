@@ -65,16 +65,23 @@ return {
 			k = {
 				name = "signature help",
 				-- TODO add a script check whether there is diagnostics to show if not display variable signature
+				K = { Cmd("lua vim.lsp.buf.hover()"), "Show hover" },
 				h = { Cmd("lua vim.lsp.buf.signature_help()"), "Signature help" },
 				k = { Cmd("lua vim.diagnostic.open_float()"), "Show diagnostics" },
-				K = { Cmd("lua vim.lsp.buf.hover()"), "Show hover" },
 			},
 			r = { Cmd("lua vim.lsp.buf.rename()"), "Rename all instances" },
 			a = { Cmd("lua vim.lsp.buf.code_action()"), "Display code action" },
 
+			-- Git diff
+			d = {
+				name = "Git diff",
+				f = { Cmd("Telescope git_status hidden=true"), "files" },
+				o = { Cmd("DiffviewOpen"), "open diff view" },
+				c = { Cmd("DiffviewClose"), "close diff view" },
+			},
+
 			-- Telescope
 			f = { Cmd("Telescope find_files hidden=true"), "Find files" },
-			d = { Cmd("Telescope git_status hidden=true"), "Git diff" },
 			G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
 			b = { Cmd("Telescope buffers"), "Buffers" },
 			s = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
@@ -99,10 +106,11 @@ return {
 			-- Buffer Management
 			q = {
 				name = "Close",
-				q = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
 				Q = { Cmd("Bdelete!"), "Force close buffer" }, -- (uses bbye)
 				b = { Cmd("bd"), "Close buffer" },
-				a = { Cmd("qall"), "Quit nvim" },
+				o = { Cmd("BufferLineCloseOthers"), "Close all other buffers" }, -- (uses bufferline)
+				q = { Cmd("Bdelete"), "Close buffer" }, -- (uses bbye)
+				v = { Cmd("qall"), "Quit nvim" },
 			},
 			w = { Cmd("w!"), "Force write buffer" },
 			h = { Cmd("noh"), "Remove highlights" },
@@ -111,19 +119,19 @@ return {
 			g = {
 				name = "Get something",
 				D = { Cmd("lua vim.lsp.buf.declaration()"), "Declaration" },
+				["/"] = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
 				d = { Cmd("lua vim.lsp.buf.definition()"), "Definition" },
 				i = { Cmd("lua vim.lsp.buf.implementation()"), "Implementation" },
 				r = { Cmd("Telescope lsp_references"), "All references in code base" },
-				["/"] = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
 			},
 
 			-- Terminal
 			t = {
 				name = "Terminal",
-				t = { TERMINAL_TOGGLE, "Open Terminal" },
 				g = { GITUI_TOGGLE, "Open GitUI" }, -- GITUI_TOGGLE global is defined in toggle-term
 				h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
 				n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term
+				t = { TERMINAL_TOGGLE, "Open Terminal" },
 			},
 			z = { Cmd("Telescope symbols"), "z-emojis of course" },
 			["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
