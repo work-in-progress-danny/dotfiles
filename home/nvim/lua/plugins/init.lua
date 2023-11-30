@@ -30,6 +30,5 @@ return {
 
 	-- Text Manipulation
 	{ "AndrewRadev/splitjoin.vim", event = "BufRead" }, -- split a single line of code into multiple and multiple into single
-	{ "kylechui/nvim-surround", dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" }, event = "BufRead" },
 	{ "godlygeek/tabular", event = "BufRead" }, -- Takes a regular expression and aligns a block of text depending on that
 }
