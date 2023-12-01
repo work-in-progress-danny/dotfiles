@@ -63,5 +63,7 @@ fn main() {
         .current_dir(full_path)
         .args(args)
         .spawn()
+        .unwrap()
+        .wait()
         .unwrap();
 }
