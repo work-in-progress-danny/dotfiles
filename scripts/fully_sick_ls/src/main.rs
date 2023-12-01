@@ -1,6 +1,6 @@
 use clap::Parser;
-use std::{path::Path, process::Command};
 use colored::*;
+use std::{path::Path, process::Command};
 
 // A fully sick implementation of exa, which is a fully sick implementation of UNIX's ls command
 // https://github.com/ogham/exa
@@ -24,13 +24,13 @@ fn is_valid_integer(s: &str) -> bool {
 }
 
 fn print_usage() {
-    println!("{} {} {} {} {}",
-             "Usage:".bold(),
-             "fully_sick_ls".green(),
-             "<path>".yellow(),
-             "optional:",
-             "<depth>".blue(),
-             );
+    println!(
+        "{} {} {} optional: {}",
+        "Usage:".bold(),
+        "fully_sick_ls".green(),
+        "<path>".yellow(),
+        "<depth>".blue(),
+    );
 }
 
 fn main() {
@@ -38,16 +38,14 @@ fn main() {
     let full_path = Path::new(&path);
     let full_depth = format!("--level={}", depth);
 
-    if !is_valid_directory(&full_path) {
+    if !is_valid_directory(full_path) {
         println!("\"{}\" is an invalid directory", full_path.display());
         print_usage();
-        return ();
     }
-    
+
     if !is_valid_integer(&depth) {
         println!("\"{}\" is not a number", depth);
         print_usage();
-        return ();
     }
 
     let args = [
@@ -60,12 +58,10 @@ fn main() {
     ];
 
     // The full command looks like
-    // {path} exa --tree --group-directories-first --level={depth} -hal --git --time-style=long-iso
-    Command::new("exa")
+    // {path} eza --tree --group-directories-first --level={depth} -hal --git --time-style=long-iso
+    Command::new("eza")
         .current_dir(full_path)
         .args(args)
         .spawn()
-        .unwrap()
-        .wait()
         .unwrap();
 }
