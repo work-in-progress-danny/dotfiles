@@ -149,6 +149,7 @@ alias jp='jupyter notebook'
 alias cc='cargo check'
 alias cr='cargo run'
 alias cb='cargo build'
+alias ct='cargo test'
 
 # Docker
 alias dcup="docker-compose up"
