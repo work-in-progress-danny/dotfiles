@@ -1,0 +1,39 @@
+{
+  "Advent of Code boilerplate": {
+    "description": "Advent of Code boilerplate",
+    "prefix": "aoc",
+    "body": [
+      "use std::fs;",
+      "",
+      "fn part_1(input: &str) {",
+      "    unimplemented!()",
+      "}",
+      "",
+      "fn part_2(input: &str) {",
+      "    unimplemented!()",
+      "}",
+      "",
+      "fn main() {",
+      "    let input = fs::read_to_string(\"\").unwrap();",
+      "",
+      "    \/\/ println!(\"part_1: {}\", part_1(&input));",
+      "    \/\/ println!(\"part_2: {}\", part_2(&input));",
+      "}",
+      "",
+      "#[cfg(test)]",
+      "mod tests {",
+      "    use super::*;",
+      "",
+      "    #[test]",
+      "    fn test_part_1() {",
+      "        unimplemented!()",
+      "    }",
+      "",
+      "    #[test]",
+      "    fn test_part_2() {",
+      "        unimplemented!()",
+      "    }",
+      "}"
+    ]
+  }
+}

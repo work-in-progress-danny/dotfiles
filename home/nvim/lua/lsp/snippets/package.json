@@ -13,6 +13,12 @@
           "react"
         ],
         "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "rust"
+        ], 
+        "path": "./rust.json"
       }
     ]
   }
