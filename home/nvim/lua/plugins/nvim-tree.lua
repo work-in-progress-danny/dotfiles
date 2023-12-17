@@ -1,9 +1,4 @@
 local function open_nvim_tree(data)
-	local IGNORED_FT = {
-		"startify",
-		"dashboard",
-		"alpha",
-	}
 	-- buffer is a [No Name]
 	local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
 
@@ -20,11 +15,6 @@ local function open_nvim_tree(data)
 	-- change to the directory
 	if directory then
 		vim.cmd.cd(data.file)
-	end
-
-	-- skip ignored filetypes
-	if vim.tbl_contains(IGNORED_FT, filetype) then
-		return
 	end
 
 	-- open the tree
