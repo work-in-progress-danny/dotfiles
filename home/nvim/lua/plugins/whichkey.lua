@@ -82,7 +82,7 @@ return {
 
 			-- Telescope
 			f = { Cmd("Telescope find_files hidden=true"), "Find files" },
-			G = { Cmd("Telescope live_grep hidden=true"), "Grep text" },
+			G = { Cmd('lua require("telescope").extensions.live_grep_args.live_grep_args()'), "Grep text" },
 			b = { Cmd("Telescope buffers"), "Buffers" },
 			s = { Cmd("Telescope current_buffer_fuzzy_find"), "Search current buffer" },
 			R = { Cmd("Telescope resume"), "Resume last Telescope instance" },
