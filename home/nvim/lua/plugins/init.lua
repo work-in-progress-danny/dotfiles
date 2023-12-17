@@ -1,6 +1,4 @@
 return {
-	-- Utilities
-	{ "folke/lazy.nvim" },
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
