@@ -13,7 +13,7 @@ HISTSIZE=50000 # number of commands to save
 SAVEHIST=10000 # The history is trimmed when its length exceeds SAVEHIST by 20%
 HISTFILE="$HOME/.zsh_history"
 
-export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+export STARSHIP_CONFIG="$HOME/.dotfiles/config/starship.toml"
 
 export EXA_COLORS="da=32" # da: timestamp
 

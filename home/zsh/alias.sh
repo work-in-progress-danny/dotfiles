@@ -21,9 +21,9 @@ alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a pat
 open_nvim_script () {
   if [ "$1" ]
   then
-    ~/.nix-profile/bin/nvim "$1"
+   /opt/homebrew/bin/nvim "$1"
   else
-    ~/.nix-profile/bin/nvim .
+    /opt/homebrew/bin/nvim .
   fi
 }
 
