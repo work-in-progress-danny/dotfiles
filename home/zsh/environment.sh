@@ -12,4 +12,5 @@ eval "$(/opt/homebrew/bin/starship init zsh)"
 
 export PATH=/Users/danny.lowater/Library/Android/sdk/platform-tools:$PATH
 
+source "$HOME/.cargo/env"
 # curl -s -H \"Accept: text/plain\" https://icanhazdadjoke.com/ | cowsay

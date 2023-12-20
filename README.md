@@ -43,8 +43,8 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- Dotfiles Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
-- Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
+- Dotfiles Manager: None, just simple symlinks
+- Package Manager: [Homebrew](https://brew.sh/)
 - Password Manager: [1Password](https://1password.com/)
 - GPG Program: [1Password](https://developer.1password.com/docs/ssh) supports ssh keys and commit signing with Touch-Id and Apple Watch
 - CLI apps:
@@ -65,5 +65,5 @@ Yarn installs by default 16.14.2 and doesn't switch to other installed versions 
 - Shell: [Fish Shell](https://fishshell.com/)
   - Prompts: [(Zsh) Powerlevel 10k](https://github.com/romkatv/powerlevel10k), [(Zsh) Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
   - Zsh Plugin Manager: [Antigen](https://github.com/zsh-users/antigen)
-- Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/), [GNU stow](https://www.gnu.org/software/stow/manual/stow.html)
-- Package Manager: [Homebrew](https://brew.sh/)
+- Dotfiles Managers: [Fresh](https://github.com/freshshell/fresh/), [Chezmoi](https://www.chezmoi.io/docs/install/), [GNU stow](https://www.gnu.org/software/stow/manual/stow.html), [Nix Home-Manager](https://github.com/nix-community/home-manager)
+- Package Manager: [Nix Home-Manager](https://github.com/nix-community/home-manager)
