@@ -7,7 +7,7 @@ return {
 
 	opts = function()
 		local luasnip = require("luasnip.loaders.from_vscode")
-		local loader_ok, _ = pcall(luasnip.load, { paths = "~/.dotfiles/home/nvim/lua/lsp/snippets" })
+		local loader_ok, _ = pcall(luasnip.load, { paths = "~/.dotfiles/config/nvim/lua/lsp/snippets" })
 
 		if not loader_ok then
 			print("Whoops seems like your snippets are whack dog, check ~/.dotfiles/home/nvim/lua/lsp/snippets")
