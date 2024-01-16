@@ -125,8 +125,10 @@ return {
 				r = { Cmd("Telescope lsp_references"), "All references in code base" },
 			},
 
+			t = { Cmd("TroubleToggle"), "Toggle Trouble buffer" },
+
 			-- Terminal
-			t = {
+			x = {
 				name = "Terminal",
 				g = { GITUI_TOGGLE, "Open GitUI" }, -- GITUI_TOGGLE global is defined in toggle-term
 				h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
