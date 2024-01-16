@@ -78,6 +78,7 @@ return {
 				f = { Cmd("Telescope git_status hidden=true"), "files" },
 				o = { Cmd("DiffviewOpen"), "open diff view" },
 				c = { Cmd("DiffviewClose"), "close diff view" },
+				p = { Cmd("diffput"), "put diff back" },
 			},
 
 			-- Telescope
