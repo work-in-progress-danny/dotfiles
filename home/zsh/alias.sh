@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 # Command Relearning
 alias find='echo "use fd, https://github.com/sharkdp/fd. Remove when it makes sense, 14 Jan" find'
 
@@ -15,17 +15,17 @@ alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
 # Helpers/shortcuts
 alias lus='l /dev | grep usbserial' # list usb serial ports, for arduino flashing
 
-# alias vr='nvim' # nvim auto-sessions will resume if nvim is opened without a flag or path to the cwd
-# alias v='nvim .' # this will open nvim and not resume auto-sessions
-alias v='open_nvim_script' # temp nvim auto-sessions don't work when using a path
-open_nvim_script () {
-  if [ "$1" ]
-  then
-   /opt/homebrew/bin/nvim "$1"
-  else
-    /opt/homebrew/bin/nvim .
-  fi
-}
+# Open Neovim
+alias v='
+  () {
+    if [ "$1" ]
+    then
+     /opt/homebrew/bin/nvim "$1"
+    else
+      /opt/homebrew/bin/nvim .
+    fi
+  }
+'
 
 # Directories
 alias desktop="cd ~/Desktop"
@@ -57,7 +57,7 @@ alias g='gitui'
 alias gwtc='~/.dotfiles/scripts/src/git_worktree_creator/target/release/git_worktree_creator'
 alias git_authors='git log | sed -n 's/Author://p'  | sort --unique --ignore-case| column -t -s "<\*>"'
 # reset
-alias grh="git reset head~"
+alias grh='() { git reset head~"$1" }'
 # fetch
 alias gfo="git fetch origin" # don't know what this does specifically 
 # merge
