@@ -98,7 +98,6 @@ return {
 			},
 
 			t = { Cmd("TroubleToggle"), "Toggle Trouble buffer" },
-			-- J = { Cmd("ToggleTerm"), "Toggle Terminal" },
 			z = { Cmd("Telescope symbols"), "z-emojis of course" },
 			["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 			["="] = { Cmd("wincmd ="), "Reset window distribution" },
