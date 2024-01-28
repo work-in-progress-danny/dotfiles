@@ -12,9 +12,7 @@ return {
 		"zbirenbaum/copilot.lua",
 	},
 	config = function()
-		local cmp = TryRequire("cmp")
-		local luasnip = TryRequire("luasnip")
-
+		local cmp, luasnip = TryRequire("cmp"), TryRequire("luasnip")
 		if not cmp or not luasnip then
 			return
 		end

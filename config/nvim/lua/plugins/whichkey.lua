@@ -1,36 +1,7 @@
--- https://github.com/folke/which-key.nvim
--- https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/core/which-key.lua
---
 return {
 	"folke/which-key.nvim", -- Whichkey ( Keybinding Prompt on leader-key down )
 	config = function()
-		local Terminal = require("toggleterm.terminal").Terminal
-
-		local gitui = Terminal:new({ cmd = "gitui" })
-		local htop = Terminal:new({ cmd = "htop" })
-		local node = Terminal:new({ cmd = "node" })
-		local terminal = Terminal:new()
-
-		function GITUI_TOGGLE()
-			gitui:toggle()
-		end
-
-		function HTOP_TOGGLE()
-			htop:toggle()
-		end
-
-		function NODE_TOGGLE()
-			node:toggle()
-		end
-
-		function TERMINAL_TOGGLE()
-			terminal:toggle()
-		end
-
-		local which_key = TryRequire("which-key")
-		if not which_key then
-			return
-		end
+		local which_key = require("which-key")
 
 		local setup_preferences = {
 			ignore_missing = true,
@@ -127,15 +98,7 @@ return {
 			},
 
 			t = { Cmd("TroubleToggle"), "Toggle Trouble buffer" },
-
-			-- Terminal
-			x = {
-				name = "Terminal",
-				g = { GITUI_TOGGLE, "Open GitUI" }, -- GITUI_TOGGLE global is defined in toggle-term
-				h = { HTOP_TOGGLE, "Open htop" }, -- HTOP_TOGGLE global is defined in toggle-term
-				n = { NODE_TOGGLE, "Open a Node environment" }, -- HTOP_TOGGLE global is defined in toggle-term
-				t = { TERMINAL_TOGGLE, "Open Terminal" },
-			},
+			-- J = { Cmd("ToggleTerm"), "Toggle Terminal" },
 			z = { Cmd("Telescope symbols"), "z-emojis of course" },
 			["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
 			["="] = { Cmd("wincmd ="), "Reset window distribution" },
