@@ -46,12 +46,6 @@ alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/pro
 alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
 alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/'
 
-# Nix Home-Manager
-alias hms="home-manager -f ~/.dotfiles/home.nix switch"
-alias ncg="nix-collect-garbage --delete-older-than 7d"
-alias ncu="nix-channel --update"
-alias wc="ncu && hms && ncg"
-
 # Git
 alias g='gitui'
 alias gwtc='~/.dotfiles/scripts/src/git_worktree_creator/target/release/git_worktree_creator'
