@@ -68,7 +68,10 @@ return {
 			-- Marks
 			m = {
 				name = "Marks",
-				a = { Cmd('lua require("harpoon.mark").add_file()'), "Add Mark" },
+				a = { Cmd('lua require("harpoon"):list():append()'), "Add Mark" },
+				r = { Cmd('lua require("harpoon"):list():remove()'), "Remove Mark" },
+				n = { Cmd('lua require("harpoon"):list():next()'), "Next Mark" },
+				p = { Cmd('lua require("harpoon"):list():prev()'), "Previous Mark" },
 				m = { Cmd("Telescope harpoon marks"), "Open Marks list" },
 			},
 
