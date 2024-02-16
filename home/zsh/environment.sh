@@ -3,8 +3,8 @@
 if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
 
 eval "$(starship init zsh)"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
 
+export PATH="/opt/homebrew/bin:$PATH"
 # eval "$(fnm env --use-on-cd)"
 
 source "$HOME/.cargo/env"

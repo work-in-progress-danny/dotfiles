@@ -51,9 +51,5 @@ return {
 			--[[ }, -- table of hex strings, this matches the colours set in indent-blankline.lua ]]
 			-- termcolors = {} -- table of colour name strings
 		},
-		context_commentstring = {
-			--[[ enable = true, ]]
-			enable_autocmd = false,
-		},
 	},
 }
