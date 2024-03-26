@@ -6,7 +6,7 @@ vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
-vim.opt.smartcase = true -- smart case
+vim.opt.smartcase = true -- smart case for / searching
 vim.opt.swapfile = false -- creates a swapfile
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
@@ -16,7 +16,7 @@ vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would sh
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.opt.textwidth = 100 -- set textwidth to 100 to match colorcolumn
-vim.opt.colorcolumn = "100" -- set colorcolumn to 100 to match textwidth
+vim.opt.colorcolumn = "0" -- set colorcolumn to 100 to match textwidth
 vim.opt.incsearch = true
 -- UI
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
