@@ -18,6 +18,11 @@ return {
 				spacing = 3, -- spacing between columns
 				align = "left", -- align columns left, center or right
 			},
+			icons = {
+				breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+				separator = "", -- symbol used between a key and it's label
+				group = "+", -- symbol prepended to a group
+			},
 		}
 
 		local normal_mode_opts = {
