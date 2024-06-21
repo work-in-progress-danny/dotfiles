@@ -10,6 +10,8 @@ alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias l='~/.dotfiles/scripts/fully_sick_ls/target/release/fully_sick_ls'
 alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
+# Play a sound
+alias pingme='afplay -v 10 /System/Library/Sounds/Glass.aiff'
 # alias rm="bin_chicken"
 
 # Helpers/shortcuts
@@ -71,6 +73,7 @@ alias gpllom='gpll origin main' # this will break if the "main" branch is master
 alias dmb='git switch main && git branch --merged | grep -v \* | xargs git branch -d' # delete merged branches TODO make this take a "main/master" target as a param
 alias gsw='git switch'
 alias gswc='git switch -c'
+alias gswm='git switch master'
 # rebase
 alias grb='git rebase'
 alias grbih='git_rebase_interactive_head_script'
