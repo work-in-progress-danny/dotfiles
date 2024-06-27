@@ -117,6 +117,9 @@ aoc_template () {
   fi
 }
 
+# tmux
+alias t='tmux'
+alias tks='tmux kill-server'
 
 # C++
 alias gpp='g++ -Wall -std=c++1z'
