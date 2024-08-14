@@ -34,6 +34,7 @@ alias desktop="cd ~/Desktop"
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
 alias goose='pro && cd GooseElectronics'
+alias mus='pro && cd ./mus/v1'
 
 # Dotfiles
 alias d='cd ~/.dotfiles/'
@@ -47,6 +48,7 @@ alias ob='v ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
 alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
 alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
 alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/'
+alias wipd='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/dannythomas.dev/v3'
 
 # Git
 alias g='gitui'
