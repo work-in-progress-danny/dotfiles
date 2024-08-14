@@ -3,7 +3,7 @@ return {
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
 	opts = {
-		format_on_save = { timeout_ms = 10000, lsp_fallback = true },
+		format_on_save = { timeout_ms = 500, lsp_fallback = true },
 		formatters_by_ft = {
 			lua = { "stylua" },
 			rust = { "rustfmt" },
@@ -11,6 +11,7 @@ return {
 			javascript = { "biome" },
 			javascriptreact = { "biome" },
 			typescriptreact = { "biome" },
+			json = { "biome" },
 			toml = { "taplo" },
 		},
 	},
