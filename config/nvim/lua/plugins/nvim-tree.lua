@@ -1,3 +1,17 @@
+local function on_attach(bufnr)
+	local api = require("nvim-tree.api")
+
+	local function opts(desc)
+		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+	end
+
+	-- default mappings
+	api.config.mappings.default_on_attach(bufnr)
+	-- custom mappings
+
+	vim.keymap.set("n", "d", api.fs.trash, opts("Trash"))
+end
+
 local function open_nvim_tree(data)
 	-- buffer is a [No Name]
 	local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
@@ -43,6 +57,7 @@ return {
 	},
 	config = function()
 		local nvim_tree = require("nvim-tree")
+
 		nvim_tree.setup({
 			renderer = {
 				root_folder_label = false,
@@ -102,6 +117,7 @@ return {
 				cmd = "trash",
 				require_confirm = true,
 			},
+			on_attach = on_attach,
 		})
 
 		Get_and_set_gruvbox_highlight_group("GruvboxGreen", "guifg", "NvimTreeGitStaged", "guifg")
