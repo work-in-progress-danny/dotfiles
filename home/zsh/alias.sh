@@ -34,7 +34,7 @@ alias desktop="cd ~/Desktop"
 alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
 alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
 alias goose='pro && cd GooseElectronics'
-alias mus='pro && cd ./mus/v1'
+alias mus='pro && cd ./mus'
 
 # Dotfiles
 alias d='cd ~/.dotfiles/'
