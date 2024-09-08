@@ -5,7 +5,6 @@ end
 
 local on_attach = function(client)
 	if
-		--[[ client.name == "tsserver" uncomment when using Biome ]]
 		client.name == "jsonls"
 		or client.name == "rustfmt"
 		or client.name == "rust_analyzer"
@@ -57,7 +56,7 @@ return {
 			capabilities = capabilities,
 		})
 
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
