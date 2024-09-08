@@ -3,7 +3,7 @@
 
 [commit]
 	gpgsign = true
-	template = "~/.dotfiles/home/git/commitmessage"
+	template = "~/.dotfiles/home/git/.commitmessage"
 	verbose = true
 
 [core]
