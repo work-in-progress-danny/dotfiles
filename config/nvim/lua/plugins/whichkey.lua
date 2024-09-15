@@ -3,7 +3,7 @@ local leader = "<leader>"
 return {
 	"folke/which-key.nvim", -- Whichkey ( Keybinding Prompt on leader-key down )
 	dependencies = { "echasnovski/mini.icons", version = false },
-	event = "VeryLazy",
+	lazy = false,
 	opts = {
 		preset = "helix",
 		plugins = {
