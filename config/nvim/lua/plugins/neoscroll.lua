@@ -38,7 +38,7 @@ return {
 				local lines = vim.api.nvim_buf_line_count(bufnr)
 
 				if lines < 400 then
-					neoscroll.scroll(lines, { move_cursor = true, duration = 100 })
+					neoscroll.scroll(lines, { duration = 200 })
 				else
 					vim.api.nvim_command("normal! G")
 				end
@@ -49,7 +49,7 @@ return {
 				local lines = vim.api.nvim_buf_line_count(bufnr)
 
 				if lines < 400 then
-					neoscroll.scroll(0, { move_cursor = true, duration = 100 })
+					neoscroll.scroll(-lines, { duration = 200 })
 				else
 					vim.api.nvim_command("normal! gg")
 				end
