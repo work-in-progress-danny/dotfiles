@@ -9,6 +9,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp", -- LSP completions
 		"f3fora/cmp-spell", -- spell completions
 		"windwp/nvim-autopairs",
+		"zbirenbaum/copilot.lua",
 	},
 	config = function()
 		local cmp, luasnip = TryRequire("cmp"), TryRequire("luasnip")
@@ -24,10 +25,10 @@ return {
 		end
 
     -- stylua: ignore start
-    -- פּ ﯟ   some other good icons
+    --   פּ ﯟ   some other good icons
     -- find more here: https://www.nerdfonts.com/cheat-sheet
     local kind_icons = {
-      Codeium        = "",
+      Copilot       = "",
       Text          = "󰊄",
       Method        = "m",
       Function      = "󰊕",
@@ -41,6 +42,7 @@ return {
       Unit          = "",
       Value         = "",
       Enum          = "",
+      Keyword       = "",
       Snippet       = "",
       Color         = "󰉦",
       File          = "",
@@ -109,26 +111,22 @@ return {
 				format = function(entry, vim_item)
 					-- Kind icons
 					vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-					-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-					vim_item.max_width = 50
-					vim_item.ellipsis_char = "..."
-					vim_item.mode = "symbol"
+          -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
           -- stylua: ignore start
           vim_item.menu = ({
-            codeium  = "[Codeium]",
+            copilot  = "[Copilot]",
             spell    = "[Spell]",
             nvim_lsp = "[LSP]",
             luasnip  = "[Snippet]",
             buffer   = "[File]",
             path     = "[Path]",
           })[entry.source.name]
-
           return vim_item
 					-- stylua: ignore end
 				end,
 			},
 			sources = {
-				{ name = "codeium" },
+				{ name = "copilot" },
 				{ name = "nvim_lsp" },
 				{ name = "spell", keyword_length = 4 },
 				{ name = "luasnip" },
