@@ -133,6 +133,7 @@ alias jtd='jest -o'
 alias jof='jest --onlyFailures'
 # Yarn
 alias yd="yarn dev"
+alias yb="yarn build"
 alias yi="yarn install"
 alias y="yarn"
 # NPM
