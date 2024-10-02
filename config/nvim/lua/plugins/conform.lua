@@ -13,6 +13,7 @@ return {
 			typescriptreact = { "biome" },
 			json = { "biome" },
 			toml = { "taplo" },
+			yaml = { "yamlfmt" },
 		},
 	},
 }
