@@ -31,8 +31,8 @@ alias v='
 
 # Directories
 alias desktop="cd ~/Desktop"
-alias dev='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev'
-alias pro='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/'
+alias dev='cd ~/Documents/dev'
+alias pro='cd ~/Documents/dev/projects/'
 alias goose='pro && cd GooseElectronics'
 alias mus='pro && cd ./mus'
 
@@ -41,14 +41,14 @@ alias d='cd ~/.dotfiles/'
 alias od='nvim ~/.dotfiles/'
 
 # Brain 
-alias b='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
-alias ob='v ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Brain'
+alias b='cd ~/Documents/Brain'
+alias ob='v ~/Documents/Brain'
 
 ## Projects
-alias menu='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/menu'
-alias cs50='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/cs50'
-alias aoc='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/advent_of_code/'
-alias wipd='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/dev/projects/dannythomas.dev/v3'
+alias menu='cd ~/Documents/dev/projects/menu'
+alias cs50='cd ~/Documents/dev/projects/cs50'
+alias aoc='cd ~/Documents/dev/projects/advent_of_code/'
+alias wipd='cd ~/Documents/dev/projects/dannythomas.dev/v3'
 
 # Git
 alias g='gitui'
