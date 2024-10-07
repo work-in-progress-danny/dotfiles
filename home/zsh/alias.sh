@@ -33,8 +33,8 @@ alias v='
 alias desktop="cd ~/Desktop"
 alias dev='cd ~/Documents/dev'
 alias pro='cd ~/Documents/dev/projects/'
-alias goose='pro && cd GooseElectronics'
 alias mus='pro && cd ./mus'
+alias noods='pro && cd ./noods.io'
 
 # Dotfiles
 alias d='cd ~/.dotfiles/'
