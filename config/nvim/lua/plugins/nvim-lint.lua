@@ -7,6 +7,7 @@ return {
 			typescript = { "biomejs" },
 			javascriptreact = { "biomejs" },
 			typescriptreact = { "biomejs" },
+			sql = { "sqlfluff" },
 		}
 
 		vim.api.nvim_create_autocmd({ "InsertLeave", "BufWritePre", "TextChanged", "BufEnter" }, {

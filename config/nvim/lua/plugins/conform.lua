@@ -14,6 +14,7 @@ return {
 			json = { "biome" },
 			toml = { "taplo" },
 			yaml = { "yamlfmt" },
+			sql = { "sqlfluff" },
 		},
 	},
 }
