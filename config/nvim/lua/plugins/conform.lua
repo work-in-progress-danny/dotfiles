@@ -12,9 +12,10 @@ return {
 			javascriptreact = { "biome" },
 			typescriptreact = { "biome" },
 			json = { "biome" },
+			html = { "prettier" },
 			toml = { "taplo" },
 			yaml = { "yamlfmt" },
-			sql = { "sqlfluff" },
+			python = { "ruff_format" },
 		},
 	},
 }
