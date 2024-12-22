@@ -28,6 +28,11 @@ return {
 			nowait = true,
 			remap = false,
 		},
+		{
+			leader .. "Y",
+			Cmd('normal! ggVG"+y'),
+			desc = "Yank all",
+		},
 		{ leader .. "=", Cmd("wincmd ="), desc = "Reset window distribution", nowait = true, remap = false },
 		{
 			leader .. "G",
