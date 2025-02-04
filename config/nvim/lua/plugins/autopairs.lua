@@ -1,73 +1,29 @@
 return {
 	"windwp/nvim-autopairs",
-	event = "BufRead",
+	dependencies = {
+		"windwp/nvim-ts-autotag",
+		"hrsh7th/nvim-cmp",
+	},
 	config = function()
 		local nvim_autopairs = require("nvim-autopairs")
 		local nvim_ts_autotag = require("nvim-ts-autotag")
+		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 		local cmp = require("cmp")
 
-		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
-
-		local filetypes = {
-			"html",
-			"javascript",
-			"typescript",
-			"javascriptreact",
-			"typescriptreact",
-			"svelte",
-			"vue",
-			"tsx",
-			"jsx",
-			"rescript",
-			"xml",
-			"php",
-			"markdown",
-			"glimmer",
-			"handlebars",
-			"hbs",
-		}
-		local skip_tags = {
-			"area",
-			"base",
-			"br",
-			"col",
-			"command",
-			"embed",
-			"hr",
-			"img",
-			"slot",
-			"input",
-			"keygen",
-			"link",
-			"meta",
-			"param",
-			"source",
-			"track",
-			"wbr",
-			"menuitem",
-		}
-
-		nvim_ts_autotag.setup({ skip_tags = skip_tags, filetypes = filetypes })
+		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 		nvim_autopairs.setup({
 			check_ts = true,
-			-- ts_config = {
-			-- 	lua = { "string", "source" },
-			-- 	javascript = { "string", "template_string" },
-			-- },
 			disable_filetype = { "TelescopePrompt", "spectre_panel" },
-			-- fast_wrap = {
-			-- 	map = "<M-e>",
-			-- 	chars = { "{", "[", "(", '"', "'" },
-			-- 	pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-			-- 	offset = 0, -- Offset from pattern match
-			-- 	end_key = "$",
-			-- 	keys = "qwertyuiopzxcvbnmasdfghjkl",
 			check_comma = true,
-			-- 	highlight = "PmenuSel",
-			-- 	highlight_grey = "LineNr",
-			-- },
+		})
+
+		nvim_ts_autotag.setup({
+			opts = {
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = true, -- Auto close on trailing </
+			},
 		})
 	end,
 }
