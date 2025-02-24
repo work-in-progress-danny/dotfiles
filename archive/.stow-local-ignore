@@ -1,8 +1,0 @@
-.DS_Store
-.sample_gitconfig
-.stow-local-ignore
-/scripts
-/source
-/_archive
-/.git
-README.md

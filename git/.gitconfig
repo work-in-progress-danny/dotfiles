@@ -1,0 +1,29 @@
+[branch]
+	autorebase = true
+
+[commit]
+	gpgsign = true
+	verbose = true
+	template = "~/dotfiles/git/.commitmessage"
+
+[core]
+	editor = "nvim"
+	excludesfile = "~/dotfiles/git/.gitignore_global"
+
+[gpg]
+	format = "ssh"
+
+[init]
+	defaultBranch = "main"
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[include]
+    path = ~/dotfiles/git/config
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig_work

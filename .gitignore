@@ -1,6 +1,3 @@
 .DS_Store
-**/target/
-/home/nvim/plugin/
-/home/local.nix
-**/work.*
+./git/config
 

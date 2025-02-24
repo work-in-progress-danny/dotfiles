@@ -1,0 +1,127 @@
+add_newline = false
+
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$cmake\
+$cobol\
+$container\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+
+$fill\
+
+$cmd_duration\
+$time\
+
+$line_break\
+
+$jobs\
+$battery\
+$status\
+$shell\
+$character"""
+
+[fill]
+symbol = " "
+
+[username]
+format = "[$user]($style)[@](bold green)"
+
+[hostname]
+style = "bold blue"
+format = "[$hostname]($style) "
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+style = "bold cyan"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[time]
+disabled = false
+format = '[$time](#FFA500) '
+
+[cmd_duration]
+format = '[$duration](#FFA500) '
+
+[character]
+vicmd_symbol = '[](bold green) '
+
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+
+[git_status]
+style = "#FFA500"
+ahead = "⇡${count}"
+diverged = "[⇡${ahead_count}](bold green)[⇣${behind_count}](bold red)"
+behind = "⇣${count}"
+
+[git_metrics]
+format = '[+$added](green)/[-$deleted](red) '
+disabled = false
+
+[docker_context]
+disabled = true
+
+[ruby]
+format = " [ ($version) ]($style)"
+
+[nodejs]
+format = " [$symbol($version )]($style)"
