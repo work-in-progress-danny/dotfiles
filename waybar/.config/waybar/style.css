@@ -1,5 +1,34 @@
-@import url("./style-dark.css");
+* {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
 
-window#waybar {
-  background: @background;
+#waybar {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 10px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#tray {
+  padding: 0 10px;
+}
+
+#clock {
+  font-weight: bold;
 }

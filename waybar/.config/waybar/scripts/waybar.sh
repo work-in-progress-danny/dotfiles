@@ -10,6 +10,7 @@ cleanup() {
     sed -i '1i @import url("./launch_animation.css");' "$STYLE"
   fi
 }
+
 trap cleanup EXIT
 
 swaync-client -t

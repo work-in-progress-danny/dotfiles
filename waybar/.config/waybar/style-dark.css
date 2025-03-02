@@ -1,240 +1,88 @@
-@import url("./launch_animation.css");
-@define-color background @theme_bg_color;
-@define-color background-alpha alpha(@theme_bg_color, 0.25);
-@define-color background-beta alpha(@theme_bg_color, 0.75);
-@define-color border @borders;
-@define-color accent-bg @theme_selected_bg_color;
-@define-color accent-fg @theme_selected_fg_color;
-@define-color text @theme_text_color;
-@define-color cyan #00cccc;
-
 * {
-  all: unset;
-  font-family: "Symbols Nerd Font", "Fira Sans Nerd Font";
-  font-weight: normal;
-  font-size: 14px;
-  min-height: 0px;
-  border-radius: 6px;
+  border: none;
+  border-radius: 0;
+  font-family: "monospace";
+  font-size: 22px;
+  min-height: 0;
+  margin: 0px;
 }
 
 window#waybar {
-  background: @background-beta;
-  color: @text;
-  border: 1px solid alpha(@border, 0.75);
-  transition:
-    background-color 0.25s linear,
-    color 0.25s linear,
-    border-color 0.5s linear;
+  background: rgba(0, 0, 0, 0.7);
+  color: gray;
+  color: #ffffff;
 }
 
-#workspaces button,
-#taskbar button {
-  padding: 2px;
-  color: @text;
-  margin: 3px 2px;
-  min-width: 15px;
-  text-shadow:
-    -1px -1px 2px @background,
-    1px -1px 2px @background,
-    -1px 1px 2px @background,
-    1px 1px 2px @background;
-  border: 1px solid transparent;
-  transition: all 0.25s linear;
+#window {
+  color: #e4e4e4;
+  font-weight: bold;
 }
 
-window#waybar:not(.eDP-1) #workspaces button,
-window#waybar:not(.eDP-1) #taskbar button {
-  padding: 4px;
+#workspaces {
+  margin: 0 10px;
 }
 
-#workspaces button.active,
-#taskbar button.active,
-#workspaces button.visible:not(.active) {
-  background: @accent-bg;
-  color: @accent-fg;
-  text-shadow: none;
-  border: 1px solid @background;
-}
-
-#workspaces button.visible:not(.active) {
-  opacity: 0.5;
-}
-
-#workspaces button:hover,
-#taskbar button:hover {
-  opacity: 0.75;
-  border: 1px solid @background;
-}
-
-#workspaces button:hover:not(.active),
-#taskbar button:hover:not(.active):not(.maximized):not(.fullscreen) {
-  border-color: @accent-bg;
-}
-
-#workspaces button.empty {
-  opacity: 0.5;
-}
-
-#workspaces,
-#taskbar {
+#workspaces button {
+  font-size: 25px;
   padding: 0 2px;
+  margin: 4px;
+  background: transparent;
+  color: #ff8700;
+  border: 1px solid #1b1d1e;
+  font-weight: bold;
 }
 
-#taskbar button.maximized,
-#taskbar button.fullscreen {
-  border-color: @cyan;
+#workspaces button:hover {
+  color: #1b1d1e;
 }
 
-#taskbar button.maximized.active,
-#taskbar button.fullscreen.active {
-  background: @cyan;
+#workspaces button .focused {
+  background: #e88939;
+  background: #00afd7;
+  color: #1b1d1e;
 }
 
-window#waybar.fullscreen {
-  border-color: @cyan;
+#workspaces button.urgent {
+  background: #af005f;
+  color: #1b1d1e;
 }
 
-window#waybar.fullscreen #window {
-  background: @background;
-  border-color: @cyan;
+#mode {
+  background: #af005f;
+  color: #1b1d1e;
 }
 
-#waybar.fullscreen .module:not(.plugged):not(.charging):not(.Playing) {
-  /* Uncomment this if needed */
-  /* background: @background; */
-}
-
-#waybar.fullscreen #workspaces button:not(.active),
-#waybar.fullscreen #taskbar button:not(.maximized):not(.fullscreen):not(:hover) {
-  border-color: transparent;
-}
-
-#waybar.fullscreen #workspaces button:hover:not(.active),
-#waybar.swallowing #workspaces button:hover:not(.active) {
-  border-color: @accent-bg;
-}
-
-window#waybar.empty #window,
-#taskbar.empty {
-  border-color: transparent;
-  background-color: transparent;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-}
-
-window#waybar.swallowing #window {
-  border-color: #d0679d;
-}
-
-.module {
-  background: @background-alpha 0 0 / 750% 750%;
-  color: @text;
-  padding: 0 10px;
-  margin: 0 4px;
-  border: 1px solid @border;
-  text-shadow:
-    -1px -1px 2px @background,
-    1px -1px 2px @background,
-    -1px 1px 2px @background,
-    1px 1px 2px @background;
-  transition: all 0.25s linear;
-}
-
-.module:hover:not(#workspaces):not(#taskbar):not(#tray) {
-  background: @accent-bg 0 0 / 750% 750%;
-  color: @accent-fg;
-  border: 1px solid @background;
-  text-shadow: none;
-}
-
-#privacy {
-  color: #0f0f0f;
-  margin: 0 4px;
-  padding: 0 10px;
-  border: 1px solid @border;
-  background-color: #90ceaa;
-}
-
-tooltip {
-  margin: 2px;
-  background: @background-beta;
-  color: @text;
-  border: 1px solid @border;
-  text-shadow:
-    -1px -1px 2px @background,
-    1px -1px 2px @background,
-    -1px 1px 2px @background,
-    1px 1px 2px @background;
-  box-shadow:
-    -1px -1px 2px alpha(@border, 0.25),
-    1px -1px 2px alpha(@border, 0.25),
-    -1px 1px 2px alpha(@border, 0.25),
-    1px 1px 2px alpha(@border, 0.25);
-}
-
-#tray menu {
-  background: @background-beta;
-  box-shadow: none;
-  margin: 2px;
-  padding: 5px;
-  border: 1px solid @border;
-}
-
-#tray menu menuitem {
-  padding: 2px 20px 2px 20px;
-  margin: 2px;
-  border: 1px solid transparent;
-  transition:
-    background-color 0.1s,
-    color 0.1s,
-    border-color 0.1s,
-    text-shadow 0.1s;
-}
-
-#tray menu menuitem:disabled label {
-  opacity: 0.75;
-}
-
-#tray menu menuitem:hover:not(:disabled) {
-  background-color: @text;
-  color: @accent-fg;
-  text-shadow: none;
-  border-color: @border;
-  margin: 2px;
-}
-
-.modules-left {
-  margin-left: -4px;
-}
-
-.modules-right {
-  margin-right: -4px;
-}
-
-#pulseaudio,
-#wireplumber,
-#backlight,
-#custom-wl-gammarelay-brightness,
+#clock,
 #battery,
-#network {
-  min-width: 46px;
-}
-
-#custom-wl-gammarelay-temperature {
-  min-width: 55px;
-}
-
 #cpu,
-#memory {
-  min-width: 67px;
+#memory,
+#network,
+#pulseaudio,
+#custom-spotify,
+#tray,
+#mode {
+  padding: 0 3px;
+  margin: 0 2px;
 }
 
-#custom-notification {
-  min-width: 24px;
-  font-size: 12px;
+#clock {}
+
+#cpu {}
+
+#memory {}
+
+#network {}
+
+#network.disconnected {
+  background: #f53c3c;
 }
 
-#custom-playerctl {
-  min-width: 140px;
+#pulseaudio {}
+
+#pulseaudio.muted {}
+
+#custom-spotify {
+  color: rgb(102, 220, 105);
 }
+
+#tray {}
