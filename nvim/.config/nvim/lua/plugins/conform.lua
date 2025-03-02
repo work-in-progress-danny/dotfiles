@@ -12,6 +12,7 @@ return {
 			javascriptreact = { "biome" },
 			typescriptreact = { "biome" },
 			json = { "biome" },
+			jsonc = { "biome" },
 			html = { "prettier" },
 			toml = { "taplo" },
 			yaml = { "yamlfmt" },
