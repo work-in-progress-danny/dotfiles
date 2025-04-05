@@ -11,23 +11,40 @@ return {
 		defaults = {
 			prompt_prefix = " ",
 			selection_caret = " ",
-			path_display = { "smart" },
-			file_ignore_patterns = {
-				--[[ "node_modules", ]]
+			vimgrep_arguments = {
+				"rg",
+				"--hidden", -- Search hidden files
+				"--color=never",
+				"--no-heading",
+				"--with-filename",
+				"--line-number",
+				"--column",
+				"--smart-case",
+				"--trim",
+				"--iglob=!**/.git/*", -- Exclude .git directories
 			},
-			pickers = {
-				buffers = {
-					sort_lastused = true,
-					theme = "dropdown",
-					previewer = false,
-					mappings = {
-						i = {
-							["<c-d>"] = "delete_buffer",
-						},
-						n = {
-							["<c-d>"] = "delete_buffer",
-						},
+		},
+		pickers = {
+			buffers = {
+				sort_lastused = true,
+				theme = "dropdown",
+				previewer = false,
+				mappings = {
+					i = {
+						["<c-d>"] = "delete_buffer",
 					},
+					n = {
+						["<c-d>"] = "delete_buffer",
+					},
+				},
+			},
+			find_files = {
+				find_command = {
+					"fd",
+					"--type",
+					"f",
+					"-E",
+					"**/.git/*", -- E-xclude .git directories
 				},
 			},
 		},
