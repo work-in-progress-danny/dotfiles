@@ -196,7 +196,7 @@ return {
 			nowait = true,
 			remap = false,
 		},
-		{ leader .. "t", Cmd("TroubleToggle"), desc = "Toggle Trouble buffer", nowait = true, remap = false },
+		{ leader .. "t", Cmd("TodoTelescope"), desc = "Toggle TODO list", nowait = true, remap = false },
 		{ leader .. "w", Cmd("w!"), desc = "Force write buffer", nowait = true, remap = false },
 		{ leader .. "z", Cmd("Telescope symbols"), desc = "z-emojis of course", nowait = true, remap = false },
 		{
