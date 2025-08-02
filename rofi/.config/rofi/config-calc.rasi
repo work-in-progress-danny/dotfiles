@@ -1,0 +1,17 @@
+@import "~/.config/rofi/config.rasi" 
+
+/* ---- Entry ---- */
+entry {
+  width: 27%;
+}
+
+/* ---- Window ---- */
+window {
+    width:	30%;
+}
+
+/* ---- Message ---- */
+textbox {
+    background-color:            @selected;
+    text-color:                  @background;
+}

@@ -1,0 +1,115 @@
+@import "colors.rasi"
+
+configuration {
+	modi:                       "drun,calc";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-calc:               "🧮 ";
+	drun-display-format:        "{name}";
+	calc-display-format:        "{name}";
+}
+
+/*
+└── window 
+    └── mainbox
+        ├── inputbar
+        │   ├── prompt
+        │   └── entry
+        └── listview
+            └── elements
+*/
+
+window {
+    width:                       750px;
+    border:                      0px;
+    border-radius:               12px;
+    border-color:                @selected;
+    background-color:            @background;
+}
+
+
+mainbox {
+    spacing:                     20px;
+    padding:                     20px;
+    border:                      0px;
+    border-radius:               12px 12px 12px 12px;
+    border-color:                @selected;
+    background-color:            @background;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                     10px;
+    padding:                     15px;
+    border:                      0px;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            @input-background;
+    text-color:                  @foreground;
+    font:                        "Hack 20";
+    children:                    [ "prompt", "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+listview {
+    columns:                     4;
+    lines:                       3;
+    scrollbar:                   false;
+    border:                      0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element {
+    spacing:                     15px;
+    padding:                     15px 10px;
+    border:                      0px;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+
+element-icon {
+    size:                        64px;
+}
+
+element-text {
+    background-color:            transparent;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               10px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    text-color:                  @foreground;
+}
