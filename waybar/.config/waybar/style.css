@@ -1,34 +1,41 @@
 * {
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 13px;
-  color: #ffffff;
+  background-color: transparent;
+  color: white;
+
+  font-family: Hack Nerd Font;
+  font-size: 12px;
+
+  min-height: 0;
 }
 
-#waybar {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0 10px;
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  background: transparent;
-  color: #ffffff;
-  border: none;
+  min-width: 8px;
+  border-radius: 4px;
 }
 
-#workspaces button:hover {
-  background: rgba(255, 255, 255, 0.2);
+#workspaces button * {
+  background-color: transparent;
 }
 
-#clock,
-#pulseaudio,
-#network,
+#tray,
 #cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
 #memory,
-#tray {
-  padding: 0 10px;
+#temperature,
+#clock,
+#custom-power-menu {
+  min-width: 12px;
+  margin: 0 7.5px;
 }
 
-#clock {
-  font-weight: bold;
-}
