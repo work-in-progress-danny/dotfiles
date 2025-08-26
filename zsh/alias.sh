@@ -1,17 +1,4 @@
 #!/bin/bash
-# Shell 
-alias rm='rm -i'
-alias cv='cv -i'
-alias ln='ln -i'
-alias mkdir='mkdir -p'
-alias l='exa -la --icons --group-directories-first'
-
-ltree() {
-    local depth="${1:-2}"
-    local path="${2:-.}"
-    /usr/bin/eza --tree --level="$depth" "$path"
-}
-
 alias imfl="~/.dotfiles/scripts/binaries/git_config_emoji_switcher"
 
 # Helpers/shortcuts
@@ -30,15 +17,13 @@ function v () {
 # Directories
 alias desktop="cd ~/Desktop"
 alias pro='cd ~/projects/'
-alias noods='pro && cd ./noods'
+alias n='pro && cd ./noods'
+alias na='pro && cd ./noods/app'
+alias nb='pro && cd ./noods/backend'
 
 # Dotfiles
 alias d='cd ~/dotfiles/'
 alias od='nvim ~/dotfiles/'
-
-# Brain 
-alias b='cd ~/Documents/Brain'
-alias ob='v ~/Documents/Brain'
 
 # Git
 alias g='gitui'
@@ -108,44 +93,10 @@ aoc_template () {
   fi
 }
 
-# tmux
-alias t='tmux'
-alias tks='tmux kill-server'
-
-# C++
-alias gpp='g++ -Wall -std=c++1z'
-
-# Javascript/Typescript
-alias ts='ts-node'
-## Jest
-alias jtd='jest -o'
-alias jof='jest --onlyFailures'
 # Yarn
 alias yd="yarn dev"
-alias yb="yarn build"
 alias yi="yarn install"
 alias y="yarn"
-# NPM
-alias nr="npm run"
-
-# Rails
-alias rs='rails server'
-alias rc='rails console'
-alias rdb='rails db'
-
-# Python
-alias py='python'
-alias jp='jupyter notebook'
-
-# Rust
-alias cc='cargo check'
-alias cr='cargo run'
-alias cb='cargo build'
-alias ct='cargo test'
-
-# Docker
-alias dcup="docker-compose up"
-alias dcs="docker-compose stop"
 
 # Paru
 alias in='paru -S' # install package
@@ -156,15 +107,17 @@ alias la='paru -Ss' # list available package
 alias rc='paru -Sc' # remove unused cache
 alias ru='paru -Qtdq | paru -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 
-# Directory navigation shortcuts
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
+# Shell 
+alias rm='rm -i' # Always confirm before deleting
+alias ln='ln -i' # Always confirm before linking
+alias mkdir='mkdir -p' # Always mkdir at a path. eg /new/path/to/dir
+alias cp='cp -r' # Always copy recursively
+alias l='exa -la --icons --group-directories-first'  # ls replacement with icons, hidden files and dirs first
 
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-alias mkdir='mkdir -p'
+# Shell scripts
+ltree() {
+    local depth="${1:-2}"
+    local path="${2:-.}"
+    /usr/bin/eza --tree --level="$depth" "$path"
+}
 
-# Always copy recursively
-alias cp='cp -r'

@@ -18,3 +18,4 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
