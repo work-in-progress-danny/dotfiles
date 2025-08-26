@@ -98,6 +98,10 @@ alias yd="yarn dev"
 alias yi="yarn install"
 alias y="yarn"
 
+# Bun
+alias bd="bun dev"
+alias bi="bun install"
+
 # Paru
 alias in='paru -S' # install package
 alias un='paru -Rns' # uninstall package
