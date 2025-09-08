@@ -112,7 +112,7 @@ alias rm='rm -i' # Always confirm before deleting
 alias ln='ln -i' # Always confirm before linking
 alias mkdir='mkdir -p' # Always mkdir at a path. eg /new/path/to/dir
 alias cp='cp -r' # Always copy recursively
-alias l='exa -la --icons --group-directories-first'  # ls replacement with icons, hidden files and dirs first
+alias l='eza -la --icons --group-directories-first'  # ls replacement with icons, hidden files and dirs first
 
 # Shell scripts
 ltree() {
