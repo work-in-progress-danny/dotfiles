@@ -7,7 +7,6 @@ return {
 			typescript = { "biomejs" },
 			javascriptreact = { "biomejs" },
 			typescriptreact = { "biomejs" },
-			sql = { "sqlfluff" },
 			python = { "ruff" },
 		}
 
