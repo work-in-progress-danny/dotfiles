@@ -29,7 +29,7 @@ alias od='nvim ~/dotfiles/'
 alias g='gitui'
 alias git_authors='git log | sed -n 's/Author://p'  | sort --unique --ignore-case| column -t -s "<\*>"'
 # reset
-alias grh='() { git reset head~"$1" }'
+alias grh='() { git reset HEAD~"${1:-1}" }'
 # fetch
 alias gfo="git fetch origin" # don't know what this does specifically 
 # merge
