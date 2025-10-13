@@ -15,7 +15,6 @@ vim.cmd([[highlight IblScope guifg=#c015ef]])
 
 return {
 	"lukas-reineke/indent-blankline.nvim",
-	event = "LspAttach",
 	main = "ibl",
 	opts = {
 		indent = {},

@@ -28,7 +28,6 @@ end
 
 return {
 	"kevinhwang91/nvim-ufo",
-	event = "LspAttach",
 	dependencies = { "kevinhwang91/promise-async" },
 	opts = {
 		fold_virt_text_handler = ufo_fold_virt_text_handler,
