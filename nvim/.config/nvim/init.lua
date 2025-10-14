@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -9,12 +10,13 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
+
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
-require("utils")
-TryRequire("user")
-TryRequire("lazy").setup("plugins", {
+require("colors")
+require("options")
 
 require("lazy").setup("plugins", {
 	defaults = { lazy = false },
@@ -30,3 +32,5 @@ require("lazy").setup("plugins", {
 		notify = false, -- get a notification when changes are found
 	},
 })
+
+require("highlights")
