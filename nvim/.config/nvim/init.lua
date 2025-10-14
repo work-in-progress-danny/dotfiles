@@ -15,12 +15,14 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 require("utils")
 TryRequire("user")
 TryRequire("lazy").setup("plugins", {
+
+require("lazy").setup("plugins", {
+	defaults = { lazy = false },
 	checker = {
-		-- automatically check for plugin updates
 		enabled = true,
-		concurrency = 100, ---@type number? set to 1 to check for updates very slowly
-		notify = true, -- get a notification when new updates are found
-		frequency = 432000, -- check for updates once a week
+		concurrency = 100,
+		notify = true,
+		frequency = 432000,
 	},
 	change_detection = {
 		-- automatically check for config file changes and reload the ui

@@ -1,13 +1,7 @@
 -- https://www.youtube.com/watch?v=ZgyVY7tArwg&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ&index=14
 return {
 	"lewis6991/gitsigns.nvim",
-	config = function()
-		Get_and_set_gruvbox_highlight_group("GruvboxGreen", "guifg", "GitSignsAdd", "guifg")
-		Get_and_set_gruvbox_highlight_group("GruvboxRed", "guifg", "GitSignsDelete", "guifg")
-		Get_and_set_gruvbox_highlight_group("GruvboxBlue", "guifg", "GitSignsChange", "guifg")
-		Get_and_set_gruvbox_highlight_group("GruvboxYellow", "guifg", "GitSignsChangeDelete", "guifg")
-
-		require("gitsigns").setup({
+	opts = {
 			signs = {
 				add = { text = "┃" },
 				change = { text = "┃" },
@@ -45,6 +39,5 @@ return {
 				row = 0,
 				col = 1,
 			},
-		})
-	end,
+		}
 }

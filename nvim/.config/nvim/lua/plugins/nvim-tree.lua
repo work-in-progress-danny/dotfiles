@@ -117,8 +117,5 @@ return {
 			},
 			on_attach = on_attach,
 		})
-
-		Get_and_set_gruvbox_highlight_group("GruvboxGreen", "guifg", "NvimTreeGitStaged", "guifg")
-		Get_and_set_gruvbox_highlight_group("GruvboxPurpleBold", "guifg", "NvimTreeGitNew", "guifg")
 	end,
 }
