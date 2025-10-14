@@ -1,6 +1,41 @@
 local leader = "<leader>"
 
-vim.o.timeout = false
+-- Shorthand for vim.cmd
+function Cmd(command_body)
+	return "<cmd>" .. command_body .. "<cr>"
+end
+
+local function toggle_comment_highlight()
+  -- Store original colors on first run
+  if not _G.original_comment_hl then
+    _G.original_comment_hl = vim.api.nvim_get_hl(0, { name = 'Comment' })
+  end
+  
+  -- Initialize mode if not set
+  if not _G.comment_mode then
+    _G.comment_mode = 'default'
+  end
+  
+  -- Cycle through modes: default -> dim -> light -> default
+  if _G.comment_mode == 'default' then
+    vim.api.nvim_set_hl(0, 'Comment', { 
+      fg = Colors.gray,
+      italic = true 
+    })
+    _G.comment_mode = 'dim'
+    print("Comment brightness: dim")
+    
+  elseif _G.comment_mode == 'dim' then
+    vim.api.nvim_set_hl(0, 'Comment', { fg = Colors.light_green_hard, italic = true })
+    _G.comment_mode = 'light'
+    print("Comment brightness: light")
+    
+  else
+    vim.api.nvim_set_hl(0, 'Comment', _G.original_comment_hl)
+    _G.comment_mode = 'default'
+    print("Comment brightness: dark (default)")
+  end
+end
 
 return {
 	"folke/which-key.nvim", -- Whichkey ( Keybinding Prompt on leader-key down )
@@ -73,6 +108,7 @@ return {
 			remap = false,
 		},
 		{ leader .. "b", Cmd("Telescope buffers"), desc = "Buffers", nowait = true, remap = false },
+		{ leader .. "c", toggle_comment_highlight, desc = "Toggle comments", nowait = true, remap = true },
 		{ leader .. "d", group = "Git diff", nowait = true, remap = false },
 		{ leader .. "dc", Cmd("DiffviewClose"), desc = "close diff view", nowait = true, remap = false },
 		{ leader .. "df", Cmd("Telescope git_status hidden=true"), desc = "files", nowait = true, remap = false },
