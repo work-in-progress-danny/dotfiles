@@ -99,27 +99,26 @@ vim.api.nvim_set_keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
 vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
 vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 
-
 vim.diagnostic.config({
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = "",
-      [vim.diagnostic.severity.WARN]  = "",
-      [vim.diagnostic.severity.HINT]  = "",
-      [vim.diagnostic.severity.INFO]  = "",
-    },
-    numhl = {
-      [vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
-      [vim.diagnostic.severity.WARN]  = "DiagnosticSignWarn",
-      [vim.diagnostic.severity.HINT]  = "DiagnosticSignHint",
-      [vim.diagnostic.severity.INFO]  = "DiagnosticSignInfo",
-    },
-  },
-  float = {
-    border = "rounded",
-    source = true,
-  },
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.HINT] = "",
+			[vim.diagnostic.severity.INFO] = "",
+		},
+		numhl = {
+			[vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
+			[vim.diagnostic.severity.WARN] = "DiagnosticSignWarn",
+			[vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
+			[vim.diagnostic.severity.INFO] = "DiagnosticSignInfo",
+		},
+	},
+	float = {
+		border = "rounded",
+		source = true,
+	},
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 })

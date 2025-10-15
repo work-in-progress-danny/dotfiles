@@ -1,15 +1,13 @@
 return {
 	"zbirenbaum/copilot.lua",
-	config = function()
-		require("copilot").setup({
-			debounce = 25,
-			filetypes = {
-				telescope = false,
-				gitcommit = true,
-			},
-		})
-		require("copilot_cmp").setup({
-			method = "getCompletionsCycling",
-		})
-	end,
+	cmd = "Copilot",
+	event = "InsertEnter",
+	opts = {
+		suggestion = { enabled = false },
+		panel = { enabled = false },
+		filetypes = {
+			markdown = true,
+			help = true,
+		},
+	},
 }
