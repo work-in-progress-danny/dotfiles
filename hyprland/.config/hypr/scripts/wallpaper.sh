@@ -14,7 +14,7 @@ IMAGE=$(find "$WALLPAPER_DIR" -type f \( -iname '*.jpg' -o -iname '*.png' -o -in
 
 # Set the wallpaper with swww, stretching to fit the screen
 if [ -n "$IMAGE" ]; then
-    swww img "$IMAGE" --resize stretch
+    swww img "$IMAGE" --resize stretch --filter Lanczos3
 else
     echo "No wallpapers found in $WALLPAPER_DIR"
 fi
